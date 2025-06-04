@@ -1,14 +1,20 @@
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import { Poppins, Lato } from "next/font/google";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+import svg1 from "../components/images/bg-svg1.svg";
+import svg2 from "../components/images/bg-svg2.svg";
+import Image from "next/image";
+
+const poppins = Poppins({
   subsets: ["latin"],
+  weight: ["400", "700"], // Add weights you need
+  variable: "--font-poppins", // Optional CSS variable name
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const lato = Lato({
   subsets: ["latin"],
+  weight: ["300", "400", "700"], // Add weights you need
+  variable: "--font-lato", // Optional CSS variable name
 });
 
 export const metadata = {
@@ -19,10 +25,12 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
+      <body className={`${poppins.variable} ${lato.variable} bg-[#FFFBFB]`}>
+        <Image src={svg1} alt="" className="absolute left-11 top-3/4 -z-50 " />
+        <Image src={svg2} alt="" className="absolute left-3/4 top-11 " />
+        <div className="flex flex-col justify-center items-center h-screen  ">
+          {children}
+        </div>
       </body>
     </html>
   );
