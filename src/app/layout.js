@@ -29,7 +29,7 @@ export default function RootLayout({ children }) {
       <body className={`${lato.variable} ${poppins.variable}  bg-[#FFFBFB]`}>
         <Image src={svg1} alt="" className="absolute left-11 top-3/4" />
         <Image src={svg2} alt="" className="absolute left-5/6 top-11 " />
-        <Image src={logo} alt="" className="absolute m-10 lg:m-0 lg:left-60 lg:top-15 " />       
+        <Image src={logo} alt="" className="absolute left-60 top-15 " />       
         <div className="flex flex-col justify-center items-center h-screen w-screen">
           {children}
         </div>
