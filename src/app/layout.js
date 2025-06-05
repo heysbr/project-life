@@ -27,10 +27,10 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`${lato.variable} ${poppins.variable}  bg-[#FFFBFB]`}>
-        <Image src={svg1} alt="" className="absolute left-11 top-3/4" />
-        <Image src={svg2} alt="" className="absolute left-5/6 top-11 " />
-        <Image src={logo} alt="" className="absolute left-60 top-15 " />       
-        <div className="flex flex-col justify-center items-center h-screen w-screen">
+        <Image src={svg1} alt="" className="absolute left-11 top-11/16 overflow-hidden" />
+        <Image src={svg2} alt="" className="absolute right-11 down-11/16 overflow-hidden" />
+        <Image src={logo} alt="" className="absolute left-45  overflow-hidden size-30 " />       
+        <div className="flex flex-col justify-center items-center h-screen w-screen overflow-hidden">
           {children}
         </div>
       </body>
