@@ -1,6 +1,6 @@
 import Image from "next/image";
 import loginLady from "../components/images/login-lady.svg";
-import LoginForm from "../components/LoginForm/LoginForm";
+import LoginForm from "../components/Pages/LoginForm/LoginForm";
 
 export default function Home() {
   return (
