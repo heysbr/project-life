@@ -1,7 +1,7 @@
 import Image from "next/image";
 import React from "react";
 
-import eye from "../images/pass-eye.svg";
+import eye from "../../images/pass-eye.svg";
 
 export default function LoginForm() {
   return (
