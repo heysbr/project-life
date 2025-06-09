@@ -2,9 +2,12 @@ import Image from "next/image";
 
 import eye from "../../components/images/pass-eye.svg";
 
-export default function Password() {
+export default function Password({children}) {
   return (
     <div className="relative ">
+      <label className="block text-sm font-medium text-gray-700">
+        {children}
+      </label>
       <input
         type="password"
         id="password"
