@@ -1,4 +1,4 @@
-import loginLady from "../../components/images/login-lady.svg";
+import loginLady from "@/components/images/login-lady.svg";
 import Image from 'next/image';
 
 const Container = ({ children }) => {

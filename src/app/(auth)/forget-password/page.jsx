@@ -18,7 +18,7 @@ export default function LoginForm() {
             <Input name="mail" placeholder={"Enter Email ID"}>Enter Email ID</Input>
             <Input pass={true} name="password1" placeholder={"Enter New Password"}>Enter New Password</Input>
             <Input pass={true} name="password2" placeholder={"Enter Confirm Password"}>Enter Confirm Password</Input>
-          <Button link="/" >Submit</Button>
+          <Button link="/login" >Submit</Button>
         </form>
       </div>
 
