@@ -7,6 +7,54 @@ import Arrow from "@/components/dashboard/svg/Arrow.svg";
 
 import { useState } from "react";
 
+const tableData = [
+  {
+    id: 1,
+    hospitalName: "Apollo Hospital",
+    contactNo: "9555508100",
+    totalStaff: 25,
+    totalPatient: 45,
+    highRiskPatient: 12,
+    status: "Active",
+  },
+  {
+    id: 2,
+    hospitalName: "Ease Care Clinic",
+    contactNo: "8655508122",
+    totalStaff: 15,
+    totalPatient: 38,
+    highRiskPatient: 5,
+    status: "Inactive",
+  },
+  {
+    id: 3,
+    hospitalName: "FemCare OBS/GYN Clinic",
+    contactNo: "9855508109",
+    totalStaff: 20,
+    totalPatient: 32,
+    highRiskPatient: 8,
+    status: "Active",
+  },
+  {
+    id: 4,
+    hospitalName: "Artemis Hospital",
+    contactNo: "8655508122",
+    totalStaff: 18,
+    totalPatient: 20,
+    highRiskPatient: 3,
+    status: "Active",
+  },
+  {
+    id: 5,
+    hospitalName: "Medanta - The Medicity",
+    contactNo: "9855508109",
+    totalStaff: 15,
+    totalPatient: 48,
+    highRiskPatient: 15,
+    status: "Active",
+  },
+];
+
 const ToggleButton = () => {
   const [isActive, setIsActive] = useState(false);
 
@@ -31,55 +79,7 @@ const ToggleButton = () => {
   );
 };
 
-const TableComponent = () => {
-  const tableData = [
-    {
-      id: 1,
-      hospitalName: "Apollo Hospital",
-      contactNo: "9555508100",
-      totalStaff: 25,
-      totalPatient: 45,
-      highRiskPatient: 12,
-      status: "Active",
-    },
-    {
-      id: 2,
-      hospitalName: "Ease Care Clinic",
-      contactNo: "8655508122",
-      totalStaff: 15,
-      totalPatient: 38,
-      highRiskPatient: 5,
-      status: "Inactive",
-    },
-    {
-      id: 3,
-      hospitalName: "FemCare OBS/GYN Clinic",
-      contactNo: "9855508109",
-      totalStaff: 20,
-      totalPatient: 32,
-      highRiskPatient: 8,
-      status: "Active",
-    },
-    {
-      id: 4,
-      hospitalName: "Artemis Hospital",
-      contactNo: "8655508122",
-      totalStaff: 18,
-      totalPatient: 20,
-      highRiskPatient: 3,
-      status: "Active",
-    },
-    {
-      id: 5,
-      hospitalName: "Medanta - The Medicity",
-      contactNo: "9855508109",
-      totalStaff: 15,
-      totalPatient: 48,
-      highRiskPatient: 15,
-      status: "Active",
-    },
-  ];
-
+export default function Table() {
   return (
     <div className="flex items-center  w-full  pb-10 ">
       <div className=" bg-white shadow-md rounded-lg w-full overflow-hidden">
@@ -87,11 +87,17 @@ const TableComponent = () => {
           <thead className="w-full bg-[#FFCCDB]">
             <tr className="text-[#1E1E1E]">
               <th className="py-3 px-4 text-left font-medium ">S. No.</th>
-              <th className="py-3 px-4 text-left font-medium ">Hospital Name</th>
+              <th className="py-3 px-4 text-left font-medium ">
+                Hospital Name
+              </th>
               <th className="py-3 px-4 text-left font-medium ">Contact No.</th>
               <th className="py-3 px-4 text-left font-medium ">Total Staff</th>
-              <th className="py-3 px-4 text-left font-medium ">Total Patient</th>
-              <th className="py-3 px-4 text-left font-medium ">High Risk Patient</th>
+              <th className="py-3 px-4 text-left font-medium ">
+                Total Patient
+              </th>
+              <th className="py-3 px-4 text-left font-medium ">
+                High Risk Patient
+              </th>
               <th className="py-3 px-4 text-left font-medium ">Status</th>
               <th className="py-3 px-4 text-left font-medium  ">Action</th>
             </tr>
@@ -138,6 +144,4 @@ const TableComponent = () => {
       </div>
     </div>
   );
-};
-
-export default TableComponent;
+}
