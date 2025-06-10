@@ -1,3 +1,4 @@
+import HospitalList from "@/components/dashboard/HospitalList";
 import Search from "@/components/dashboard/Search";
 import SideBar from "@/components/dashboard/SideBar";
 import Stats from "@/components/dashboard/Stats";
@@ -12,6 +13,7 @@ export default function page() {
       <div className="flex-1 ">
         <Search/>
         <Stats/>
+        <HospitalList/>
       </div>
     </div>
   );
