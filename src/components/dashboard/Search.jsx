@@ -14,9 +14,9 @@ export default function Search() {
         <SearchInput name={"Hospitals"} />
         <Image src={Bell} alt="bell" />
       </div>
-      <div className="border-l mr-3 px-3 flex flex-row ">
-        <span className="my-auto mr-2 font-medium text-sm">Supreme Admin</span>
-        <Image src={Profile} alt="profile" className="inline" />
+      <div className=" mr-3 px-3 flex flex-row ">
+        <span className="my-auto mr-2 font-medium text-sm border-l pl-3 border-[#DFE0EB]">Supreme Admin</span>
+        <Image src={Profile} alt="profile" className="inline size-10 my-auto" />
       </div>
     </div>
   );
