@@ -17,8 +17,8 @@ const data = [
 export default function Stats() {
   return (
     <div className="mx-10">
-      <div className="flex flex-row justify-between ">
-        <div className="text-2xl font-bold">Dashboard- All Hospitals</div>
+      <div className="flex flex-row justify-between py-10 ">
+        <div className="text-2xl font-semibold">Dashboard- All Hospitals</div>
         <div className="bg-[#FC5285] text-[#FFFFFF] py-1.5 px-3 text-sm rounded-md">
           Add Institute
         </div>
@@ -27,23 +27,58 @@ export default function Stats() {
         <div className="flex flex-row">
           <div className="flex-3 grid grid-cols-2  gap-4 pl-0 p-2">
             {data.map((item) => (
-              <div key={item.name} className="bg-gray-100">
-                {item.num}{" "}
-                <Image src={item.icon} alt={item.name} className="inline" />{" "}
+              <div
+                key={item.name}
+                className="bg-white shadow-lg rounded-lg p-5"
+              >
+                <div className="flex flex-row justify-between">
+                  <p className="text-2xl text-[#FC5285] font-medium">
+                    {item.num}
+                  </p>
+                  <Image src={item.icon} alt={item.name} className="inline" />
+                </div>
+
                 <br />
                 {item.name}
               </div>
             ))}
           </div>
 
-          <div className="flex-2  flex flex-row m-2 mr-0 bg-white rounded-xl justify-between p-4">
+          <div className="flex-2  flex flex-row m-2 mr-0 bg-white rounded-lg p-5 shadow-lg justify-between ">
             <div>
-              <h1>580</h1>
-              <p>Total Deliveries</p>
-              <span>Veginal 230</span>
-              <span>Surgical 230</span>
+              <p className="text-3xl text-[#FC5285] font-medium my-5 m">580</p>
+              <p className="font-medium mb-5">Total Deliveries</p>
+
+              <span className="">
+                {" "}
+                <svg
+                  className="inline mr-1"
+                  width="9"
+                  height="9"
+                  viewBox="0 0 9 9"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <circle cx="4.55469" cy="4.50317" r="3.625" fill="#FFDD5E" />
+                </svg>
+                Veginal 230
+              </span>
+              <br />
+              <span>
+                <svg
+                  className="inline mr-1"
+                  width="9"
+                  height="9"
+                  viewBox="0 0 9 9"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <circle cx="4.55469" cy="4.50317" r="3.625" fill="#FC5285" />
+                </svg>
+                Surgical 350
+              </span>
             </div>
-            <Image src={Pie} alt="" />
+            <Image src={Pie} alt="" className="w-1/2" />
           </div>
         </div>
       </div>

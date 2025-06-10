@@ -1,6 +1,37 @@
+"use client"
 import Image from "next/image";
 import React from "react";
-import edit from '@/components/dashboard/delete.svg';
+import Delete from "@/components/dashboard/delete.svg";
+import Edit from "@/components/dashboard/edit.svg";
+import Arrow from "@/components/dashboard/Arrow.svg";
+
+
+import  { useState } from "react";
+
+const ToggleButton = () => {
+  const [isActive, setIsActive] = useState(false);
+
+  const background = isActive
+  ?"border-green-500"
+  :"border-gray-500";
+
+  const toggleClass = isActive
+    ? "bg-green-500 translate-x-5"
+    : "bg-gray-500 translate-x-0";
+
+  return (<>
+    <div
+      className={`w-12 h-6 flex items-center  bg-transparent ${background} border-2 rounded-full p-1 cursor-pointer`}
+      onClick={() => setIsActive(!isActive)}
+      >
+      <div
+        className={`w-4 h-4 rounded-full transition-transform duration-300 ${toggleClass}`}
+        ></div>
+    </div>
+    {isActive?<p>Active</p>:<p>Inactive</p>}
+    </>
+  );
+};
 
 const TableComponent = () => {
   const tableData = [
@@ -52,17 +83,23 @@ const TableComponent = () => {
   ];
 
   return (
-    <div className="flex items-center justify-center">
+    <div className="flex items-center justify-center w-full  ">
       <div className="w-fit bg-white shadow-md rounded-lg overflow-hidden">
         <table className="border-collapse ">
           <thead className="bg-[#FFCCDB]">
             <tr className="text-[#1E1E1E]">
               <th className="py-3 px-4 text-left font-medium ">S. No.</th>
-              <th className="py-3 px-4 text-left font-medium ">Hospital Name</th>
+              <th className="py-3 px-4 text-left font-medium ">
+                Hospital Name
+              </th>
               <th className="py-3 px-4 text-left font-medium ">Contact No.</th>
               <th className="py-3 px-4 text-left font-medium ">Total Staff</th>
-              <th className="py-3 px-4 text-left font-medium ">Total Patient</th>
-              <th className="py-3 px-4 text-left font-medium ">High Risk Patient</th>
+              <th className="py-3 px-4 text-left font-medium ">
+                Total Patient
+              </th>
+              <th className="py-3 px-4 text-left font-medium ">
+                High Risk Patient
+              </th>
               <th className="py-3 px-4 text-left font-medium ">Status</th>
               <th className="py-3 px-4 text-left font-medium  ">Action</th>
             </tr>
@@ -75,28 +112,24 @@ const TableComponent = () => {
                 <td className="py-3 px-4">{data.contactNo}</td>
                 <td className="py-3 px-4">{data.totalStaff} </td>
                 <td className="py-3 px-4">{data.totalPatient} </td>
-                <td className="py-3 px-4 text-red-500 font-bold">{data.highRiskPatient}</td>
-                <td className="py-3 px-4 flex items-center">
-                  {/* {data.status === "Active" ? ( */}
-                    <div className="w-10 h-6 flex items-center bg-green-200 rounded-full p-1">
-                      <div className="bg-green-500 h-4 w-4 rounded-full"></div>
-                    </div>
-                  {/* ) : (
-                    <div className="w-10 h-6 flex items-center bg-gray-200 rounded-full p-1">
-                      <div className="bg-gray-500 h-4 w-4 rounded-full"></div>
-                    </div>
-                  )} */}
-                  {/* <span className="ml-2 text-gray-700">{data.status}</span> */}
+                <td className="py-3 px-4 text-red-500 font-bold">
+                  {data.highRiskPatient}
+                </td>
+                <td className="py-3 px-4 items-center">
+                  <ToggleButton/>
                 </td>
                 <td className="py-3 px-4">
-                    <Image src={edit} alt="edit" className="inline"/>
-                    <Image src={''} alt="delete" className="inline"/>
+                  <Image src={Edit} alt="edit" className="inline" />
+                  <Image src={Delete} alt="delete" className="inline" />
                 </td>
               </tr>
             ))}
           </tbody>
         </table>
-        <div className="flex justify-center p-4 bg-[#FFCCDB]">
+        <div className="flex justify-end p-4 ">
+          <button className="px-3 py-1 mx-1 text-pink-600 bg-white border border-pink-300 rounded-md hover:bg-pink-200">
+            <Image src={Arrow} alt="arrow" className="rotate-180" />
+          </button>
           <button className="px-3 py-1 mx-1 text-pink-600 bg-white border border-pink-300 rounded-md hover:bg-pink-200">
             1
           </button>
@@ -105,6 +138,9 @@ const TableComponent = () => {
           </button>
           <button className="px-3 py-1 mx-1 text-pink-600 bg-white border border-pink-300 rounded-md hover:bg-pink-200">
             3
+          </button>
+          <button className="px-3 py-1 mx-1 text-pink-600 bg-white border border-pink-300 rounded-md hover:bg-pink-200">
+            <Image src={Arrow} alt="arrow" className="" />
           </button>
         </div>
       </div>

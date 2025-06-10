@@ -6,7 +6,7 @@ import Profile from "@/components/dashboard/photo.png";
 
 export default function Search() {
   return (
-    <div className="flex flex-row justify-between my-4 h-fit ">
+    <div className="flex flex-row justify-between bg-[#FFFFFF] h-16  ">
       <div className="flex flex-row gap-x-4 my-auto">
         <span className="ml-20 my-auto font-medium ">Search Hospitals</span>
         <SearchInput name={"State"} />
