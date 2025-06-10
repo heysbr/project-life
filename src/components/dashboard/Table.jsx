@@ -1,34 +1,32 @@
-"use client"
+"use client";
 import Image from "next/image";
 import React from "react";
 import Delete from "@/components/dashboard/delete.svg";
 import Edit from "@/components/dashboard/edit.svg";
 import Arrow from "@/components/dashboard/Arrow.svg";
 
-
-import  { useState } from "react";
+import { useState } from "react";
 
 const ToggleButton = () => {
   const [isActive, setIsActive] = useState(false);
 
-  const background = isActive
-  ?"border-green-500"
-  :"border-gray-500";
+  const background = isActive ? "border-green-500" : "border-gray-500";
 
   const toggleClass = isActive
     ? "bg-green-500 translate-x-5"
     : "bg-gray-500 translate-x-0";
 
-  return (<>
-    <div
-      className={`w-12 h-6 flex items-center  bg-transparent ${background} border-2 rounded-full p-1 cursor-pointer`}
-      onClick={() => setIsActive(!isActive)}
-      >
+  return (
+    <>
       <div
-        className={`w-4 h-4 rounded-full transition-transform duration-300 ${toggleClass}`}
+        className={`w-12 h-6 flex items-center  bg-transparent ${background} border-2 rounded-full p-1 cursor-pointer`}
+        onClick={() => setIsActive(!isActive)}
+      >
+        <div
+          className={`w-4 h-4 rounded-full transition-transform duration-300 ${toggleClass}`}
         ></div>
-    </div>
-    {isActive?<p>Active</p>:<p>Inactive</p>}
+      </div>
+      {isActive ? <p>Active</p> : <p>Inactive</p>}
     </>
   );
 };
@@ -83,23 +81,17 @@ const TableComponent = () => {
   ];
 
   return (
-    <div className="flex items-center justify-center w-full  ">
-      <div className="w-fit bg-white shadow-md rounded-lg overflow-hidden">
-        <table className="border-collapse ">
-          <thead className="bg-[#FFCCDB]">
+    <div className="flex items-center  w-full  pb-10 ">
+      <div className=" bg-white shadow-md rounded-lg w-full overflow-hidden">
+        <table className="border-collapse w-full">
+          <thead className="w-full bg-[#FFCCDB]">
             <tr className="text-[#1E1E1E]">
               <th className="py-3 px-4 text-left font-medium ">S. No.</th>
-              <th className="py-3 px-4 text-left font-medium ">
-                Hospital Name
-              </th>
+              <th className="py-3 px-4 text-left font-medium ">Hospital Name</th>
               <th className="py-3 px-4 text-left font-medium ">Contact No.</th>
               <th className="py-3 px-4 text-left font-medium ">Total Staff</th>
-              <th className="py-3 px-4 text-left font-medium ">
-                Total Patient
-              </th>
-              <th className="py-3 px-4 text-left font-medium ">
-                High Risk Patient
-              </th>
+              <th className="py-3 px-4 text-left font-medium ">Total Patient</th>
+              <th className="py-3 px-4 text-left font-medium ">High Risk Patient</th>
               <th className="py-3 px-4 text-left font-medium ">Status</th>
               <th className="py-3 px-4 text-left font-medium  ">Action</th>
             </tr>
@@ -116,7 +108,7 @@ const TableComponent = () => {
                   {data.highRiskPatient}
                 </td>
                 <td className="py-3 px-4 items-center">
-                  <ToggleButton/>
+                  <ToggleButton />
                 </td>
                 <td className="py-3 px-4">
                   <Image src={Edit} alt="edit" className="inline" />

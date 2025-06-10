@@ -5,9 +5,9 @@ import TableComponent from "./Table";
 
 export default function HospitalList() {
   return (
-    <div>
-      <h1>HospitalList</h1>
-      <div className="flex rounded-4xl px-3 py-1 items-center bg-white w-1/5 ">
+    <div className="mx-10">
+      <h1 className="text-xl font-medium mt-10 mb-5">HospitalList</h1>
+      <div className="flex rounded-4xl px-3 py-1 items-center bg-white w-1/5  shadow-xl mb-5">
         <Image src={search} alt="down" className="  " />
         <span className="ml-2 text-[#A0A4A8] ">
           <input

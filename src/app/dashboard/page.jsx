@@ -12,7 +12,7 @@ export default function page() {
       </div>
       <div className="flex-1  ">
         <Search/>
-        <div className="bg-white/80">
+        <div className="bg-white/80 ">
         <Stats/>
         <HospitalList/>
         </div>
