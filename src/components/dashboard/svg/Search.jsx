@@ -1,8 +1,8 @@
 import React from "react";
 import SearchInput from "./SearchInput";
-import Bell from "@/components/dashboard/svg/Bell.svg";
+import Bell from "@/components/dashboard/Bell.svg";
 import Image from "next/image";
-import Profile from "@/components/dashboard/svg/photo.png";
+import Profile from "@/components/dashboard/photo.png";
 
 export default function Search() {
   return (

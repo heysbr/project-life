@@ -1,8 +1,8 @@
 import React from "react";
-import Menu from "@/components/dashboard/Menu.svg";
-import Dashboard from "@/components/dashboard/dashboard.svg";
-import Hospitals from "@/components/dashboard/all-hospitals.svg";
-import Help from "@/components/dashboard/help.svg";
+import Menu from "@/components/dashboard/svg/Menu.svg";
+import Dashboard from "@/components/dashboard/svg/dashboard.svg";
+import Hospitals from "@/components/dashboard/svg/all-hospitals.svg";
+import Help from "@/components/dashboard/svg/help.svg";
 import Image from "next/image";
 
 export default function SideBar() {

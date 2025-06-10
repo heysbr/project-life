@@ -1,9 +1,9 @@
 "use client";
 import Image from "next/image";
 import React from "react";
-import Delete from "@/components/dashboard/delete.svg";
-import Edit from "@/components/dashboard/edit.svg";
-import Arrow from "@/components/dashboard/Arrow.svg";
+import Delete from "@/components/dashboard/svg/delete.svg";
+import Edit from "@/components/dashboard/svg/edit.svg";
+import Arrow from "@/components/dashboard/svg/Arrow.svg";
 
 import { useState } from "react";
 

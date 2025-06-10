@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React from "react";
-import Down from "@/components/dashboard/down.svg";
+import Down from "@/components/dashboard/svg/down.svg";
 
 export default function SearchInput({ name, dropdown = false, classname }) {
   return (

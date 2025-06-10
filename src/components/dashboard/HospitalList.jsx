@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React from "react";
-import search from "@/components/dashboard/search.svg";
+import search from "@/components/dashboard/svg/search.svg";
 import TableComponent from "./Table";
 
 export default function HospitalList() {
