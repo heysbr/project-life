@@ -5,7 +5,7 @@ import Patients from "@/components/dashboard/cards/Patients.svg";
 import Risk from "@/components/dashboard/cards/risk-patients.svg";
 import Pie from "@/components/dashboard/svg/pie-chart.svg";
 import Image from "next/image";
-import Cards from "./cards/Cards";
+import Button from "../Forms/Button";
 
 const data = [
   { name: "Hospitals", num: "450", icon: Hospitals },
@@ -19,9 +19,7 @@ export default function Stats() {
     <div className="mx-10">
       <div className="flex flex-row justify-between py-10 ">
         <div className="text-2xl font-semibold">Dashboard- All Hospitals</div>
-        <div className="bg-[#FC5285] text-[#FFFFFF] py-1.5 px-3 text-sm rounded-md">
-          Add Institute
-        </div>
+        <Button >Add Institute</Button>
       </div>
       <div>
         <div className="flex flex-row">
