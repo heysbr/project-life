@@ -6,6 +6,7 @@ import Risk from "@/components/dashboard/cards/risk-patients.svg";
 import Pie from "@/components/dashboard/svg/pie-chart.svg";
 import Image from "next/image";
 import Button from "../Forms/Button";
+import PageTitle from "../comman/PageTitle";
 
 const data = [
   { name: "Hospitals", num: "450", icon: Hospitals },
@@ -17,10 +18,8 @@ const data = [
 export default function Stats() {
   return (
     <div className="mx-10">
-      <div className="flex flex-row justify-between py-10 ">
-        <div className="text-2xl font-semibold">Dashboard- All Hospitals</div>
-        <Button >Add Institute</Button>
-      </div>
+      
+      <PageTitle title={'Dashboard- All Hospitals'} btnLabel={'Add Institute'}/>
       <div>
         <div className="flex flex-row">
           <div className="flex-3 grid grid-cols-2  gap-4 pl-0 p-2">
