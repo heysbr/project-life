@@ -6,7 +6,7 @@ import Risk from "@/components/dashboard/cards/risk-patients.svg";
 import Pie from "@/components/dashboard/svg/pie-chart.svg";
 import Image from "next/image";
 import Button from "../Forms/Button";
-import PageTitle from "../comman/PageTitle";
+import PageTitle from "../common/PageTitle";
 
 const data = [
   { name: "Hospitals", num: "450", icon: Hospitals },

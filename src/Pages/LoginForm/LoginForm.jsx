@@ -4,7 +4,7 @@ import Button from "@/components/Forms/Button";
 import Forget from "@/components/Forms/Forget";
 import Input from "@/components/Forms/Input";
 import Heading from "@/components/layouts/Heading";
-import FormField from "@/components/comman/FormField";
+import FormField from "@/components/common/FormField";
 
 export default function LoginForm() {
   const FORM_FIELDS = [
