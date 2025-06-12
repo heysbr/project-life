@@ -9,7 +9,7 @@ export default function Modal() {
   {toggle&&(
 
     <div className="fixed inset-0  transition-opacity bg-gray-500/75 z-10 flex items-center justify-center min-h-full w-screen overflow-y-auto">
-        <div className="bg-gray-50 p-10 rounded-2xl" onClick={()=>setToggle(false)}>Hello world</div>
+        <div className="bg-gray-50 p-10 rounded-2xl" onClick={()=>setToggle(false)}>Modal <Branch></Branch></div>
     </div>
 ) }
 </div>
