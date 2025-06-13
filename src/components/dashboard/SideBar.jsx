@@ -30,26 +30,26 @@ export default function SideBar() {
           <Image
             src={toggle ? Menu : MenuToggle}
             alt="menu"
-            className="m-6 cursor-pointer"
+            className="m-6 cursor-pointer active:scale-95 "
             onClick={() => setToggle(!toggle)}
           />
         </div>
-        <Link href={"/dashboard"} className=" w-full   pl-5">
+        <Link href={"/dashboard"} className=" w-full   pl-5 active:scale-98">
           <Image
             src={Dashboard}
             alt="Dashboard"
-            className="inline mx-3 hover:"
+            className="inline mx-3 hover: "
           />
           {toggle && <span>Dashboard</span>}
         </Link>
         <Link
           href={"/dashboard/all-hospitals"}
-          className="border-b border-[#E8E8E8] w-full pb-8  pl-5"
+          className="border-b border-[#E8E8E8] w-full pb-8  pl-5 active:scale-98"
         >
-          <Image src={Hospitals} alt="Hospitals" className="inline mx-3" />
+          <Image src={Hospitals} alt="Hospitals" className="inline mx-3 " />
           {toggle && <span>All Hospitals</span>}
         </Link>
-        <Link href={"/dashboard/help"} className="w-full pl-5 ">
+        <Link href={"/dashboard/help"} className="w-full pl-5 active:scale-98">
           <Image src={Help} alt="Help" className="inline mx-3" />
           {toggle && <span>Help</span>}
         </Link>

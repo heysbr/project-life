@@ -29,7 +29,7 @@ export default function Stats() {
                 className="bg-white shadow-lg rounded-lg p-5"
               >
                 <div className="flex flex-row justify-between">
-                  <p className="text-2xl text-[#FC5285] font-medium">
+                  <p className="text-2xl text-[#FC5285] font-semibold ">
                     {item.num}
                   </p>
                   <Image src={item.icon} alt={item.name} className="inline" />
