@@ -1,5 +1,4 @@
 const FormTextField = (props) => {
-    console.log("hello", props);
   return (
     <>
       <div className="">

@@ -6,7 +6,7 @@ const PageTitle = ({ title, btnLabel }) => {
       <h1 className="text-2xl font-semibold">
         {title}
       </h1>
-      {btnLabel && <Button >{btnLabel}</Button>}
+      {btnLabel && <Button label={btnLabel}  />}
     </div>
   );
 }

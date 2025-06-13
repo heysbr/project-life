@@ -22,7 +22,7 @@ export default function LoginForm() {
   ];
 
   return (
-    <div className="w-9/10 h-fit px-5  bg-white rounded-2xl ">
+    <div className="w-9/10 h-fit  px-5 lg:px-10   bg-white rounded-2xl ">
       <Heading>Login</Heading>
       <form className="mt-8">
         <div className="flex flex-col mb-4 mt-8 gap-y-5 ">
