@@ -90,11 +90,12 @@ const headers = [
 const Table = () => (
   <div className="flex items-center w-full pb-10">
     <div className="bg-white shadow-md rounded-lg w-full overflow-hidden">
-      <table className="border-collapse w-full">
+
+      <table className="border-collapse border border-[#E8E8E8] w-full">
         <thead className="bg-[#FFCCDB]">
           <tr className="text-[#1E1E1E]">
             {headers.map((header) => (
-              <th key={header} className="py-3 px-4 text-left font-medium">
+              <th key={header} className="py-3 px-4 text-center font-semibold">
                 {header}
               </th>
             ))}
@@ -102,37 +103,37 @@ const Table = () => (
         </thead>
         <tbody className="text-gray-600">
           {tableData.map((data, idx) => (
-            <tr key={data.id} className="border-b hover:bg-pink-50">
-              <td className="py-3 px-4">{idx + 1}</td>
-              <td className="py-3 px-4">{data.hospitalName}</td>
-              <td className="py-3 px-4">{data.contactNo}</td>
-              <td className="py-3 px-4">{data.totalStaff}</td>
-              <td className="py-3 px-4">{data.totalPatient}</td>
-              <td className="py-3 px-4 text-red-500 font-bold">
+            <tr key={data.id} className="border-b border-[#E8E8E8] hover:bg-pink-50 text-center">
+              <td className="py-3 px-4  *:">{idx + 1}</td>
+              <td className="py-3 px-4 ">{data.hospitalName}</td>
+              <td className="py-3 px-4 ">{data.contactNo}</td>
+              <td className="py-3 px-4 ">{data.totalStaff}</td>
+              <td className="py-3 px-4 ">{data.totalPatient}</td>
+              <td className="py-3 px-4 text-red-500 font-bold ">
                 {data.highRiskPatient}
               </td>
-              <td className="py-3 px-4">
+              <td className="py-3 px-4 w-40  scale-75">
                 <ToggleButton active={data.status} />
               </td>
               <td className="py-3 px-4 flex items-center gap-3">
-                <Image src={Edit} alt="edit" className="inline" />
-                <Image src={Delete} alt="delete" className="inline" />
+                <Image src={Edit} alt="edit" className="inline cursor-pointer active:scale-90 transition-all" />
+                <Image src={Delete} alt="delete" className="inline cursor-pointer active:scale-90 transition-all" />
               </td>
             </tr>
           ))}
         </tbody>
       </table>
+
+          {/* table Buttons for pagination */}
       <div className="flex justify-end p-4">
         {[
           <Image key="prev" src={Arrow} alt="prev" className="rotate-180" />,
-          1,
-          2,
-          3,
-          <Image key="next" src={Arrow} alt="next" />,
+          1,2,3,
+          <Image key="next" src={Arrow} alt="next" /> 
         ].map((item, idx) => (
           <button
             key={idx}
-            className="px-3 py-1 mx-1 text-pink-600 bg-white border border-pink-300 rounded-md hover:bg-pink-200"
+            className="px-3 py-1 mx-1 text-pink-600 bg-white border border-pink-300 rounded-md hover:bg-pink-200 active:bg-pink-300 transition-colors"
           >
             {item}
           </button>
