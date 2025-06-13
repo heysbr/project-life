@@ -9,51 +9,39 @@ import Image from "next/image";
 import Link from "next/link";
 
 export default function SideBar() {
-  const [toggle, setToggle] = useState(true);
+  const [open, setOpen] = useState(false);
+  const links = [
+    { href: "/dashboard", icon: Dashboard, label: "Dashboard" },
+    { href: "/dashboard/all-hospitals", icon: Hospitals, label: "All Hospitals" },
+    { href: "/dashboard/help", icon: Help, label: "Help" },
+  ];
+
   return (
-    <>
-      {/* Sidebar */}
-      {/* This sidebar is used in the dashboard page */}
-      <aside
-        className={
-          toggle
-            ? "w-64 flex flex-col gap-y-5 "
-            : "w-fit flex flex-col gap-y-5 "
-        }
-      >
-        <div className="outline outline-[#E8E8E8]  border-[#E8E8E8] flex w-full flex-row justify-between  items-center h-17 ">
-          {toggle && (
-            <Link href={"/login"} className="p-5">
-              <span>Project Life</span>
-            </Link>
-          )}
+    <aside className={`flex flex-col gap-y-5 bg-white transition-all duration-300 ${open ? "w-64" : "w-16"}`} >
+      <div className={`outline outline-[#E8E8E8] flex items-center justify-between h-17 relative 
+        ${open ? "" : "justify-center"}`}>
+        {open && ( <Link href="/login" className="p-5"> <span>Project Life</span> </Link> )}
+        <div className={open? "": ""}>
           <Image
-            src={toggle ? Menu : MenuToggle}
+            src={open ? Menu : MenuToggle}
             alt="menu"
-            className="m-6 cursor-pointer active:scale-95 "
-            onClick={() => setToggle(!toggle)}
+            className={`${open?"m-6":"mx-auto"} cursor-pointer active:scale-95`}
+            onClick={() => setOpen((v) => !v)}
           />
         </div>
-        <Link href={"/dashboard"} className=" w-full   pl-5 active:scale-98">
-          <Image
-            src={Dashboard}
-            alt="Dashboard"
-            className="inline mx-3 hover: "
-          />
-          {toggle && <span>Dashboard</span>}
-        </Link>
+      </div>
+      {links.map(({ href, icon, label }) => (
         <Link
-          href={"/dashboard/all-hospitals"}
-          className="border-b border-[#E8E8E8] w-full pb-8  pl-5 active:scale-98"
+          key={href}
+          href={href}
+          className={`pl-5 flex items-center gap-3 w-full active:scale-98 ${
+            href === "/dashboard/all-hospitals" ? "border-b border-[#E8E8E8] pb-8" : ""
+          }`}
         >
-          <Image src={Hospitals} alt="Hospitals" className="inline mx-3 " />
-          {toggle && <span>All Hospitals</span>}
+          <Image src={icon} alt={label} className="inline" />
+          {open && <span>{label}</span>}
         </Link>
-        <Link href={"/dashboard/help"} className="w-full pl-5 active:scale-98">
-          <Image src={Help} alt="Help" className="inline mx-3" />
-          {toggle && <span>Help</span>}
-        </Link>
-      </aside>
-    </>
+      ))}
+    </aside>
   );
 }
