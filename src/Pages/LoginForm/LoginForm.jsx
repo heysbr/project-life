@@ -2,7 +2,6 @@ import React from "react";
 
 import Button from "@/components/Forms/Button";
 import Forget from "@/components/Forms/Forget";
-import Input from "@/components/Forms/Input";
 import Heading from "@/components/layouts/Heading";
 import FormField from "@/components/common/FormField";
 
@@ -23,10 +22,10 @@ export default function LoginForm() {
   ];
 
   return (
-    <div className="w-11/16 h-fit p-5 bg-white rounded-2xl mt-4 lg:mt-20 mx-auto ">
+    <div className="w-9/10 h-fit p-5 py-10 bg-white   rounded-2xl ">
       <Heading>Login</Heading>
       <form className="mt-8">
-        <div className="flex flex-col mb-4  gap-y-5 ">
+        <div className="flex flex-col mb-4 mt-8 gap-y-5 ">
           {FORM_FIELDS.map((field, index) => (
             <FormField
               key={index}
@@ -38,7 +37,7 @@ export default function LoginForm() {
           ))}
         </div>
         <Forget />
-        <Button link="/activation">Login</Button>
+        <Button link="/activation" >Login</Button>
       </form>
     </div>
   );

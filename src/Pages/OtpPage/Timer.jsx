@@ -1,7 +1,25 @@
-import React from 'react'
+"use client"
+import React, { useState, useEffect } from "react";
 
-export default function Timer({className}) {
+const Timer = ({classname}) => {
+  const [time, setTime] = useState(30); // Initialize timer with 30 seconds
+
+  useEffect(() => {
+    if (time > 0) {
+      const timerId = setInterval(() => {
+        setTime((prevTime) => prevTime - 1);
+      }, 1000);
+
+      return () => clearInterval(timerId); // Cleanup interval on component unmount
+    }
+  }, [time]);
+
   return (
-    <div className={` ${className}`}>00:27</div>
-  )
-}
+
+      
+      <div className={`${classname}`}>{time === 0 ? <p>Time's up!</p> : <p>{`00:${time}`}</p> }</div>
+
+  );
+};
+
+export default Timer;

@@ -1,14 +1,14 @@
-import React from "react";
-import FormTextField from "./FormField/FormTextField";
-import FormRadioField from "./formField/FormRadioField";
+import FormTextField from "@/components/common/formField/FormTextField";
+import FormPasswordField from "@/components/common/formField/FormPasswordField";
+
 const FormField = (props) => {
-    console.log("props-formfield", props);
   const renderField = () => {
     switch (props?.type) {
-      case "radio":
-        return <FormRadioField {...props} />;
-        case "password":
-            return <FormTextField {...props} />
+      case "text":
+        return <FormTextField {...props} />;
+      case "password":
+        return <FormPasswordField {...props} />;
+
       default:
         return <FormTextField {...props} />;
     }

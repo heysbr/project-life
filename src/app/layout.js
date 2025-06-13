@@ -1,10 +1,6 @@
 import "./globals.css";
 import { Poppins, Lato } from "next/font/google";
 
-import svg1 from "../components/images/bg-svg1.svg";
-import svg2 from "../components/images/bg-svg2.svg";
-import logo from "../components/images/logo.svg";
-import Image from "next/image";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -26,16 +22,16 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
   
-    // <html lang="en">
-    //   <body className={`${lato.variable} ${poppins.variable}  bg-[#FFFBFB]`} >
-    //   {children}
-    //   </body>
-    // </html>
-
     <html lang="en">
-      <body >
+      <body className={`${lato.variable} ${poppins.variable}`} >
       {children}
       </body>
     </html>
+
+    // <html lang="en">
+    //   <body >
+    //   {children}
+    //   </body>
+    // </html>
   );
 }

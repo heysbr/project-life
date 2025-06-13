@@ -38,7 +38,7 @@ export default function layout({ children }) {
         alt=""
         className="absolute left-45  overflow-hidden size-30 "
       />
-      <div className="flex flex-col justify-center items-center h-screen w-screen  ]">
+      <div className="flex flex-col justify-center items-center h-screen w-full ">
         {children}
       </div>
     </div>
