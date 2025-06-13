@@ -4,6 +4,7 @@ import Dropdown from "./Dropdown";
 import Bell from "@/components/dashboard/svg/Bell.svg";
 import Image from "next/image";
 import Profile from "@/components/dashboard/svg/photo.png";
+import ProfileSection from "../common/profile/ProfileSection";
 
  const hospitals = [
     "All Hospitals",
@@ -22,12 +23,9 @@ export default function Search() {
         <Dropdown name={"State"} data={hospitals}/>
         <Dropdown name={"District"} data={hospitals}/>
         <Dropdown name={"Hospitals"} data={hospitals}/>
-        <Image src={Bell} alt="bell cursor pointer" />
+        <Image src={Bell} alt="bell" className="cursor-pointer active:scale-90 transition-all"/>
       </div>
-      <div className=" mr-3 px-3 flex flex-row ">
-        <span className="my-auto mr-2 font-medium text-sm border-l pl-3 border-[#DFE0EB]">Supreme Admin</span>
-        <Image src={Profile} alt="profile" className="inline size-10 my-auto" />
-      </div>
+      <ProfileSection />
     </div>
   );
 }

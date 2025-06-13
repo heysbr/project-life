@@ -21,7 +21,7 @@ export default function SideBar() {
             : "w-fit flex flex-col gap-y-5 "
         }
       >
-        <div className="outline outline-[#E8E8E8]  border-[#E8E8E8] flex w-full flex-row justify-between  items-center h-17">
+        <div className="outline outline-[#E8E8E8]  border-[#E8E8E8] flex w-full flex-row justify-between  items-center h-17 ">
           {toggle && (
             <Link href={"/login"} className="p-5">
               <span>Project Life</span>

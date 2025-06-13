@@ -14,7 +14,7 @@ export default function Dropdown({data, name}){
    );
  
    return (
-     <div className="relative  ">
+     <div className="relative" onMouseLeave={() => setIsOpen(false)}>
        <div className="flex flex-row border  border-gray-300 rounded-full : " onClick={() => setIsOpen(!isOpen) }>
            <input
              type="text"
@@ -23,10 +23,10 @@ export default function Dropdown({data, name}){
              onChange={(e) => setSearchTerm(e.target.value)}
              onClick={() => setIsOpen(!isOpen)}
              className="p-1.5 px-3 focus:outline-0 text-sm "/>
-             <Image src={Down} alt="down" className="  inline  mr-5 cursor-pointer " />
+             <Image src={Down} alt="down" className="  inline  mr-5 cursor-pointer active:scale-90" />
        </div> 
        {isOpen && (
-         <ul className="absolute z-10 w-full bg-white  rounded-md shadow-lg h-fit overflow-y-auto list-disc list-inside">
+         <ul className="absolute z-10 w-full inline-block bg-white  rounded-md shadow-lg h-fit overflow-y-auto list-disc list-inside">
            {filteredItems.length > 0 ? (
              filteredItems.map((item, index) => (
                <li
