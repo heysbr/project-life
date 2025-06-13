@@ -7,12 +7,12 @@ export function LargeCard({ name, num, icon }) {
       <div>
         <p className="text-3xl text-[#FC5285] font-semibold my-5">{num}</p>
         <p className="font-medium mb-5">{name}</p>
-        <ul className="list-disc pl-5">
+        <ul className="list-disc pl-5 flex flex-row gap-x-7">
           <li className="marker:text-[#FC5285]">Veginal 230</li>
           <li className="marker:text-[#FFDB54]">Surgical 350</li>
         </ul>
       </div>
-      <Image src={icon} alt={name} className="w-1/2 h-auto" />
+      <Image src={icon} alt={name} className="w-36 h-auto" />
     </div>
   );
 }
