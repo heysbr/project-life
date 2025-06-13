@@ -20,7 +20,7 @@ export default function Stats() {
     <div className="mx-10">
       <PageTitle title={"Dashboard- All Hospitals"} btnLabel={"Add Institute"} />
         <div className="flex flex-row">
-          <SmallCard />
+          <SmallCard data={data} />
           <LargeCard name={"Total Deliveries"} num={"580"} icon={Pie} />
         </div>
     </div>
