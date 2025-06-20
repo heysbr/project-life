@@ -1,10 +1,10 @@
 "use client";
 import React, { useState } from "react";
-import Menu from "@/components/dashboard/svg/Menu.svg";
-import MenuToggle from "@/components/dashboard/svg/menu-toggle.svg";
-import Dashboard from "@/components/dashboard/svg/dashboard.svg";
-import Hospitals from "@/components/dashboard/svg/all-hospitals.svg";
-import Help from "@/components/dashboard/svg/help.svg";
+import Menu from "@/components/svg/Menu.svg";
+import MenuToggle from "@/components/svg/menu-toggle.svg";
+import Dashboard from "@/components/svg/dashboard.svg";
+import Hospitals from "@/components/svg/all-hospitals.svg";
+import Help from "@/components/svg/help.svg";
 import Image from "next/image";
 import Link from "next/link";
 

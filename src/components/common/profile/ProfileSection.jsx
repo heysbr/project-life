@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import React, { useState } from "react";
-import Profile from "@/components/dashboard/svg/photo.png";
+import Profile from "@/components/svg/photo.png";
 
 export default function ProfileSection() {
     const [toggleProfile, setToggleProfile] = useState(false);

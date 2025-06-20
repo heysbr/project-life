@@ -1,7 +1,7 @@
 "use client"
 import Image from "next/image";
 import React, { useState } from "react";
-import Down from "@/components/dashboard/svg/down.svg";
+import Down from "@/components/svg/down.svg";
 
 
 export default function Dropdown({data, name}){

@@ -1,9 +1,8 @@
 
 import React from "react";
 import Dropdown from "./Dropdown";
-import Bell from "@/components/dashboard/svg/Bell.svg";
+import Bell from "@/components/svg/Bell.svg";
 import Image from "next/image";
-import Profile from "@/components/dashboard/svg/photo.png";
 import ProfileSection from "../common/profile/ProfileSection";
 
  const hospitals = [

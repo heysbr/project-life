@@ -3,7 +3,7 @@ import Hospitals from "@/components/dashboard/cards/Hospitals.svg";
 import Staff from "@/components/dashboard/cards/Staff.svg";
 import Patients from "@/components/dashboard/cards/Patients.svg";
 import Risk from "@/components/dashboard/cards/risk-patients.svg";
-import Pie from "@/components/dashboard/svg/pie-chart.svg";
+import Pie from "@/components/svg/pie-chart.svg";
 import PageTitle from "../common/PageTitle";
 import { LargeCard } from "./LargeCard";
 import { SmallCard } from "./SmallCard";
