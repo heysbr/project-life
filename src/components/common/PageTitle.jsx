@@ -1,4 +1,4 @@
-import Button from "../Forms/Button";
+import Button from "@/components/common/Button";
 
 const PageTitle = ({ title, btnLabel }) => {
   return (

@@ -1,7 +1,5 @@
 import FormField from "@/components/common/FormField";
-import Button from "@/components/Forms/Button";
-import Forget from "@/components/Forms/Forget";
-import Input from "@/components/Forms/Input";
+import Button from "@/components/common/Button";
 import Heading from "@/components/layouts/Heading";
 
 const FORM_FIELDS = [

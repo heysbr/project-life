@@ -6,6 +6,7 @@ import FormEmailField from "./formField/FormEmailField";
 import FormCheckboxField from "./formField/FormCheckboxField";
 import FormDatepickerField from "./formField/FormDatepickerField";
 import FormRadioField from "./formField/FormRadioField";
+import FormForgetField from "./formField/FormForgetField";
 
 const fieldComponentMap = {
   text: FormTextField,
@@ -16,6 +17,7 @@ const fieldComponentMap = {
   email: FormEmailField,
   checkbox: FormCheckboxField,
   datepicker: FormDatepickerField,
+  forget: FormForgetField,
 };
 
 const FormField = (props) => {
