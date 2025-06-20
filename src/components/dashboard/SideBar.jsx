@@ -21,7 +21,7 @@ export default function SideBar() {
       <div className={`outline outline-[#E8E8E8] flex items-center justify-between h-17 relative 
         ${open ? "" : "justify-center"}`}>
         {open && ( <Link href="/login" className="p-5"> <span>Project Life</span> </Link> )}
-        <div className={open? "": ""}>
+        <div >
           <Image
             src={open ? Menu : MenuToggle}
             alt="menu"
@@ -34,7 +34,7 @@ export default function SideBar() {
         <Link
           key={href}
           href={href}
-          className={`pl-5 flex items-center gap-3 w-full active:scale-98 ${
+          className={`${open ? "pl-5" : "justify-center"} flex items-center gap-3 w-full active:scale-98 ${
             href === "/dashboard/all-hospitals" ? "border-b border-[#E8E8E8] pb-8" : ""
           }`}
         >
