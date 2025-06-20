@@ -58,7 +58,7 @@ const tableData = [
 const ToggleButton = ({ active }) => {
   const [isActive, setIsActive] = useState(active === "Active");
   return (
-    <div className="flex items-center gap-2">
+    <div className="flex-col py-2 w-full justify-center items-center gap-2 text-sm flex ">
       <div
         className={`w-12 h-6 flex items-center bg-transparent border-2 rounded-full p-1 cursor-pointer ${
           isActive ? "border-green-500" : "border-gray-500"
@@ -71,7 +71,8 @@ const ToggleButton = ({ active }) => {
           }`}
         />
       </div>
-      <span>{isActive ? "Active" : "Inactive"}</span>
+      
+      <p>{isActive ? "Active" : "Inactive"}</p>
     </div>
   );
 };
@@ -87,11 +88,12 @@ const headers = [
   "Action",
 ];
 
-const Table = () => (
-  <div className="flex items-center w-full pb-10">
-    <div className="bg-white shadow-md rounded-lg w-full overflow-hidden">
+export default function TableComponent () {
+  return (
+    <div className="flex items-center w-full pb-10">
+      <div className="bg-white shadow-md rounded-lg w-full overflow-hidden">
 
-      <table className="border-collapse border border-[#E8E8E8] w-full">
+      <table className="border-collapse w-full">
         <thead className="bg-[#FFCCDB]">
           <tr className="text-[#1E1E1E]">
             {headers.map((header) => (
@@ -102,17 +104,17 @@ const Table = () => (
           </tr>
         </thead>
         <tbody className="text-gray-600">
-          {tableData.map((data, idx) => (
+          {tableData.map((data, i) => (
             <tr key={data.id} className="border-b border-[#E8E8E8] hover:bg-pink-50 text-center">
-              <td className="py-3 px-4  *:">{idx + 1}</td>
+              <td className="py-3 px-4 ">{i + 1}</td>
               <td className="py-3 px-4 ">{data.hospitalName}</td>
               <td className="py-3 px-4 ">{data.contactNo}</td>
               <td className="py-3 px-4 ">{data.totalStaff}</td>
               <td className="py-3 px-4 ">{data.totalPatient}</td>
-              <td className="py-3 px-4 text-red-500 font-bold ">
+              <td className="py-3 px-4 text-[#FF6760] ">
                 {data.highRiskPatient}
               </td>
-              <td className="py-3 px-4 w-40  scale-75">
+              <td className="w-40 ">
                 <ToggleButton active={data.status} />
               </td>
               <td className="py-3 px-4 flex items-center gap-3">
@@ -130,9 +132,9 @@ const Table = () => (
           <Image key="prev" src={Arrow} alt="prev" className="rotate-180" />,
           1,2,3,
           <Image key="next" src={Arrow} alt="next" /> 
-        ].map((item, idx) => (
+        ].map((item, i) => (
           <button
-            key={idx}
+            key={i}
             className="px-3 py-1 mx-1 text-pink-600 bg-white border border-pink-300 rounded-md hover:bg-pink-200 active:bg-pink-300 transition-colors"
           >
             {item}
@@ -143,4 +145,4 @@ const Table = () => (
   </div>
 );
 
-export default Table;
+}

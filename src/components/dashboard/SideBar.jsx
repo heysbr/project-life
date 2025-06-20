@@ -24,7 +24,7 @@ export default function SideBar() {
   ];
 
   return (
-    <aside className={`flex flex-col gap-y-5 bg-white transition-all duration-300 ${open ? "w-64" : "w-16"}`} >
+    <aside className={`flex flex-col gap-y-5 bg-white transition-all duration-300 ${open ? "w-56" : "w-16"}`} >
       <div className={`outline outline-[#E8E8E8] flex items-center justify-between h-17 relative 
         ${open ? "" : "justify-center"}`}>
         {open && ( <Link href="/login" className="p-5"> <span>Project Life</span> </Link> )}
@@ -51,7 +51,7 @@ export default function SideBar() {
           src={active === href ? activeIcon : icon} alt={label} 
           className="inline" />
           
-          {open && <span className={`${active === href ? "text-[#FC5285]" : "text-[#52575C]"}`}>{label}</span>}
+          {open && <span className={`${active === href ? "text-[#FC5285]" : "text-[#52575C]"} font-semibold`}>{label}</span>}
 
         </Link>
       ))}
