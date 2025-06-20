@@ -27,17 +27,11 @@ export default function LoginForm() {
       <form className="mt-8">
         <div className="flex flex-col mb-4 mt-8 gap-y-5 ">
           {FORM_FIELDS.map((field, index) => (
-            <FormField
-              key={index}
-              name={field.name}
-              type={field.type}
-              placeholder={field.placeholder}
-              label={field.label}
-            />
+            <FormField key={index} name={field.name} type={field.type} placeholder={field.placeholder} label={field.label} />
           ))}
         </div>
         <Forget />
-        <Button link="/activation" >Login</Button>
+        <Button link="/activation">Login</Button>
       </form>
     </div>
   );
