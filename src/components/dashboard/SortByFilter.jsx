@@ -2,13 +2,13 @@
 import Image from "next/image";
 import React, { useState } from "react";
 import Down from "@/components/svg/down.svg";
+import Sort from "@/components/svg/sortBy.svg";
 
 
-export default function Dropdown({data, name}){
+export default function Dropdown({items, name}){
  const [searchTerm, setSearchTerm] = useState("");
    const [isOpen, setIsOpen] = useState(false);
-
-   const items = ["Apple", "Banana", "Cherry", "Date", "Grapes", "Mango", "Orange"];
+   items = ["Apple", "Banana", "Cherry", "Date", "Grapes", "Mango", "Orange"];
  
    const filteredItems = items.filter((item) =>
      item.toLowerCase().includes(searchTerm.toLowerCase())
@@ -16,15 +16,20 @@ export default function Dropdown({data, name}){
  
    return (
      <div className="relative" onMouseLeave={() => setIsOpen(false)}>
-       <div className="flex flex-row border  border-gray-300 rounded-full bg-[#FFFFFF] " onClick={() => setIsOpen(!isOpen) }>
+       <div className="flex items-center bg-white rounded-4xl px-3 py-1 w-72 h-9 shadow-md " onClick={() => setIsOpen(!isOpen) }>
+             
+           <Image src={Sort} alt="down" className="  inline  ml-5 cursor-pointer active:scale-90" />
            <input
              type="text"
-             placeholder={name}
+             placeholder="Sort By"
              value={searchTerm}
              onChange={(e) => setSearchTerm(e.target.value)}
              onClick={() => setIsOpen(!isOpen)}
              className="p-1.5 px-3 focus:outline-0 text-sm "/>
              <Image src={Down} alt="down" className="  inline  mr-5 cursor-pointer active:scale-90" />
+             
+             
+
        </div> 
        {isOpen && (
          <ul className="absolute z-10 w-full inline-block bg-white  rounded-md shadow-lg h-fit overflow-y-auto list-disc list-inside">
