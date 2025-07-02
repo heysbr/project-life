@@ -33,7 +33,7 @@ const countryCodes = [
 
 export default function FormMobileField({ children, name }) {
   return (
-    <div className="w-fit " >
+    <div className=" " >
       <label className="text-sm font-medium text-gray-700 mb-2">
         Mobile No.
       </label><br/>
@@ -58,7 +58,7 @@ function SelectCountry({ options }) {
   return (
     <>
       <div className="w-fit inline">
-        <select className=" px-1 py-2  text-sm focus:outline-0 mr-2">
+        <select className=" px-1 py-2  text-sm focus:outline-0 mr-2" defaultValue={"+91"}>
           {options.map(({ code, country }) => (
             <option className="hover:bg-[#FC5285]" key={code}><>{code}</></option>
           ))}
