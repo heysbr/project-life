@@ -1,7 +1,7 @@
-"use client"
+"use client";
 import React, { useState, useEffect } from "react";
 
-const Timer = ({classname}) => {
+const Timer = ({ classname }) => {
   const [time, setTime] = useState(30); // Initialize timer with 30 seconds
 
   useEffect(() => {
@@ -15,10 +15,9 @@ const Timer = ({classname}) => {
   }, [time]);
 
   return (
-
-      
-      <div className={`${classname}`}>{time === 0 ? <p>Time's up!</p> : <p>{`00:${time}`}</p> }</div>
-
+    <div className={`${classname}`}>
+      {time === 0 ? <p>Time's up!</p> : <p>{`00:${time}`}</p>}
+    </div>
   );
 };
 

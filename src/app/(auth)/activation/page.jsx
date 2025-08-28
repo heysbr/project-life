@@ -1,6 +1,3 @@
-import React from 'react'
-
-
 import OtpPage from '@/components/Activation/OtpPage';
 import Container from '@/components/Container/Container';
 

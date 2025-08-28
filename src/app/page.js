@@ -1,3 +1,4 @@
+"use client";
 import Button from "@/components/common/Button";
 import svg1 from "@/components/images/bg-svg1.svg";
 import svg2 from "@/components/images/bg-svg2.svg";

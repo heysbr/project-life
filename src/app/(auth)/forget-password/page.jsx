@@ -2,26 +2,7 @@ import FormField from "@/components/common/FormField";
 import Button from "@/components/common/Button";
 import Heading from "@/components/layouts/Heading";
 
-const FORM_FIELDS = [
-  {
-    name: "email",
-    type: "text",
-    placeholder: "Email ID",
-    label: "Enter Email ID",
-  },
-  {
-    name: "password1",
-    type: "password",
-    placeholder: "Password",
-    label: "Enter New Password",
-  },
-  {
-    name: "password2",
-    type: "password",
-    placeholder: "Password",
-    label: "Enter Confirm Password",
-  },
-];
+import { LoginFields } from "@/data/fields";
 
 export default function LoginForm() {
   return (
@@ -31,7 +12,7 @@ export default function LoginForm() {
         <h2 className="font-medium mb-8 text-2xl">Reset Password</h2>
         <form className="px-10">
           <div className="flex flex-col mb-4  gap-y-5 ">
-            {FORM_FIELDS.map((field, index) => (
+            {LoginFields.map((field, index) => (
               <FormField
                 key={index}
                 name={field.name}
