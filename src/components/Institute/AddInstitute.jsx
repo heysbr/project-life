@@ -9,7 +9,7 @@ import { AddInstituteFields as fields } from "@/data/fields";
 
 export default function AddInstitute({ closeModal }) {
   return (
-    <div className="bg-[#FFFFFF] absolute top-1/2 left-1/2 -translate-1/2  z-50 h-4/5  w-4/5 flex items-center  flex-col rounded-md border shadow-2xlp-10">
+    <div className="bg-[#FFFFFF]  shadow-2xl  absolute top-1/2 left-1/2 -translate-1/2  z-50 h-4/5  w-4/5 flex items-center  flex-col rounded-md  shadow-2xlp-10">
       <Image
         src={addInstituteCrossBtn}
         alt="close"

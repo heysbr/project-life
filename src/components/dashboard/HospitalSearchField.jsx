@@ -4,7 +4,7 @@ import searchImg from "@/components/svg/search.svg";
 
 export default function HospitalSearchField() {
   return (
-    <div className="flex items-center bg-white rounded-4xl px-3 py-1 w-72 h-9 shadow-md ">
+    <div className="flex items-center bg-white rounded-4xl px-3 py-1 w-72 h-9 shadow-md mb-5 ">
       <Image src={searchImg} alt="search" />
       <input
         type="text"

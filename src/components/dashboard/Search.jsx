@@ -16,13 +16,13 @@ import ProfileSection from "../common/profile/ProfileSection";
 
 export default function Search() {
   return (
-    <div className="flex flex-row justify-between bg-[#FFFFFF] h-17  ">
+    <div className="flex flex-row justify-between bg-[#FFFFFF] h-17 ">
       <div className="flex flex-row gap-x-4 my-auto">
         <span className="ml-10 my-auto font-medium  ">Search Hospitals</span>
         <Dropdown name={"State"} data={hospitals}/>
         <Dropdown name={"District"} data={hospitals}/>
         <Dropdown name={"Hospitals"} data={hospitals}/>
-        <Image src={Bell} alt="bell" className="cursor-pointer active:scale-90 transition-all"/>
+        <Image width={"auto"} height={"auto"} src={Bell} alt="bell" className="cursor-pointer active:scale-90 transition-all"/>
       </div>
       <ProfileSection />
     </div>

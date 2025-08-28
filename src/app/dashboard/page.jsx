@@ -5,12 +5,12 @@ import React from "react";
 
 export default function page() {
   return (
-    <div className="flex-1 ">
-      <Search/>
+    <div className="flex-1 h-max">
+      <Search />
       <div className="bg-white/80 ">
-      <Stats/>
-      <HospitalList/>
+        <Stats />
+        <HospitalList />
       </div>
-      </div>
+    </div>
   );
 }
