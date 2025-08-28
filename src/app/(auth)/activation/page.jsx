@@ -1,7 +1,7 @@
 import React from 'react'
 
 
-import OtpPage from '@/Pages/OtpPage/OtpPage';
+import OtpPage from '@/components/Activation/OtpPage';
 import Container from '@/components/Container/Container';
 
 export default function page() {

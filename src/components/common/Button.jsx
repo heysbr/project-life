@@ -1,0 +1,16 @@
+import Link from "next/link";
+
+export default function Button(props) {
+
+
+  return (
+    <Link href={props?.link || "#"} >
+      <button
+        type="submit"
+        className={`${props?.className} ${props?.height || "h-10"} ${props?.width || "w-full"} px-4  h-10  text-white bg-[#FC5285] rounded-md text-sm cursor-pointer active:bg-[#E0365A] duration-300 transition-all`}
+      >
+        {props?.label || "Submit"}
+      </button>
+    </Link>
+  );
+}

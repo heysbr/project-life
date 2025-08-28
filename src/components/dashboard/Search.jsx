@@ -1,9 +1,9 @@
 
 import React from "react";
-import SearchInput from "./Dropdown";
-import Bell from "@/components/dashboard/svg/Bell.svg";
+import Dropdown from "./Dropdown";
+import Bell from "@/components/svg/Bell.svg";
 import Image from "next/image";
-import Profile from "@/components/dashboard/svg/photo.png";
+import ProfileSection from "../common/profile/ProfileSection";
 
  const hospitals = [
     "All Hospitals",
@@ -19,15 +19,12 @@ export default function Search() {
     <div className="flex flex-row justify-between bg-[#FFFFFF] h-17  ">
       <div className="flex flex-row gap-x-4 my-auto">
         <span className="ml-10 my-auto font-medium  ">Search Hospitals</span>
-        <SearchInput name={"State"} data={hospitals}/>
-        <SearchInput name={"District"} data={hospitals}/>
-        <SearchInput name={"Hospitals"} data={hospitals}/>
-        <Image src={Bell} alt="bell cursor pointer" />
+        <Dropdown name={"State"} data={hospitals}/>
+        <Dropdown name={"District"} data={hospitals}/>
+        <Dropdown name={"Hospitals"} data={hospitals}/>
+        <Image src={Bell} alt="bell" className="cursor-pointer active:scale-90 transition-all"/>
       </div>
-      <div className=" mr-3 px-3 flex flex-row ">
-        <span className="my-auto mr-2 font-medium text-sm border-l pl-3 border-[#DFE0EB]">Supreme Admin</span>
-        <Image src={Profile} alt="profile" className="inline size-10 my-auto" />
-      </div>
+      <ProfileSection />
     </div>
   );
 }
