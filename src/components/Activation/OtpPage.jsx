@@ -15,7 +15,7 @@ export default function OtpPage() {
       </p>
       <OtpInput className={"justify-center mb-10"} />
       <Timer classname={"text-center mb-10"} />
-      <Button link="/forget-password">Submit</Button>
+      <Button link="/dashboard">Submit</Button>
     </div>
   );
 }

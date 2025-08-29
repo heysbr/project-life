@@ -2,26 +2,23 @@
 import React, { useState } from "react";
 import Menu from "@/components/svg/Menu.svg";
 import MenuToggle from "@/components/svg/menu-toggle.svg";
-import Dashboard from "@/components/svg/dashboard.svg";
-import Hospitals from "@/components/svg/all-hospitals.svg";
-import Help from "@/components/svg/help.svg";
 
 
-import ActiveDashboard from "@/components/svg/dashboard-active-svgs/dashboardActive.svg";
-import ActiveHospitals from "@/components/svg/dashboard-active-svgs/all-hospitalsActive.svg";
-import ActiveHelp from "@/components/svg/dashboard-active-svgs/helpActive.svg";
+
+
 
 import Image from "next/image";
 import Link from "next/link";
 
+
+
+  import {SideBarLinks} from "@/data/data"
+
 export default function SideBar() {
   const [open, setOpen] = useState(true);
   const[active, setActive] = useState("/dashboard");
-  const links = [
-    { href: "/dashboard", icon: Dashboard, label: "Dashboard", activeIcon: ActiveDashboard },
-    { href: "/dashboard/all-hospitals", icon: Hospitals, label: "All Hospitals", activeIcon: ActiveHospitals },
-    { href: "/dashboard/help", icon: Help, label: "Help", activeIcon: ActiveHelp },
-  ];
+
+  
 
   return (
     <aside className={`flex flex-col gap-y-5 bg-white transition-all duration-300 ${open ? "w-56" : "w-16"}`} >
@@ -37,7 +34,7 @@ export default function SideBar() {
           />
         </div>
       </div>
-      {links.map(({ href, icon, label, activeIcon }) => (
+      {SideBarLinks.map(({ href, icon, label, activeIcon }) => (
         <Link
           key={href}
           href={href}

@@ -213,7 +213,6 @@ export const Staffdata = [
   },
 ];
 
-
 import Hospitals from "@/components/dashboard/cards/Hospitals.svg";
 import Staff from "@/components/dashboard/cards/Staff.svg";
 import Patients from "@/components/dashboard/cards/Patients.svg";
@@ -230,4 +229,114 @@ export const LargeCardData = [
     totalDeliveries: 580,
     veginal: 230,
     surgical: 350,
-  }]
+  },
+];
+
+export const HospitalsListData = [
+  "All Hospitals",
+  "Apollo Hospital",
+  "FemCare OBS/GYN Clinic",
+  "Artemis Hospital",
+  "Medanta -The Medicity",
+  "Ease Care Clinic",
+];
+
+export const StatesListData = [
+  "All Cities",
+  "Delhi",
+  "Mumbai",
+  "Kolkata",
+  "Chennai",
+  "Bengaluru",
+  "Hyderabad",
+  "Ahmedabad",
+  "Pune",
+];
+
+export const DistrictsList = [
+  "New Delhi",
+  "South Delhi",
+  "Mumbai City",
+  "Mumbai Suburban",
+  "Kolkata",
+  "Chennai",
+  "Bangalore Urban",
+  "Hyderabad",
+  "Ahmedabad",
+  "Pune",
+];
+
+export const tableComponentData = [
+  {
+    id: 1,
+    hospitalName: "Apollo Hospital",
+    contactNo: "9555508100",
+    totalStaff: 25,
+    totalPatient: 45,
+    highRiskPatient: 12,
+    status: "Active",
+  },
+  {
+    id: 2,
+    hospitalName: "Ease Care Clinic",
+    contactNo: "8655508122",
+    totalStaff: 15,
+    totalPatient: 38,
+    highRiskPatient: 5,
+    status: "Inactive",
+  },
+  {
+    id: 3,
+    hospitalName: "FemCare OBS/GYN Clinic",
+    contactNo: "9855508109",
+    totalStaff: 20,
+    totalPatient: 32,
+    highRiskPatient: 8,
+    status: "Active",
+  },
+  {
+    id: 4,
+    hospitalName: "Artemis Hospital",
+    contactNo: "8655508122",
+    totalStaff: 18,
+    totalPatient: 20,
+    highRiskPatient: 3,
+    status: "Active",
+  },
+  {
+    id: 5,
+    hospitalName: "Medanta - The Medicity",
+    contactNo: "9855508109",
+    totalStaff: 15,
+    totalPatient: 48,
+    highRiskPatient: 15,
+    status: "Active",
+  },
+];  
+
+import Dashboard from "@/components/svg/dashboard.svg";
+import HospitalsIcon from "@/components/svg/all-hospitals.svg";
+import Help from "@/components/svg/help.svg";
+import ActiveDashboard from "@/components/svg/dashboard-active-svgs/dashboardActive.svg";
+import ActiveHospitals from "@/components/svg/dashboard-active-svgs/all-hospitalsActive.svg";
+import ActiveHelp from "@/components/svg/dashboard-active-svgs/helpActive.svg";
+export const SideBarLinks = [
+  {
+    href: "/dashboard",
+    icon: Dashboard,
+    label: "Dashboard",
+    activeIcon: ActiveDashboard,
+  },
+  {
+    href: "/dashboard/all-hospitals",
+    icon: HospitalsIcon,
+    label: "All Hospitals",
+    activeIcon: ActiveHospitals,
+  },
+  {
+    href: "/dashboard/help",
+    icon: Help,
+    label: "Help",
+    activeIcon: ActiveHelp,
+  },
+];
