@@ -2,6 +2,7 @@
 import Image from "next/image";
 import React, { useState } from "react";
 import Down from "@/components/svg/down.svg";
+import Link from "next/link";
 
 export default function Dropdown({ data, name }) {
   const [searchTerm, setSearchTerm] = useState("");
@@ -36,16 +37,17 @@ export default function Dropdown({ data, name }) {
         <ul className="absolute z-10 w-full inline-block bg-white  rounded-md shadow-lg h-fit overflow-y-auto list-disc list-inside">
           {filteredItems.length > 0 ? (
             filteredItems.map((item, index) => (
-              <li
-                key={index}
-                className="p-2 pl-5 text-sm hover:bg-gray-100 cursor-pointer  "
-                onClick={() => {
-                  setSearchTerm(item);
-                  setIsOpen(!isOpen);
-                }}
-              >
-                {item}
-              </li>
+              <Link href="/dashboard/all-hospitals/staff" key={index}>
+                <li
+                  className="p-2 pl-5 text-sm hover:bg-gray-100 cursor-pointer  "
+                  onClick={() => {
+                    setSearchTerm(item);
+                    setIsOpen(!isOpen);
+                  }}
+                >
+                  {item}
+                </li>
+              </Link>
             ))
           ) : (
             <div className="p-2 pl-5 text-gray-500 text-sm">No items found</div>

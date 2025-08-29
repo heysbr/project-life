@@ -1,12 +1,11 @@
 import Stats from "@/components/dashboard/Stats";
-import StaffCards from "@/components/dashboard/StaffCards";
-import { Staffdata } from "@/data/data";
+import WardGroup from "@/components/dashboard/WardGroup";
 
 export default function page() {
   return (
     <div className="bg-white/80 ">
       <Stats />
-      <StaffCards data={Staffdata} />
+      <WardGroup />
     </div>
   );
 }

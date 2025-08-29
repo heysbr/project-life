@@ -8,6 +8,7 @@ import Call from "@/components/svg/staff-list-call-button.svg";
 import Menu from "@/components/svg/staff-card-menu.svg";
 import Profile from "@/components/svg/staff-card-profile.svg";
 import Image from "next/image";
+import Link from "next/link";
 
 const CARDS_PER_PAGE = 6;
 
@@ -22,10 +23,10 @@ export default function StaffCards({ data = [] }) {
     <div className="flex flex-col mx-10 mt-15 h-fit ">
       <div className="flex flex-row gap-x-7 border-b-2 border-[#CFD2D7] pl-9">
         <div className="bg-[#FC5285] px-7 outline-[#FC5285] outline-2 rounded-t-lg py-2 h-full text-[#FFFFFF] ">
-          Staff
+          <Link href="/dashboard/all-hospitals/staff">Staff</Link>
         </div>
         <div className=" px-7 rounded-t-lg py-2 h-full text-[#25282B] ">
-          Wards
+          <Link href="/dashboard/all-hospitals/wards">Wards</Link>
         </div>
       </div>
       <h1 className="font-bold mt-12 mb-8"> Staff List</h1>

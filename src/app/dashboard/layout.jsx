@@ -1,14 +1,19 @@
-import SideBar from '@/components/dashboard/SideBar'
-import React from 'react'
-
+import ProfileSection from "@/components/common/profile/ProfileSection";
+import Search from "@/components/dashboard/Search";
+import SideBar from "@/components/dashboard/SideBar";
+import React from "react";
 
 export default function layout({ children }) {
   return (
     <div className={`flex flex-row bg-[#E8E8E8] h-fit`}>
-          <div className="flex flex-col bg-[#FFFFFF] w-fit">
-            <SideBar />
-          </div>
-          {children}
+      <SideBar />
+      <div className="flex-1 h-max">
+        <div className="flex flex-row justify-between bg-[#FFFFFF] h-17 ">
+          <Search />
+          <ProfileSection />
         </div>
-  )
+        <div className="bg-white/80 ">{children}</div>
+      </div>
+    </div>
+  );
 }
