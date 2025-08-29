@@ -1,4 +1,5 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
 import Hospitals from "@/components/dashboard/cards/Hospitals.svg";
 import Staff from "@/components/dashboard/cards/Staff.svg";
 import Patients from "@/components/dashboard/cards/Patients.svg";
@@ -7,6 +8,7 @@ import Pie from "@/components/svg/pie-chart.svg";
 import PageTitle from "../common/PageTitle";
 import { LargeCard } from "./LargeCard";
 import { SmallCard } from "./SmallCard";
+import Modal from "./Modal";
 
 export const data = [
   { name: "Hospitals", num: "450", icon: Hospitals },
@@ -15,15 +17,20 @@ export const data = [
   { name: "High risk patients", num: "500", icon: Risk },
 ];
 
+
 export default function Stats() {
+  const [open,setOpen] = useState(false);
   return (
-    <div className="mx-10">
-      <PageTitle title={"Dashboard- All Hospitals"} btnLabel={"Add Institute"} />
+    <>
+        <div className="mx-10">
+      <PageTitle title={"Dashboard- All Hospitals"} btnLabel={"Add Institute"} onClick={() => setOpen(true)} />
         <div className="flex flex-row">
           <SmallCard data={data} />
           <LargeCard name={"Total Deliveries"} num={"580"} icon={Pie} />
         </div>
     </div>
+    {open && <Modal closeModal={setOpen} label={"Ward Name"} placeholder={"Ward 1"}/>}
+    </>
   );
 }
 

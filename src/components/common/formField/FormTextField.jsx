@@ -1,7 +1,7 @@
 export default function FormTextField(props) {
   return (
     <div className="">
-      <label className="text-sm font-medium text-gray-700 mb-2">
+      <label className="text-sm font-bold text-gray-700 mb-2">
         {props?.label}
       </label>
       <input
