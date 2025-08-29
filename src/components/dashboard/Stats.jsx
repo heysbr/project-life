@@ -1,37 +1,36 @@
 "use client";
 import React, { useState } from "react";
-import Hospitals from "@/components/dashboard/cards/Hospitals.svg";
-import Staff from "@/components/dashboard/cards/Staff.svg";
-import Patients from "@/components/dashboard/cards/Patients.svg";
-import Risk from "@/components/dashboard/cards/risk-patients.svg";
-import Pie from "@/components/svg/pie-chart.svg";
+
 import PageTitle from "../common/PageTitle";
 import { LargeCard } from "./LargeCard";
 import { SmallCard } from "./SmallCard";
 import Modal from "./Modal";
 
-export const data = [
-  { name: "Hospitals", num: "450", icon: Hospitals },
-  { name: "Staff", num: "1200", icon: Staff },
-  { name: "Total Patients", num: "1500", icon: Patients },
-  { name: "High risk patients", num: "500", icon: Risk },
-];
-
+import { SmallCardData } from "@/data/data";
+import { LargeCardData } from "@/data/data";
 
 export default function Stats() {
-  const [open,setOpen] = useState(false);
+  const [open, setOpen] = useState(false);
   return (
     <>
-        <div className="mx-10">
-      <PageTitle title={"Dashboard- All Hospitals"} btnLabel={"Add Institute"} onClick={() => setOpen(true)} />
+      <div className="mx-10">
+        <PageTitle
+          title={"Dashboard- All Hospitals"}
+          btnLabel={"Add Institute"}
+          onClick={() => setOpen(true)}
+        />
         <div className="flex flex-row">
-          <SmallCard data={data} />
-          <LargeCard name={"Total Deliveries"} num={"580"} icon={Pie} />
+          <SmallCard data={SmallCardData} />
+          <LargeCard data={LargeCardData} />
         </div>
-    </div>
-    {open && <Modal closeModal={setOpen} label={"Ward Name"} placeholder={"Ward 1"}/>}
+      </div>
+      {open && (
+        <Modal
+          closeModal={setOpen}
+          label={"Ward Name"}
+          placeholder={"Ward 1"}
+        />
+      )}
     </>
   );
 }
-
-
