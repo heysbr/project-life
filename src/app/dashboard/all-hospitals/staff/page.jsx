@@ -6,7 +6,7 @@ export default function page() {
   return (
     <div className="bg-white/80 ">
       <Stats />
-      <StaffCards data={Staffdata} />
+      {/* <StaffCards data={Staffdata} /> */}
     </div>
   );
 }
