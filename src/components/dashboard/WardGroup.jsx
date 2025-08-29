@@ -66,7 +66,7 @@ export default function WardGroup() {
           <button
             onClick={() => setPage((p) => Math.max(1, p - 1))}
             disabled={page === 1}
-            className="px-3 py-1 rounded border border-[#E8E8E8] disabled:opacity-50"
+            className="px-3 py-1 cursor-pointer rounded border border-[#E8E8E8] disabled:opacity-50"
           >
             <Svg2 />
           </button>
@@ -76,7 +76,7 @@ export default function WardGroup() {
             <button
               key={idx}
               onClick={() => setPage(idx + 1)}
-              className={`px-3 py-1 rounded ${
+              className={`px-3 py-1 rounded cursor-pointer ${
                 page === idx + 1
                   ? "bg-[#FC5285] text-white"
                   : "border-[#E8E8E8] border"
@@ -90,7 +90,7 @@ export default function WardGroup() {
           <button
             onClick={() => setPage((p) => Math.min(totalPages, p + 1))}
             disabled={page === totalPages}
-            className="px-3 py-1 rounded border border-[#E8E8E8] disabled:opacity-50 transition-all duration-300"
+            className="px-3 py-1 cursor-pointer rounded border border-[#E8E8E8] disabled:opacity-50 transition-all duration-300"
           >
             <Svg1 />
           </button>

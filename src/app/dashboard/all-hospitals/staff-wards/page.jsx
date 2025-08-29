@@ -8,8 +8,6 @@ import WardGroup from "@/components/dashboard/WardGroup";
 
 
 export default function page() {
-  const children1 = <p>hello1</p>;
-  const children2 = <p>hello2</p>;
       const [activeTab, setActiveTab] = useState("staff");
   return (
     <div className="bg-white/80 ">

@@ -96,7 +96,7 @@ export default function TableComponent() {
         </table>
 
         {/* table Buttons for pagination */}
-        <div className="flex justify-end p-4">
+        <div className="flex justify-end p-4 ">
           {[
             <Image key="prev" src={Arrow} alt="prev" className="rotate-180" />,
             1,
@@ -106,7 +106,7 @@ export default function TableComponent() {
           ].map((item, i) => (
             <button
               key={i}
-              className="px-3 py-1 mx-1 text-pink-600 bg-white border border-pink-300 rounded-md hover:bg-pink-200 active:bg-pink-300 transition-colors"
+              className="px-3 py-1 mx-1 text-pink-600 bg-white border border-pink-300 rounded-md hover:bg-pink-200 active:bg-pink-300 transition-colors cursor-pointer"
             >
               {item}
             </button>

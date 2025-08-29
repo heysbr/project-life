@@ -9,8 +9,8 @@ export default function WardCard({wardNumber ="1", totalPatient = "25" }) {
     <div className="w-full rounded-xl shadow-xl overflow-hidden">
       <div className=" bg-[#FFEEF3]  ">
         <div className="flex items-center  justify-end gap-x-3 p-3 pb-0">
-          <Image src={editIcon} alt="" />
-          <Image src={deleteIcon} alt="" />
+          <Image src={editIcon} alt="" className="cursor-pointer"/>
+          <Image src={deleteIcon} alt="" className="cursor-pointer" />
         </div>
 
         <div className="flex items-center gap-x-5 px-5 pb-4 pt-0">
