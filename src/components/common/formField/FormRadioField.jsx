@@ -1,11 +1,12 @@
-const FormRadioField = () => {
+const FormRadioField = ({children, values}) => {
+  values = values || [{value: "Yes"}, {value: "No"}]
   return (
     <>
       <label className="text-sm font-medium text-gray-700 mb-2">
         {children}
       </label>
       <div className="flex flex-row gap-x-10">
-        {radioGroup.map(({ value }, i) => (
+        {values.map(({ value }, i) => (
           <span key={i}>
              {" "}
             <input

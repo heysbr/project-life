@@ -7,9 +7,13 @@ import Button from "@/components/common/Button";
 import Link from "next/link";
 import { useState } from "react";
 import PageTitle from "../common/PageTitle";
+import Modal from "./Modal";
+import FormRadioField from "../common/formField/FormRadioField";
+import FormTextField from "../common/formField/FormTextField";
 
 export default function WardGroup() {
    const [page, setPage] = useState(1);
+   const [addWardModal, setAddWardModal] = useState(false)
   
     const totalPages = Math.ceil(9 / 6);
   return (
@@ -47,7 +51,13 @@ export default function WardGroup() {
     //   </div>
     // </div>
     <div className="mb-10 ">
-      <PageTitle title={ "All Wards"} btnLabel={ "Add Ward"}  />
+      <PageTitle title={ "All Wards"} btnLabel={ "Add Ward"}  onClick={setAddWardModal}/>
+      {addWardModal && (
+        <Modal closeModal={setAddWardModal} >
+          <h1>Add a new ward</h1>
+          <FormTextField  label="Add Ward Name" placeholder="Enter name"/>
+        </Modal>
+        )}
       {/* Cards */}
       <div className="grid grid-cols-3 gap-6 w-full mb-10 ">
         <WardCard />

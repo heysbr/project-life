@@ -2,11 +2,15 @@
 import React, { useState } from "react";
 import StaffCard from "@/components/dashboard/StaffCard";
 import PageTitle from "../common/PageTitle";
+import Modal from "./Modal";
+import FormTextField from "../common/formField/FormTextField";
+import FormRadioField from "../common/formField/FormRadioField";
 
 const CARDS_PER_PAGE = 6;
 
 export default function StaffCards({ data }) {
   const [page, setPage] = useState(1);
+  const [addStaffModal, setAddStaffModal] = useState(false);
 
   const totalPages = Math.ceil(data.length / CARDS_PER_PAGE);
   const startIdx = (page - 1) * CARDS_PER_PAGE;
@@ -14,7 +18,26 @@ export default function StaffCards({ data }) {
 
   return (
     <div className="mb-10 ">
-      <PageTitle title={ "All Staff"} btnLabel={ "Add Staff"}  />
+      <PageTitle
+        title={"All Staff"}
+        btnLabel={"Add Staff"}
+        onClick={setAddStaffModal}
+      />
+      {addStaffModal && (
+        <Modal
+          closeModal={setAddStaffModal}
+          btnText={"Yes"}
+          secondaryBtnText={"No"}
+        >
+          <h1>Add a new ward</h1>
+          <FormRadioField
+            values={[
+              { value: "Add Staff Manually" },
+              { value: "Add Staff via Sheet" },
+            ]}
+          />
+        </Modal>
+      )}
       {/* Cards */}
       <div className="grid grid-cols-3 gap-4 ">
         {currentData.map((staff, i) => (
@@ -62,7 +85,6 @@ export default function StaffCards({ data }) {
     </div>
   );
 }
-
 
 function Svg1() {
   return (
