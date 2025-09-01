@@ -30,8 +30,18 @@ export default function Home() {
           className="absolute left-45  overflow-hidden size-30 "
         />
       </Link>
-      <div className="flex flex-col justify-center items-center h-screen w-full ">
+      <div className="flex justify-center items-center">
+
+      <div className="flex flex-col gap-5 justify-center items-start h-screen w-fit ">
         <Button label="Get Started" link="/login"/>
+        <Button label="Dashboard" link="/dashboard"/>
+        <Button label="All Hospitals" link="/dashboard/all-hospitals"/>
+        <Button label="Staff and Wards Hospitals" link="/dashboard/all-hospitals/staff-wards"/>
+        <Button label="Otp Page" link="/activation"/>
+        <Button label="Forgot Page" link="/forget-password"/>
+        <Button label="Login Page" link="/login"/>
+        <Button label="Test Page" link="/test"/>
+      </div>
       </div>
     </div>
   );
