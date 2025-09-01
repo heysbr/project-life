@@ -5,10 +5,13 @@ import { useState } from "react";
 
 import { Staffdata } from "@/data/data";
 import WardGroup from "@/components/dashboard/WardGroup";
+import PageTitle from "@/components/common/PageTitle";
 
 
 export default function page() {
       const [activeTab, setActiveTab] = useState("staff");
+      const [addWardModal, setAddWardModal] = useState(false);
+      const [addStaffModal, setAddStaffModal] = useState(false);
   return (
     <div className="bg-white/80 ">
       <Stats />
@@ -31,6 +34,7 @@ export default function page() {
           Wards
         </div>
       </div>
+      
       <div className="mt-12">{activeTab==="staff" && <StaffCards data={Staffdata} />}{activeTab==="wards" && <WardGroup/>}</div>
     </div>
     </div>

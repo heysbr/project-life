@@ -38,6 +38,7 @@ export default function AddInstitute({ closeModal }) {
       </div>
 
       <Button label={"Add Institute"} width={"w-68"} />
+      
     </div>
   );
 }

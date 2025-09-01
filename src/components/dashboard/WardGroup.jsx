@@ -6,6 +6,7 @@ import Button from "@/components/common/Button";
 
 import Link from "next/link";
 import { useState } from "react";
+import PageTitle from "../common/PageTitle";
 
 export default function WardGroup() {
    const [page, setPage] = useState(1);
@@ -46,6 +47,7 @@ export default function WardGroup() {
     //   </div>
     // </div>
     <div className="mb-10 ">
+      <PageTitle title={ "All Wards"} btnLabel={ "Add Ward"}  />
       {/* Cards */}
       <div className="grid grid-cols-3 gap-6 w-full mb-10 ">
         <WardCard />

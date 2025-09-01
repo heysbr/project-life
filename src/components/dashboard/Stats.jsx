@@ -8,6 +8,7 @@ import Modal from "./Modal";
 
 import { SmallCardData } from "@/data/data";
 import { LargeCardData } from "@/data/data";
+import AddInstitute from "@/components/Institute/AddInstitute";
 
 export default function Stats() {
   const [open, setOpen] = useState(false);
@@ -25,11 +26,8 @@ export default function Stats() {
         </div>
       </div>
       {open && (
-        <Modal
-          closeModal={setOpen}
-          label={"Ward Name"}
-          placeholder={"Ward 1"}
-        />
+
+        <AddInstitute closeModal={setOpen} />
       )}
     </>
   );

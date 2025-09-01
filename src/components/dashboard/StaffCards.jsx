@@ -1,6 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import StaffCard from "@/components/dashboard/StaffCard";
+import PageTitle from "../common/PageTitle";
 
 const CARDS_PER_PAGE = 6;
 
@@ -13,6 +14,7 @@ export default function StaffCards({ data }) {
 
   return (
     <div className="mb-10 ">
+      <PageTitle title={ "All Staff"} btnLabel={ "Add Staff"}  />
       {/* Cards */}
       <div className="grid grid-cols-3 gap-4 ">
         {currentData.map((staff, i) => (
