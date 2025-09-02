@@ -1,8 +1,7 @@
 "use client";
 import Button from "@/components/common/Button";
 import ButtonSecondary from "@/components/common/ButtonSecondary";
-import FormDownloadSample from "@/components/common/formField/FormDownloadSample";
-import FormUploadField from "@/components/common/formField/FormUploadField";
+import FormPasswordField from "@/components/common/formField/FormPasswordField";
 import Modal from "@/components/dashboard/modals/Modal";
 import { useState } from "react";
 
@@ -17,18 +16,18 @@ export default function AlertMessage() {
         click
       </button>
       {toggle && (
-        <Modal
-          heading="Add Staff via Sheet"
-          closeModal={() => setToggle(false)}
-        >
-          <div className="flex flex-row gap-x-4 items-center justify-center">
-          <FormUploadField />
-          <FormDownloadSample/>
-          </div>
-            
+        <Modal heading="Update Password" closeModal={() => setToggle(false)}>
+          <FormPasswordField
+            placeholder="Enter new password"
+            label="Enter New Password"
+          />
+          <FormPasswordField
+            placeholder="Enter confirm password"
+            label="Confirm Password"
+          />
           <div className="flex flex-row gap-x-4 justify-end mt-4">
             <ButtonSecondary label="Cancel" onClick={() => setToggle(false)} />
-            <Button label="Upload" onClick={() => setToggle(false)} />
+            <Button label="Update" onClick={() => setToggle(false)} />
           </div>
         </Modal>
       )}

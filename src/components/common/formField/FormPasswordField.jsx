@@ -8,7 +8,7 @@ export default function FormPasswordField(props) {
   
   return (
  
-     <div className="relative">
+     <div className="relative w-full">
           <label className="text-sm font-medium text-gray-700 mb-2">
             {props?.label}
           </label>
