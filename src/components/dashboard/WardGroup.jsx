@@ -4,6 +4,8 @@ import { useState } from "react";
 import PageTitle from "../common/PageTitle";
 import Modal from "./modals/Modal";
 import FormTextField from "../common/formField/FormTextField";
+import ArrowBtn from "@/components/svg/arrowBtn.svg";
+import Image from "next/image";
 
 export default function WardGroup() {
   const [page, setPage] = useState(1);
@@ -44,7 +46,7 @@ export default function WardGroup() {
             disabled={page === 1}
             className="px-3 py-1 cursor-pointer rounded border border-[#E8E8E8] disabled:opacity-50"
           >
-            <Svg2 />
+            <Image src={ArrowBtn} alt="next" className="rotate-180" />
           </button>
 
           {/* Numbers Button */}
@@ -68,46 +70,10 @@ export default function WardGroup() {
             disabled={page === totalPages}
             className="px-3 py-1 cursor-pointer rounded border border-[#E8E8E8] disabled:opacity-50 transition-all duration-300"
           >
-            <Svg1 />
+            <Image src={ArrowBtn} alt="next" />
           </button>
         </div>
       )}
     </div>
-  );
-}
-
-function Svg1() {
-  return (
-    <svg
-      width="16"
-      height="17"
-      viewBox="0 0 16 17"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <path
-        d="M6.28811 13.0482L11.0881 8.24824L6.28811 3.44824L4.92811 4.80824L8.35211 8.24824L4.91211 11.6882L6.28811 13.0482Z"
-        fill="#52575C"
-      />
-    </svg>
-  );
-}
-
-function Svg2() {
-  return (
-    <svg
-      width="16"
-      height="17"
-      viewBox="0 0 16 17"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <g opacity="0.7">
-        <path
-          d="M9.71211 3.44824L4.91211 8.24824L9.71211 13.0482L11.0881 11.6882L7.64811 8.24824L11.0881 4.80824L9.71211 3.44824Z"
-          fill="#52575C"
-        />
-      </g>
-    </svg>
   );
 }
