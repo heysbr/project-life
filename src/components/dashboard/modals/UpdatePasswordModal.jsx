@@ -1,4 +1,4 @@
-export default function UpdatePasswordModal({closeModal}) {
+export default function UpdatePasswordModal({ closeModal }) {
   return (
     <Modal heading="Update Password" closeModal={() => closeModal(false)}>
       <FormPasswordField

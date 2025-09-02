@@ -6,18 +6,22 @@ import Modal from "./modals/Modal";
 import FormTextField from "../common/formField/FormTextField";
 
 export default function WardGroup() {
-   const [page, setPage] = useState(1);
-   const [addWardModal, setAddWardModal] = useState(false)
-  
-    const totalPages = Math.ceil(9 / 6);
+  const [page, setPage] = useState(1);
+  const [addWardModal, setAddWardModal] = useState(false);
+
+  const totalPages = Math.ceil(9 / 6);
   return (
     <div className="mb-10 ">
-      <PageTitle title={ "All Wards"} btnLabel={ "Add Ward"}  onClick={setAddWardModal}/>
+      <PageTitle
+        title={"All Wards"}
+        btnLabel={"Add Ward"}
+        onClick={setAddWardModal}
+      />
       {addWardModal && (
         <Modal closeModal={setAddWardModal} heading="Add a new ward">
-          <FormTextField  label="Add Ward Name" placeholder="Enter name"/>
+          <FormTextField label="Add Ward Name" placeholder="Enter name" />
         </Modal>
-        )}
+      )}
       {/* Cards */}
       <div className="grid grid-cols-3 gap-6 w-full mb-10 ">
         <WardCard />

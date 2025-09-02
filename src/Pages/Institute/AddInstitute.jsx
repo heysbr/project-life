@@ -1,7 +1,6 @@
 import Button from "@/components/common/Button";
 import FormField from "@/components/common/FormField";
 import Image from "next/image";
-import React from "react";
 import defaultProfile from "@/components/svg/defaultProfile.svg";
 import addInstituteCrossBtn from "@/components/svg/addInstituteCrossBtn.svg";
 

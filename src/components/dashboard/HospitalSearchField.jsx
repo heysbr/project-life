@@ -1,5 +1,5 @@
-"use client"
-import React, { useState } from "react";
+"use client";
+import { useState } from "react";
 import Image from "next/image";
 import searchImg from "@/components/svg/search.svg";
 import Button from "../common/Button";
@@ -19,7 +19,7 @@ export default function HospitalSearchField() {
           className="ml-2 placeholder-[#BEC5D3] text-sm text-[#A0A4A8] focus:outline-none"
         />
       </div>
-      <Button label="Add Hospital"  onClick={()=>setAddHospitalModal(true)} />
+      <Button label="Add Hospital" onClick={() => setAddHospitalModal(true)} />
       {addHospitalModal && <AddInstitute closeModal={setAddHospitalModal} />}
     </div>
   );

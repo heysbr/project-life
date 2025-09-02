@@ -22,7 +22,7 @@ export default function Modal({
       <h1 className="font-bold text-2xl my-5">{heading}</h1>
       {children}
       <div className=" flex gap-x-9 my-10">
-        {secondaryBtnText && <ButtonSecondary label={secondaryBtnText} o/>}
+        {secondaryBtnText && <ButtonSecondary label={secondaryBtnText} o />}
         {primaryBtnText && <Button label={primaryBtnText} />}
       </div>
     </div>

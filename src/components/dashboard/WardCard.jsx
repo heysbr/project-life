@@ -5,15 +5,22 @@ import editIcon from "@/components/svg/edit.svg";
 import RenameWard from "./modals/RenameWard";
 import { useState } from "react";
 
-export default function WardCard({wardNumber ="1", totalPatient = "25" }) {
+export default function WardCard({ wardNumber = "1", totalPatient = "25" }) {
   const [RenameWardModal, setRenameWardModal] = useState(false);
-    
+
   return (
     <div className="w-full rounded-xl shadow-xl overflow-hidden">
       <div className=" bg-[#FFEEF3]  ">
         <div className="flex items-center  justify-end gap-x-3 p-3 pb-0">
-          <Image src={editIcon} alt="" className="cursor-pointer" onClick={()=>setRenameWardModal(true)}/>
-          {RenameWardModal && <RenameWard closeModal={()=>setRenameWardModal(false)}/>}
+          <Image
+            src={editIcon}
+            alt=""
+            className="cursor-pointer"
+            onClick={() => setRenameWardModal(true)}
+          />
+          {RenameWardModal && (
+            <RenameWard closeModal={() => setRenameWardModal(false)} />
+          )}
           <Image src={deleteIcon} alt="" className="cursor-pointer" />
         </div>
 

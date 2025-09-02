@@ -1,6 +1,5 @@
 "use client";
 import Image from "next/image";
-import React from "react";
 import Delete from "@/components/svg/delete.svg";
 import Edit from "@/components/svg/edit.svg";
 import Arrow from "@/components/svg/Arrow.svg";

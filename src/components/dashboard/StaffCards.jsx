@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import { useState } from "react";
 import StaffCard from "@/components/dashboard/StaffCard";
 import PageTitle from "../common/PageTitle";
 import Modal from "./modals/Modal";
@@ -31,7 +31,13 @@ export default function StaffCards({ data }) {
           secondaryBtnText={"No"}
           heading={"Add Staff"}
         >
-          <FormRadioField values={[{value:"Add Staff Manually"},{value:"Add Staff via Sheet"}]} radioName='staff'/>
+          <FormRadioField
+            values={[
+              { value: "Add Staff Manually" },
+              { value: "Add Staff via Sheet" },
+            ]}
+            radioName="staff"
+          />
         </Modal>
       )}
       {/* Cards */}

@@ -1,7 +1,6 @@
 import ProfileSection from "@/components/common/profile/ProfileSection";
 import Search from "@/components/dashboard/Search";
 import SideBar from "@/components/dashboard/SideBar";
-import React from "react";
 
 export default function layout({ children }) {
   return (

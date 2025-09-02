@@ -4,13 +4,12 @@ import Profile from "@/components/svg/staff-card-profile.svg";
 import Call from "@/components/svg/staff-list-call-button.svg";
 import Menu from "@/components/svg/staff-card-menu.svg";
 
-
 export default function StaffCard({ staff }) {
   const [toggle, setToggle] = useState(false);
   const active = staff?.active ?? false;
   return (
     <div
-      key={staff.id }
+      key={staff.id}
       className={`relative max-w-md rounded-2xl shadow-md bg-white overflow-hidden ${
         active ? "opacity-100" : "opacity-50"
       } transition-all duration-300 `}

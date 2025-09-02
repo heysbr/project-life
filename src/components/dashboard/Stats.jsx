@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import { useState } from "react";
 
 import PageTitle from "../common/PageTitle";
 import { LargeCard } from "./LargeCard";
@@ -25,10 +25,7 @@ export default function Stats() {
           <LargeCard data={LargeCardData} />
         </div>
       </div>
-      {open && (
-
-        <AddInstitute closeModal={setOpen} />
-      )}
+      {open && <AddInstitute closeModal={setOpen} />}
     </>
   );
 }

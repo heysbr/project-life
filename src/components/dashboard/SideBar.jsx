@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import { useState } from "react";
 import Menu from "@/components/svg/Menu.svg";
 import MenuToggle from "@/components/svg/menu-toggle.svg";
 
