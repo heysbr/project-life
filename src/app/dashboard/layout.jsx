@@ -12,7 +12,7 @@ export default function layout({ children }) {
           <Search />
           <ProfileSection />
         </div>
-        <div className="bg-white/80 ">{children}</div>
+        <div className="bg-white/50 h-fit">{children}</div>
       </div>
     </div>
   );

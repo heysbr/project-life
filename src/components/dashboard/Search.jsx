@@ -1,5 +1,5 @@
 import React from "react";
-import Dropdown from "./Dropdown";
+import Dropdown from "../common/Dropdown";
 import Bell from "@/components/svg/Bell.svg";
 import Image from "next/image";
 import ProfileSection from "../common/profile/ProfileSection";

@@ -2,14 +2,18 @@ import Image from "next/image";
 import pieIcon from "@/components/svg/pie-icon.svg";
 import deleteIcon from "@/components/svg/delete.svg";
 import editIcon from "@/components/svg/edit.svg";
+import RenameWard from "./modals/RenameWard";
+import { useState } from "react";
 
 export default function WardCard({wardNumber ="1", totalPatient = "25" }) {
+  const [RenameWardModal, setRenameWardModal] = useState(false);
     
   return (
     <div className="w-full rounded-xl shadow-xl overflow-hidden">
       <div className=" bg-[#FFEEF3]  ">
         <div className="flex items-center  justify-end gap-x-3 p-3 pb-0">
-          <Image src={editIcon} alt="" className="cursor-pointer"/>
+          <Image src={editIcon} alt="" className="cursor-pointer" onClick={()=>setRenameWardModal(true)}/>
+          {RenameWardModal && <RenameWard closeModal={()=>setRenameWardModal(false)}/>}
           <Image src={deleteIcon} alt="" className="cursor-pointer" />
         </div>
 

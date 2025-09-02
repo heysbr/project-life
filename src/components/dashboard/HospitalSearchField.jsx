@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import Image from "next/image";
 import searchImg from "@/components/svg/search.svg";
 import Button from "../common/Button";
-import AddInstitute from "../Institute/AddInstitute";
+import AddInstitute from "../../Pages/Institute/AddInstitute";
 
 export default function HospitalSearchField() {
   const [addHospitalModal, setAddHospitalModal] = useState(false);

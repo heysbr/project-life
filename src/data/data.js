@@ -312,7 +312,7 @@ export const tableComponentData = [
     highRiskPatient: 15,
     status: "Active",
   },
-];  
+];
 
 import Dashboard from "@/components/svg/dashboard.svg";
 import HospitalsIcon from "@/components/svg/all-hospitals.svg";
@@ -339,4 +339,15 @@ export const SideBarLinks = [
     label: "Help",
     activeIcon: ActiveHelp,
   },
+];
+
+export const hospitalNames = [
+  "Arora Mother & Child Care",
+  "City Surgical & Maternity Center , Gurugram",
+  "Bansal Nursing Home, Gurgaon",
+  "Taneja Hospital & Heart Centre, Gurugram",
+  "Vardhman Medical Centre, Gurugram",
+  "Pushpanjali Hospital Gurgaon",
+  "Kalyani Hospital Gurgaon",
+  "Anand Multispeciality Hospital",
 ];

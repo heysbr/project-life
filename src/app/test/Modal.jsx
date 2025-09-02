@@ -1,5 +1,5 @@
 "use client";
-import Modal from "@/components/dashboard/Modal";
+import Modal from "@/components/dashboard/modals/Modal";
 import { useState } from "react";
 
 export default function page() {

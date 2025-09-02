@@ -20,6 +20,27 @@ export const fieldComponentMap = {
   forget: FormForgetField,
 };
 
+export const loginFormFields = [
+  {
+    name: "email",
+    type: "text",
+    placeholder: "Email ID",
+    label: "Email ID",
+  },
+  {
+    name: "password",
+    type: "password",
+    placeholder: "Password",
+    label: "Password",
+  },
+  {
+    name: "forget",
+    type: "forget",
+    placeholder: "",
+    label: "",
+  },
+];
+
 export const LoginFields = [
   {
     name: "email",

@@ -1,23 +1,20 @@
-const FormRadioField = ({children, values}) => {
-  values = values || [{value: "Yes"}, {value: "No"}]
+const FormRadioField = ({ children, values, directionCol, radioName }) => {
   return (
     <>
       <label className="text-sm font-medium text-gray-700 mb-2">
         {children}
       </label>
-      <div className="flex flex-row gap-x-10">
-        {values.map(({ value }, i) => (
-          <span key={i}>
-             {" "}
+      <div className={`flex gap-6 ${directionCol ? "flex-col" : "flex-row"}`}>
+        {values.map((item, i) => (
+          <label key={i}>
             <input
               type="radio"
-              id={value}
-              name={children}
-              value={value}
-              className="accent-[#FC5285] "
+              name={radioName}
+              className="accent-[#FC5285]"
+              // id={i} // value={item.value}
             />
-             <label htmlFor={value}>{value}</label>
-          </span>
+            {item.value}
+          </label>
         ))}
       </div>
     </>

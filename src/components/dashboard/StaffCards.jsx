@@ -2,8 +2,7 @@
 import React, { useState } from "react";
 import StaffCard from "@/components/dashboard/StaffCard";
 import PageTitle from "../common/PageTitle";
-import Modal from "./Modal";
-import FormTextField from "../common/formField/FormTextField";
+import Modal from "./modals/Modal";
 import FormRadioField from "../common/formField/FormRadioField";
 
 const CARDS_PER_PAGE = 6;
@@ -23,19 +22,16 @@ export default function StaffCards({ data }) {
         btnLabel={"Add Staff"}
         onClick={setAddStaffModal}
       />
+
+      {/* Add Staff Modal */}
       {addStaffModal && (
         <Modal
           closeModal={setAddStaffModal}
-          btnText={"Yes"}
+          primaryBtnText={"Yes"}
           secondaryBtnText={"No"}
+          heading={"Add Staff"}
         >
-          <h1>Add a new ward</h1>
-          <FormRadioField
-            values={[
-              { value: "Add Staff Manually" },
-              { value: "Add Staff via Sheet" },
-            ]}
-          />
+          <FormRadioField values={[{value:"Add Staff Manually"},{value:"Add Staff via Sheet"}]} radioName='staff'/>
         </Modal>
       )}
       {/* Cards */}

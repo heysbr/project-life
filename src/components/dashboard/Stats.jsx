@@ -4,11 +4,11 @@ import React, { useState } from "react";
 import PageTitle from "../common/PageTitle";
 import { LargeCard } from "./LargeCard";
 import { SmallCard } from "./SmallCard";
-import Modal from "./Modal";
+import Modal from "./modals/Modal";
 
 import { SmallCardData } from "@/data/data";
 import { LargeCardData } from "@/data/data";
-import AddInstitute from "@/components/Institute/AddInstitute";
+import AddInstitute from "@/Pages/Institute/AddInstitute";
 
 export default function Stats() {
   const [open, setOpen] = useState(false);

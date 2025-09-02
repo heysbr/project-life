@@ -7,7 +7,7 @@ import Button from "@/components/common/Button";
 import Link from "next/link";
 import { useState } from "react";
 import PageTitle from "../common/PageTitle";
-import Modal from "./Modal";
+import Modal from "./modals/Modal";
 import FormRadioField from "../common/formField/FormRadioField";
 import FormTextField from "../common/formField/FormTextField";
 
@@ -53,8 +53,7 @@ export default function WardGroup() {
     <div className="mb-10 ">
       <PageTitle title={ "All Wards"} btnLabel={ "Add Ward"}  onClick={setAddWardModal}/>
       {addWardModal && (
-        <Modal closeModal={setAddWardModal} >
-          <h1>Add a new ward</h1>
+        <Modal closeModal={setAddWardModal} heading="Add a new ward">
           <FormTextField  label="Add Ward Name" placeholder="Enter name"/>
         </Modal>
         )}

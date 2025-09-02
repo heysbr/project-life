@@ -1,9 +1,4 @@
-import React, { Children } from "react";
-
 export default function FormCheckboxField({  name, value, children }) {
-  // children = "Checkbox"
-  name = "hello";
-  value = "project life";
   return (
     <div className="w-full">
       
