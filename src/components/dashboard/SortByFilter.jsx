@@ -23,6 +23,7 @@ export default function Dropdown({ items, name }) {
           src={Sort}
           alt="down"
           className="  inline  ml-5 cursor-pointer active:scale-90"
+          
         />
         <input
           type="text"
