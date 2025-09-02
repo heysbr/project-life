@@ -26,6 +26,7 @@ export default function AddInstitute({ closeModal }) {
           type="file"
           className="hidden"
           accept="image/*"
+          
         />
         <label
           htmlFor="fileUpload"
