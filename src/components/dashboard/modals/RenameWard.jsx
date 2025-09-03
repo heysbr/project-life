@@ -5,15 +5,15 @@ import Modal from "@/components/dashboard/modals/Modal";
 
 export default function RenameWard({ closeModal }) {
   return (
-    <Modal heading="Rename Ward" btnText="Update">
+    <Modal heading="Rename Ward" btnText="Update" closeModal={closeModal}>
       <FormTextField
         label="Ward Name"
         name="wardName"
         placeholder="Enter Ward Name"
       />
       <div className="flex justify-around">
-        <Button label="Cancel" onClick={() => closeModal(false)} />
-        <ButtonSecondary label="Update" onClick={() => closeModal(false)} />
+        <Button label="Cancel" onClick={()=>closeModal()} />
+        <ButtonSecondary label="Update" onClick={()=>closeModal()} />
       </div>
     </Modal>
   );

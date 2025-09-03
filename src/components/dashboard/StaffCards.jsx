@@ -19,6 +19,7 @@ export default function StaffCards({ data }) {
   const startIdx = (page - 1) * CARDS_PER_PAGE;
   const currentData = data.slice(startIdx, startIdx + CARDS_PER_PAGE);
 
+
   return (
     <div className="mb-10 ">
       <PageTitle

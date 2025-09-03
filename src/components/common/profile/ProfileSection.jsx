@@ -20,12 +20,16 @@ export default function ProfileSection() {
       {toggleProfile && (
         <div className="absolute  z-10 w-36 top-full right-0 bg-white border border-gray-200 rounded-md shadow-lg">
           <ul className="py-1">
+            <Link href="/dashboard/profile">
             <li className="px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
               Profile
             </li>
+            </Link>
+            <Link href={"/dashboard/profile/edit"}>
             <li className="px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
               Settings
             </li>
+            </Link>
             <Link href="/">
               <li className="px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
                 Logout

@@ -7,6 +7,7 @@ import Arrow from "@/components/svg/Arrow.svg";
 import { useState } from "react";
 
 import { tableComponentData as tableData } from "@/data/data";
+import Link from "next/link";
 
 const ToggleButton = ({ active }) => {
   const [isActive, setIsActive] = useState(active === "Active");
@@ -78,11 +79,13 @@ export default function TableComponent() {
                   <ToggleButton active={data.status} />
                 </td>
                 <td className="py-3 px-4 flex items-center gap-3">
-                  <Image
-                    src={Edit}
-                    alt="edit"
-                    className="inline cursor-pointer active:scale-90 transition-all"
-                  />
+                  <Link href="dashboard/hospital/edit">
+                    <Image
+                      src={Edit}
+                      alt="edit"
+                      className="inline cursor-pointer active:scale-90 transition-all"
+                    />
+                  </Link>
                   <Image
                     src={Delete}
                     alt="delete"
