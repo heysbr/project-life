@@ -6,6 +6,8 @@ import Modal from "./modals/Modal";
 import FormTextField from "../common/formField/FormTextField";
 import ArrowBtn from "@/components/svg/arrowBtn.svg";
 import Image from "next/image";
+import Button from "../common/Button";
+import ButtonSecondary from "../common/ButtonSecondary";
 
 export default function WardGroup() {
   const [page, setPage] = useState(1);
@@ -22,6 +24,10 @@ export default function WardGroup() {
       {addWardModal && (
         <Modal closeModal={setAddWardModal} heading="Add a new ward">
           <FormTextField label="Add Ward Name" placeholder="Enter name" />
+          <div className="flex justify-around">
+          <Button label="Cancel" onClick={() => setAddWardModal(false)} />
+          <ButtonSecondary label="Add" onClick={() => setAddWardModal(false)} />
+          </div>
         </Modal>
       )}
       {/* Cards */}

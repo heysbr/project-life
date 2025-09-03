@@ -5,7 +5,7 @@ const PageTitle = ({ title, btnLabel, onClick }) => {
   return (
     <div className="flex flex-row justify-between py-6">
       <h1 className="text-2xl font-semibold">{title}</h1>
-      {btnLabel && <Button onClick={onClick} label={btnLabel} />}
+      {btnLabel && <Button onClick={onClick} label={btnLabel}/>}
     </div>
   );
 };

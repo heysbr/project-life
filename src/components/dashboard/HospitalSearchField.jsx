@@ -2,7 +2,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import searchImg from "@/components/svg/search.svg";
-import Button from "../common/Button";
+import Button from "@/components/common/Button";
 import AddInstitute from "../../Pages/Institute/AddInstitute";
 
 export default function HospitalSearchField() {

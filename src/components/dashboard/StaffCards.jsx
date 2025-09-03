@@ -6,6 +6,8 @@ import Modal from "./modals/Modal";
 import FormRadioField from "../common/formField/FormRadioField";
 import ArrowBtn from "@/components/svg/arrowBtn.svg";
 import Image from "next/image";
+import Button from "../common/Button";
+import ButtonSecondary from "../common/ButtonSecondary";
 
 const CARDS_PER_PAGE = 6;
 
@@ -29,8 +31,6 @@ export default function StaffCards({ data }) {
       {addStaffModal && (
         <Modal
           closeModal={setAddStaffModal}
-          primaryBtnText={"Yes"}
-          secondaryBtnText={"No"}
           heading={"Add Staff"}
         >
           <FormRadioField
@@ -40,6 +40,10 @@ export default function StaffCards({ data }) {
             ]}
             radioName="staff"
           />
+          <div className="flex justify-around">
+            <ButtonSecondary label="Cancel" onClick={() => setAddStaffModal(false)} />
+            <Button label="Add Staff" onClick={() => setAddStaffModal(false)} link="/dashboard/staff/add" />
+          </div>
         </Modal>
       )}
       {/* Cards */}
@@ -48,7 +52,6 @@ export default function StaffCards({ data }) {
           <StaffCard staff={staff} i={i} key={i} />
         ))}
       </div>
-
       {/* Pagination Controls */}
       {totalPages > 1 && (
         <div className="flex justify-end mt-6 space-x-2">

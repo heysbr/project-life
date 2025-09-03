@@ -3,6 +3,7 @@ import { useState } from "react";
 import Profile from "@/components/svg/staff-card-profile.svg";
 import Call from "@/components/svg/staff-list-call-button.svg";
 import Menu from "@/components/svg/staff-card-menu.svg";
+import Link from "next/link";
 
 export default function StaffCard({ staff }) {
   const [toggle, setToggle] = useState(false);
@@ -39,9 +40,11 @@ export default function StaffCard({ staff }) {
               onClick={() => setToggle(!toggle)}
             >
               <ul className="list-disc marker:text-[#FC5285] list-outside ml-5">
+                <Link href={`/dashboard/staff/`}>
                 <li className="p-1 rounded-md hover:bg-gray-100 cursor-pointer">
                   Edit Staff
                 </li>
+                </Link>
                 <li className="p-1 rounded  hover:bg-gray-100 cursor-pointer">
                   Make an admin
                 </li>
