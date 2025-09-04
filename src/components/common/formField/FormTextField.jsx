@@ -4,10 +4,8 @@ export default function FormTextField(props) {
   const name = props?.name || "name";
   
   return (
-    <div className="">
       <label className="text-sm font-bold text-gray-700 mb-2">
         {label}
-      </label>
       <input
         type="text"
         id={name}
@@ -16,6 +14,6 @@ export default function FormTextField(props) {
         className="w-full px-4 py-2 border border-gray-300 rounded-md  placeholder-[#BEC5D3] text-sm focus:outline-0"
         required
       />
-    </div>
+      </label>
   );
 }

@@ -26,6 +26,7 @@ export default function WardGroup() {
           <FormTextField label="Add Ward Name" placeholder="Enter name" />
           <div className="flex justify-around">
           <Button label="Cancel" onClick={() => setAddWardModal(false)} />
+          <Button label="Cancel" onClick={setAddWardModal} />
           <ButtonSecondary label="Add" onClick={() => setAddWardModal(false)} />
           </div>
         </Modal>

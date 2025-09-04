@@ -1,9 +1,7 @@
-export default function FormDatepickerField({ children, name }) {
+export default function FormDatepickerField({ name }) {
   return (
-    <div >
-      <label className="text-sm font-medium text-gray-700 mb-2">
-        {children}
-      </label>
+    <label className="text-sm font-bold text-gray-700 mb-2">
+      {name}
       <input
         type="date"
         id={name}
@@ -12,6 +10,6 @@ export default function FormDatepickerField({ children, name }) {
         className="w-full px-4 py-2  border border-gray-300 rounded-md   placeholder-[#BEC5D3] text-sm focus:outline-0"
         required
       />
-    </div>
+    </label>
   );
 }

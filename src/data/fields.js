@@ -7,6 +7,8 @@ import FormCheckboxField from "@/components/common/formField/FormCheckboxField";
 import FormDatepickerField from "@/components/common/formField/FormDatepickerField";
 import FormRadioField from "@/components/common/formField/FormRadioField";
 import FormForgetField from "@/components/common/formField/FormForgetField";
+import FormUploadField from "@/components/common/formField/FormUploadField";
+import FormDownloadSample from "@/components/common/formField/FormDownloadSample";
 
 export const fieldComponentMap = {
   text: FormTextField,
@@ -18,7 +20,87 @@ export const fieldComponentMap = {
   checkbox: FormCheckboxField,
   datepicker: FormDatepickerField,
   forget: FormForgetField,
+  upload: FormUploadField,
+  download: FormDownloadSample,
 };
+
+export const StaffFormFields = [
+  {
+    name: "firstName",
+    type: "text",
+    placeholder: "Enter first name",
+    label: "First Name",
+  },
+  {
+    name: "middleName",
+    type: "text",
+    placeholder: "Enter middle name",
+    label: "Middle Name",
+  },
+  {
+    name: "lastName",
+    type: "text",
+    placeholder: "Enter last name",
+    label: "Last Name",
+  },
+  {
+    name: "dob",
+    type: "datepicker",
+    placeholder: "Email ID",
+    label: "Dob",
+  },
+  {
+    name: "radio",
+    type: "text",
+    placeholder: "Radio Button",
+    label: "Sex",
+  },
+  {
+    name: "email",
+    type: "text vsdv",
+    placeholder: "Email ID",
+    label: "Institute Name",
+    options: [
+      { value: "Option 1" },
+      { value: "Option 2" },]  
+  },
+  {
+    name: "email",
+    type: "text",
+    placeholder: "Email ID",
+    label: "City",
+  },
+  {
+    name: "email",
+    type: "text",
+    placeholder: "Email ID",
+    label: "Middle Name",
+  },
+  {
+    name: "email",
+    type: "text",
+    placeholder: "Email ID",
+    label: "Last Name",
+  },
+  {
+    name: "email",
+    type: "text",
+    placeholder: "Email ID",
+    label: "Initials",
+  },
+  {
+    name: "email",
+    type: "text",
+    placeholder: "Email ID",
+    label: "Email",
+  },
+  {
+    name: "email",
+    type: "mobile",
+    placeholder: "Email ID",
+    label: "Last Name",
+  },
+];
 
 export const loginFormFields = [
   {

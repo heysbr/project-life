@@ -1,18 +1,14 @@
 "use client";
 import Image from "next/image";
 import addInstituteCrossBtn from "@/components/svg/addInstituteCrossBtn.svg";
-import Button from "@/components/common/Button";
-import ButtonSecondary from "@/components/common/ButtonSecondary";
 
 export default function Modal({
   closeModal,
-  primaryBtnText,
-  secondaryBtnText,
   heading,
   children,
 }) {
   return (
-    <div className="bg-[#FFFFFF]  shadow-2xl pt-10 px-15 fixed top-1/2 left-1/2 -translate-1/2  z-50 w-1/3 flex items-center  flex-col rounded-md">
+    <div className="bg-[#FFFFFF]  shadow-2xl pt-10 px-15 fixed  top-1/2 left-1/2 -translate-1/2  z-50 w-1/3 flex items-center  flex-col rounded-md">
       <Image
         src={addInstituteCrossBtn}
         alt="close"

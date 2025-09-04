@@ -1,4 +1,5 @@
 import PageTitle from "@/components/common/PageTitle";
+import Container from "@/components/Container/Container";
 
 const instituteData = [
   {
@@ -18,7 +19,7 @@ const instituteData = [
 export default function page() {
   return (
     <div className="flex items-center justify-center h-screen text-5xl">
-      This is staff details page
+      
     </div>
   );
 }
