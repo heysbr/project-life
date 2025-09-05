@@ -10,12 +10,9 @@ import { LargeCardData } from "@/data/data";
 import AddInstitute from "@/Pages/Institute/AddInstitute";
 
 export default function Stats() {
-  function handleClick(e){
-
-  }
   const [open, setOpen] = useState(false);
   return (
-    <div>
+    <div className="flex flex-col gap-4">
       <PageTitle
         title={"Dashboard- All Hospitals"}
         btnLabel={"Add Institute"}
