@@ -4,6 +4,7 @@ import Stats from "@/components/dashboard/Stats";
 import { useState } from "react";
 import { Staffdata } from "@/data/data";
 import WardCards from "@/components/dashboard/WardCards";
+import { WardsData } from "@/data/data";
 
 export default function page() {
   const [activeTab, setActiveTab] = useState("staff");
@@ -37,7 +38,7 @@ export default function page() {
 
         <div className="mt-12">
           {activeTab === "staff" && <StaffCards data={Staffdata} />}
-          {activeTab === "wards" && <WardCards />}
+          {activeTab === "wards" && <WardCards data={WardsData} />}
         </div>
       </div>
     </>

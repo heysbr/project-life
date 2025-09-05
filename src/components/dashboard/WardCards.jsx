@@ -9,7 +9,8 @@ import Image from "next/image";
 import Button from "../common/Button";
 import ButtonSecondary from "../common/ButtonSecondary";
 
-export default function WardCards() {
+
+export default function WardCards({data}) {
   const [page, setPage] = useState(1);
   const [addWardModal, setAddWardModal] = useState(false);
 
@@ -33,15 +34,7 @@ export default function WardCards() {
       )}
       {/* Cards */}
       <div className="grid grid-cols-3 gap-6 w-full mb-10 ">
-        <WardCard />
-        <WardCard />
-        <WardCard />
-        <WardCard />
-        <WardCard />
-        <WardCard />
-        <WardCard />
-        <WardCard />
-        <WardCard />
+        {data.map((ward, idx) => <WardCard key={idx} ward={ward} />)}
       </div>
 
       {/* Pagination Controls */}

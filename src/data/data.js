@@ -29,6 +29,17 @@ export const countryCodes = [
   "+30",
   "+48",
 ];
+export const WardsData = [
+  { wardNumber: "1", totalPatient: "25" },
+  { wardNumber: "2", totalPatient: "18" },
+  { wardNumber: "3", totalPatient: "30" },
+  { wardNumber: "4", totalPatient: "12" },
+  { wardNumber: "5", totalPatient: "40" },
+  { wardNumber: "6", totalPatient: "7" },
+  { wardNumber: "7", totalPatient: "16" },
+  { wardNumber: "8", totalPatient: "22" },
+  { wardNumber: "9", totalPatient: "10" },
+];
 
 export const Staffdata = [
   {
