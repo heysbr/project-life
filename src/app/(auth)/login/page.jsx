@@ -1,4 +1,4 @@
-import Container from "@/components/Container/Container";
+import LadyPicContainer from "@/components/Container/LadyPicContainer";
 import Button from "@/components/common/Button";
 import FormField from "@/components/common/FormField";
 import Heading from "@/components/layouts/Heading";
@@ -9,7 +9,7 @@ import {loginFormFields as FORM_FIELDS} from "@/data/fields";
 
 export default function Home() {
   return (
-    <Container>
+    <LadyPicContainer>
       <div className="w-9/10 h-fit  px-5 lg:px-10   bg-white rounded-2xl ">
             <Heading>Login</Heading>
             <form className="mt-8">
@@ -27,6 +27,6 @@ export default function Home() {
               <Button link="/activation">Login</Button>
             </form>
           </div>
-    </Container>
+    </LadyPicContainer>
   );
 }

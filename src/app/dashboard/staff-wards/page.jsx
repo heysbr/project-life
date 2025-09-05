@@ -3,7 +3,7 @@ import StaffCards from "@/components/dashboard/StaffCards";
 import Stats from "@/components/dashboard/Stats";
 import { useState } from "react";
 import { Staffdata } from "@/data/data";
-import WardGroup from "@/components/dashboard/WardGroup";
+import WardCards from "@/components/dashboard/WardCards";
 
 export default function page() {
   const [activeTab, setActiveTab] = useState("staff");
@@ -11,7 +11,7 @@ export default function page() {
   return (
     <>
       <Stats />
-      <div className="flex flex-col mx-10 mt-15 h-fit ">
+      <div className="flex flex-col mt-15 h-fit ">
         <div className="flex flex-row gap-x-7 border-b-2 border-[#CFD2D7] pl-9">
           <div
             onClick={() => setActiveTab("staff")}
@@ -37,7 +37,7 @@ export default function page() {
 
         <div className="mt-12">
           {activeTab === "staff" && <StaffCards data={Staffdata} />}
-          {activeTab === "wards" && <WardGroup />}
+          {activeTab === "wards" && <WardCards />}
         </div>
       </div>
     </>

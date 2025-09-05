@@ -2,10 +2,10 @@ import { countryCodes } from "@/data/data";
 
 export default function FormMobileField() {
   return (
-    <label>
+    <div>
       <span className="text-sm font-bold text-gray-700 mb-2">Mobile No.</span>
       <br />
-      <div className="flex flex-row border border-gray-300 rounded-md">
+      <label className="flex flex-row border border-gray-300 rounded-md">
         <SelectCountry />
         <input
           type="tel"
@@ -14,8 +14,8 @@ export default function FormMobileField() {
           className="w-fit px-4 py-2   border-gray-300  border-l flex-1 placeholder-[#BEC5D3] text-sm focus:outline-0"
           required
         />
-      </div>
-    </label>
+      </label>
+    </div>
   );
 }
 

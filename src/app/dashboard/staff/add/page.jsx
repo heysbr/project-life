@@ -24,7 +24,7 @@ export default function page() {
 
 function Container2({ children }) {
   return (
-    <div className="m-10">
+    <div>
       <PageTitle title="Add Staff" />
       <div className="bg-white shadow-md rounded p-6 mt-6">
       {children}

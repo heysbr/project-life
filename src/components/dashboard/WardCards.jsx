@@ -9,7 +9,7 @@ import Image from "next/image";
 import Button from "../common/Button";
 import ButtonSecondary from "../common/ButtonSecondary";
 
-export default function WardGroup() {
+export default function WardCards() {
   const [page, setPage] = useState(1);
   const [addWardModal, setAddWardModal] = useState(false);
 

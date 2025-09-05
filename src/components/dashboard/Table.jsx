@@ -46,7 +46,7 @@ const headers = [
 
 export default function TableComponent() {
   return (
-    <div className="flex items-center w-full pb-10">
+    <div className="flex items-center w-full ">
       <div className="bg-white shadow-md rounded-lg w-full overflow-hidden">
         <table className="border-collapse w-full">
           <thead className="bg-[#FFCCDB]">

@@ -2,7 +2,7 @@ import loginLady from "@/components/images/login-lady.svg";
 import Image from "next/image";
 import Heading from "../layouts/Heading";
 
-const Container = ({ children }) => {
+const LadyPicContainer = ({ children }) => {
   return (
     <div
       className="flex flex-col lg:flex-row 
@@ -20,4 +20,4 @@ const Container = ({ children }) => {
   );
 };
 
-export default Container;
+export default LadyPicContainer;

@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import Image from "next/image";
 import svgDownload from "@/components/svg/download.svg";
 

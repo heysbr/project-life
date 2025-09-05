@@ -1,10 +1,10 @@
 import OtpPage from '@/components/Activation/OtpPage';
-import Container from '@/components/Container/Container';
+import LadyPicContainer from '@/components/Container/LadyPicContainer';
 
 export default function page() {
   return (
-    <Container >
+    <LadyPicContainer >
       <OtpPage/>
-    </Container>
+    </LadyPicContainer>
   )
 }

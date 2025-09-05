@@ -1,15 +1,14 @@
-export default function FormCheckboxField({  name, value, children }) {
+export default function FormCheckboxField({ name, label }) {
   return (
-    <div className="w-full">
-      
+    <label className="text-sm font-medium text-gray-700" htmlFor={name}>
       <input
         type="checkbox"
         id={name}
         name={name}
-        value={value}
+        value={label}
         className="me-2  accent-[#FC5285]"
       />
-      <label className="text-sm font-medium text-gray-700" htmlFor={name}>{children}</label> 
-    </div>
+      {label}
+    </label>
   );
 }

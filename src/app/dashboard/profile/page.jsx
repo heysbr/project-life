@@ -14,7 +14,7 @@ import ButtonSecondary from "@/components/common/ButtonSecondary";
 export default function page() {
   const [toggleEdit, setToggleEdit] = useState(false);
   return (
-    <div className="p-10 h-screen">
+    <>
       <PageTitle
         title={"Profile"}
         btnLabel={`${toggleEdit ? "" : "Edit Profile"}`}
@@ -62,6 +62,6 @@ export default function page() {
           <Button label="Update" onClick={() => setToggleEdit(false)} />
         </div>
       )}
-    </div>
+    </>
   );
 }

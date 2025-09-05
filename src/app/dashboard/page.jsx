@@ -1,3 +1,4 @@
+import DashboardContainer from "@/components/Container/DashboardContainer";
 import HospitalList from "@/components/dashboard/HospitalList";
 import Stats from "@/components/dashboard/Stats";
 

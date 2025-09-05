@@ -12,6 +12,7 @@ import ButtonSecondary from "../common/ButtonSecondary";
 const CARDS_PER_PAGE = 6;
 
 export default function StaffCards({ data }) {
+  
   const [page, setPage] = useState(1);
   const [addStaffModal, setAddStaffModal] = useState(false);
 
@@ -21,24 +22,12 @@ export default function StaffCards({ data }) {
 
 
   return (
-    <div className="mb-10 ">
-      <PageTitle
-        title={"All Staff"}
-        btnLabel={"Add Staff"}
-        onClick={setAddStaffModal}
-      />
-
+    <div className="">
+      <PageTitle title={"All Staff"} btnLabel={"Add Staff"} onClick={setAddStaffModal} className="mb-5"/>
       {/* Add Staff Modal */}
-      {addStaffModal && (
-        <Modal
-          closeModal={setAddStaffModal}
-          heading={"Add Staff"}
-        >
+      {addStaffModal && ( <Modal closeModal={setAddStaffModal} heading={"Add Staff"} >
           <FormRadioField
-            values={[
-              { value: "Add Staff Manually" },
-              { value: "Add Staff via Sheet" },
-            ]}
+            values={["Add Staff Manually", "Add Staff via Sheet"]}
             radioName="staff"
           />
           <div className="flex justify-around">

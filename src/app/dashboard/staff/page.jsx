@@ -1,5 +1,5 @@
 import PageTitle from "@/components/common/PageTitle";
-import Container from "@/components/Container/Container";
+import Container from "@/components/Container/LadyPicContainer";
 
 const instituteData = [
   {
@@ -19,7 +19,7 @@ const instituteData = [
 export default function page() {
   return (
     <div className="flex items-center justify-center h-screen text-5xl">
-      
+      hello world
     </div>
   );
 }
