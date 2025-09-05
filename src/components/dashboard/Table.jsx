@@ -79,7 +79,7 @@ export default function TableComponent() {
                   <ToggleButton active={data.status} />
                 </td>
                 <td className="py-3 px-4 flex items-center gap-3">
-                  <Link href="dashboard/hospital/edit">
+                  <Link href="/dashboard/hospital/edit">
                     <Image
                       src={Edit}
                       alt="edit"
