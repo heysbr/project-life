@@ -8,6 +8,7 @@ import ArrowBtn from "@/components/svg/arrowBtn.svg";
 import Image from "next/image";
 import Button from "../common/Button";
 import ButtonSecondary from "../common/ButtonSecondary";
+import AddStaffModal from "./modals/AddStaffModal";
 
 const CARDS_PER_PAGE = 6;
 
@@ -25,17 +26,7 @@ export default function StaffCards({ data }) {
     <div className="">
       <PageTitle title={"All Staff"} btnLabel={"Add Staff"} onClick={setAddStaffModal} className="mb-5"/>
       {/* Add Staff Modal */}
-      {addStaffModal && ( <Modal closeModal={setAddStaffModal} heading={"Add Staff"} >
-          <FormRadioField
-            values={["Add Staff Manually", "Add Staff via Sheet"]}
-            radioName="staff"
-          />
-          <div className="flex justify-around">
-            <ButtonSecondary label="Cancel" onClick={() => setAddStaffModal(false)} />
-            <Button label="Add Staff" onClick={() => setAddStaffModal(false)} link="/dashboard/staff/add" />
-          </div>
-        </Modal>
-      )}
+      {addStaffModal && <AddStaffModal closeModal={()=>setAddStaffModal(false)} />}
       {/* Cards */}
       <div className="grid grid-cols-3 gap-4 ">
         {currentData.map((staff, i) => (

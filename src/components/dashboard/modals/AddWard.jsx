@@ -8,8 +8,8 @@ export default function AddWard({closeModal}) {
     <Modal closeModal={closeModal} heading="Add a new ward">
       <FormTextField label="Add Ward Name" placeholder="Enter name" />
       <div className="flex justify-around">
-        <Button label="Cancel" onClick={() => closeModal(false)} />
-        <ButtonSecondary label="Add" onClick={() => closeModal(false)} />
+        <Button label="Cancel" onClick={closeModal} />
+        <ButtonSecondary label="Add" onClick={closeModal} />
       </div>
     </Modal>
   );

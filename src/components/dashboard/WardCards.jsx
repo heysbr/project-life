@@ -8,6 +8,7 @@ import ArrowBtn from "@/components/svg/arrowBtn.svg";
 import Image from "next/image";
 import Button from "../common/Button";
 import ButtonSecondary from "../common/ButtonSecondary";
+import AddWard from "./modals/AddWard";
 
 
 export default function WardCards({data}) {
@@ -22,16 +23,8 @@ export default function WardCards({data}) {
         btnLabel={"Add Ward"}
         onClick={setAddWardModal}
       />
-      {addWardModal && (
-        <Modal closeModal={setAddWardModal} heading="Add a new ward">
-          <FormTextField label="Add Ward Name" placeholder="Enter name" />
-          <div className="flex justify-around">
-          <Button label="Cancel" onClick={() => setAddWardModal(false)} />
-          <Button label="Cancel" onClick={setAddWardModal} />
-          <ButtonSecondary label="Add" onClick={() => setAddWardModal(false)} />
-          </div>
-        </Modal>
-      )}
+      {addWardModal && <AddWard closeModal={()=>setAddWardModal(false)} />}
+
       {/* Cards */}
       <div className="grid grid-cols-3 gap-6 w-full mb-10 ">
         {data.map((ward, idx) => <WardCard key={idx} ward={ward} />)}
