@@ -63,7 +63,7 @@ export default function TableComponent() {
               key={data.id}
               className="border-b border-[#E8E8E8] hover:bg-pink-50 text-center"
             >
-              <td className="py-3 px-4 ">{i + 1}</td>
+              <td className="py-3 px-4 ">{data.id}</td>
               <td className="py-3 px-4 ">{data.hospitalName}</td>
               <td className="py-3 px-4 ">{data.contactNo}</td>
               <td className="py-3 px-4 ">{data.totalStaff}</td>

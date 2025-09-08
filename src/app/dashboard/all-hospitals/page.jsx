@@ -1,8 +1,6 @@
 "use client";
 import HospitalSearchField from "@/components/dashboard/HospitalSearchField";
-import Pagination from "@/components/dashboard/Pagination";
 import TableComponent from "@/components/dashboard/Table";
-import { useState } from "react";
 
 export default function page() {
   return (
