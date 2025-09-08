@@ -9,7 +9,6 @@ import profile from "@/components/images/profile.jpg";
 import pencil from "@/components/svg/profile-edit.svg";
 import { useState } from "react";
 import Button from "@/components/common/Button";
-import ButtonSecondary from "@/components/common/ButtonSecondary";
 
 export default function page() {
   const [toggleEdit, setToggleEdit] = useState(false);
@@ -52,7 +51,7 @@ export default function page() {
       
       {toggleEdit && (
         <div className="flex justify-end mt-5 gap-x-5">
-          <ButtonSecondary
+          <Button variant="secondary"
             label="Cancel"
             onClick={() => setToggleEdit(false)}
           />

@@ -1,6 +1,5 @@
 import FormRadioField from "@/components/common/formField/FormRadioField";
 import Modal from "./Modal";
-import ButtonSecondary from "@/components/common/ButtonSecondary";
 import Button from "@/components/common/Button";
 
 export default function AddStaffModal({ closeModal }) {
@@ -11,7 +10,11 @@ export default function AddStaffModal({ closeModal }) {
         radioName="staff"
       />
       <div className="flex justify-around">
-        <ButtonSecondary label="Cancel" onClick={() => closeModal(false)} />
+        <Button
+          variant="secondary"
+          label="Cancel"
+          onClick={() => closeModal(false)}
+        />
         <Button
           label="Add Staff"
           onClick={() => closeModal(false)}

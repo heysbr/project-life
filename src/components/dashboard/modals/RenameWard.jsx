@@ -1,5 +1,4 @@
 import Button from "@/components/common/Button";
-import ButtonSecondary from "@/components/common/ButtonSecondary";
 import FormTextField from "@/components/common/formField/FormTextField";
 import Modal from "@/components/dashboard/modals/Modal";
 
@@ -13,7 +12,7 @@ export default function RenameWard({ closeModal }) {
       />
       <div className="flex justify-around">
         <Button label="Cancel" onClick={() => closeModal()} />
-        <ButtonSecondary label="Update" onClick={() => closeModal()} />
+        <Button variant="secondary" label="Update" onClick={() => closeModal()} />
       </div>
     </Modal>
   );

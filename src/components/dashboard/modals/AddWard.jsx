@@ -1,5 +1,4 @@
 import Button from "@/components/common/Button";
-import ButtonSecondary from "@/components/common/ButtonSecondary";
 import FormTextField from "@/components/common/formField/FormTextField";
 import Modal from "./Modal";
 
@@ -9,7 +8,7 @@ export default function AddWard({ closeModal }) {
       <FormTextField label="Add Ward Name" placeholder="Enter name" />
       <div className="flex justify-around">
         <Button label="Cancel" onClick={closeModal} />
-        <ButtonSecondary label="Add" onClick={closeModal} />
+        <Button variant="secondary" label="Add" onClick={closeModal} />
       </div>
     </Modal>
   );

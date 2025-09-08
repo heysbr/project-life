@@ -10,7 +10,7 @@ export default function AddStaffViaSheet({ closeModal }) {
       </div>
 
       <div className="flex flex-row gap-x-4 justify-end mt-4">
-        <ButtonSecondary label="Cancel" onClick={() => closeModal(false)} />
+        <Button variant="secondary" label="Cancel" onClick={() => closeModal(false)} />
         <Button label="Upload" onClick={() => closeModal(false)} />
       </div>
     </Modal>
