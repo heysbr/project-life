@@ -1,9 +1,9 @@
 "use client";
 import { useState } from "react";
-import StaffCard from "@/components/dashboard/StaffCard";
-import PageTitle from "../common/PageTitle";
-import AddStaffModal from "./modals/AddStaffModal";
-import Pagination from "./Pagination";
+import StaffCard from "@/components/dashboard/staff/StaffCard";
+import PageTitle from "../../common/PageTitle";
+import AddStaffModal from "../modals/AddStaffModal";
+import Pagination from "../pagination/Pagination";
 
 export default function StaffCards({ data }) {
   const [dataList, setDataList] = useState(data);

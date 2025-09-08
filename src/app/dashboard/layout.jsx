@@ -1,7 +1,7 @@
 import ProfileSection from "@/components/common/profile/ProfileSection";
 import DashboardContainer from "@/components/Container/DashboardContainer";
-import Search from "@/components/dashboard/Search";
-import SideBar from "@/components/dashboard/SideBar";
+import Search from "@/components/dashboard/hospital/Search";
+import SideBar from "@/components/dashboard/sidebar/SideBar";
 
 export default function layout({ children }) {
   return (

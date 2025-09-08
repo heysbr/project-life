@@ -1,9 +1,9 @@
 "use client";
-import WardCard from "@/components/dashboard/WardCard";
+import PageTitle from "@/components/common/PageTitle";
+import WardCard from "@/components/dashboard/wards/WardCard";
 import { useState } from "react";
-import PageTitle from "../common/PageTitle";
-import AddWard from "./modals/AddWard";
-import Pagination from "./Pagination";
+import AddWard from "@/components/dashboard/modals/AddWard";
+import Pagination from "@/components/dashboard/pagination/Pagination";
 
 export default function WardCards({ data }) {
   const [dataList, setDataList] = useState(data);

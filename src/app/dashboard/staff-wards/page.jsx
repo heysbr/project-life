@@ -1,11 +1,11 @@
 "use client";
-import StaffCards from "@/components/dashboard/StaffCards";
-import Stats from "@/components/dashboard/Stats";
+import StaffCards from "@/components/dashboard/staff/StaffCards";
+import Stats from "@/components/dashboard/stats/Stats";
 import { useState } from "react";
 import { Staffdata } from "@/data/data";
-import WardCards from "@/components/dashboard/WardCards";
 import { WardsData } from "@/data/data";
 import StaffWardTab from "@/components/dashboard/cards/StaffWardTab";
+import WardCards from "@/components/dashboard/wards/WardCards";
 
 export default function page() {
   const [activeTab, setActiveTab] = useState("staff");

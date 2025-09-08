@@ -12,7 +12,11 @@ export default function RenameWard({ closeModal }) {
       />
       <div className="flex justify-around">
         <Button label="Cancel" onClick={() => closeModal()} />
-        <Button variant="secondary" label="Update" onClick={() => closeModal()} />
+        <Button
+          variant="secondary"
+          label="Update"
+          onClick={() => closeModal()}
+        />
       </div>
     </Modal>
   );

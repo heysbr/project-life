@@ -2,7 +2,7 @@ import Image from "next/image";
 import pieIcon from "@/components/svg/pie-icon.svg";
 import deleteIcon from "@/components/svg/delete.svg";
 import editIcon from "@/components/svg/edit.svg";
-import RenameWard from "./modals/RenameWard";
+import RenameWard from "../modals/RenameWard";
 import { useState } from "react";
 
 export default function WardCard({ ward, handleRemove }) {

@@ -24,7 +24,6 @@ export default function SideBar() {
       >
         {open && (
           <Link href="/login" className="p-5">
-            {" "}
             <span>Project Life</span>{" "}
           </Link>
         )}

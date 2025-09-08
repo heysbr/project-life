@@ -6,7 +6,7 @@ import { useState } from "react";
 import Delete from "@/components/svg/delete.svg";
 import Edit from "@/components/svg/edit.svg";
 
-import Pagination from "./Pagination";
+import Pagination from "../pagination/Pagination";
 
 import { tableComponentData as tableData } from "@/data/data";
 import { tableComponentDataHeaders as headers } from "@/data/data";

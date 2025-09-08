@@ -1,13 +1,12 @@
 "use client";
 import { useState } from "react";
 
-import PageTitle from "../common/PageTitle";
-import { LargeCard } from "./LargeCard";
-import { SmallCard } from "./SmallCard";
-
 import { SmallCardData } from "@/data/data";
 import { LargeCardData } from "@/data/data";
-import AddInstitute from "@/Pages/Institute/AddInstitute";
+import AddInstitute from "@/components/dashboard/modals/AddInstitute";
+import PageTitle from "@/components/common/PageTitle";
+import { SmallCard } from "@/components/dashboard/stats/SmallCard";
+import { LargeCard } from "@/components/dashboard/stats/LargeCard";
 
 export default function Stats() {
   const [open, setOpen] = useState(false);
