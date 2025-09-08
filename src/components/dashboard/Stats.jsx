@@ -18,7 +18,7 @@ export default function Stats() {
         btnLabel={"Add Institute"}
         onClick={() => setOpen(true)}
       />
-      {open && <AddInstitute  closeModal={setOpen} open={open} />}
+      {open && <AddInstitute closeModal={setOpen} open={open} />}
       <div className="flex flex-row">
         <SmallCard data={SmallCardData} />
         <LargeCard data={LargeCardData} />

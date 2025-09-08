@@ -12,8 +12,8 @@ export default function RenameWard({ closeModal }) {
         placeholder="Enter Ward Name"
       />
       <div className="flex justify-around">
-        <Button label="Cancel" onClick={()=>closeModal()} />
-        <ButtonSecondary label="Update" onClick={()=>closeModal()} />
+        <Button label="Cancel" onClick={() => closeModal()} />
+        <ButtonSecondary label="Update" onClick={() => closeModal()} />
       </div>
     </Modal>
   );

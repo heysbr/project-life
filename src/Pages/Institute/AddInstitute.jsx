@@ -8,7 +8,11 @@ import { AddInstituteFields as fields } from "@/data/fields";
 
 export default function AddInstitute({ closeModal, open }) {
   return (
-    <div className={`fixed inset-auto top-1/2 left-1/2 -translate-1/2 shadow-2xl z-50 grid place-items-center bg-white  min-h-4/5 p-8 rounded-lg w-4/5 transition-all duration-1000 ${open ? "opacity-100" : "opacity-0 scale-125"}`}>
+    <div
+      className={`fixed inset-auto top-1/2 left-1/2 -translate-1/2 shadow-2xl z-50 grid place-items-center bg-white  min-h-4/5 p-8 rounded-lg w-4/5 transition-all duration-1000 ${
+        open ? "opacity-100" : "opacity-0 scale-125"
+      }`}
+    >
       <Image
         src={addInstituteCrossBtn}
         alt="close"
@@ -55,6 +59,3 @@ export default function AddInstitute({ closeModal, open }) {
     </div>
   );
 }
-
-
-

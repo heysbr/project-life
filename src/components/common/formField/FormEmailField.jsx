@@ -1,5 +1,3 @@
-import React from "react";
-
 export default function FormEmailField({ name }) {
   return (
     <label className="text-sm font-medium text-gray-700 mb-2">

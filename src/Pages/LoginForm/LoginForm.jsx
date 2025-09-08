@@ -1,5 +1,3 @@
-import React from "react";
-
 import Button from "@/components/common/Button";
 import Heading from "@/components/layouts/Heading";
 import FormField from "@/components/common/FormField";

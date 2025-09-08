@@ -60,7 +60,6 @@ export const WardsData = [
   { wardNumber: "27", totalPatient: "29" },
 ];
 
-
 export const Staffdata = [
   {
     name: "John Doe",
@@ -580,7 +579,6 @@ export const tableComponentData = [
     status: "Inactive",
   },
 ];
-
 
 import Dashboard from "@/components/svg/dashboard.svg";
 import HospitalsIcon from "@/components/svg/all-hospitals.svg";

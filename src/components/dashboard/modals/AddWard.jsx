@@ -3,7 +3,7 @@ import ButtonSecondary from "@/components/common/ButtonSecondary";
 import FormTextField from "@/components/common/formField/FormTextField";
 import Modal from "./Modal";
 
-export default function AddWard({closeModal}) {
+export default function AddWard({ closeModal }) {
   return (
     <Modal closeModal={closeModal} heading="Add a new ward">
       <FormTextField label="Add Ward Name" placeholder="Enter name" />

@@ -1,4 +1,4 @@
-export default function StaffWardTab({setActiveTab, activeTab}) {
+export default function StaffWardTab({ setActiveTab, activeTab }) {
   return (
     <div className="flex flex-row gap-x-7 border-b-2 border-[#CFD2D7] pl-9">
       <div

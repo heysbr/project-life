@@ -60,9 +60,7 @@ export const StaffFormFields = [
     type: "text vsdv",
     placeholder: "Email ID",
     label: "Institute Name",
-    options: [
-      { value: "Option 1" },
-      { value: "Option 2" },]  
+    options: [{ value: "Option 1" }, { value: "Option 2" }],
   },
   {
     name: "email",

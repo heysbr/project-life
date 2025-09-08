@@ -45,6 +45,9 @@ export default function TableComponent() {
 
   function handleRemove(id) {
     setDataList((prev) => prev.filter((item) => item.id !== id));
+    if (page > 1 && currentData.length === 1) {
+      setPage((prev) => prev - 1); // shift back if page gets empty
+    }
   }
 
   return (
@@ -60,7 +63,7 @@ export default function TableComponent() {
           </tr>
         </thead>
         <tbody className="text-gray-600">
-          {currentData.map((data, i) => (
+          {currentData.map((data) => (
             <tr
               key={data.id}
               className="border-b border-[#E8E8E8] hover:bg-pink-50 text-center"

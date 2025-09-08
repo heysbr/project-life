@@ -2,11 +2,7 @@
 import Image from "next/image";
 import addInstituteCrossBtn from "@/components/svg/addInstituteCrossBtn.svg";
 
-export default function Modal({
-  closeModal,
-  heading,
-  children,
-}) {
+export default function Modal({ closeModal, heading, children }) {
   return (
     <div className="bg-[#FFFFFF]  shadow-2xl p-10 px-15 fixed  top-1/2 left-1/2 -translate-1/2  z-50 w-1/3 flex items-center  flex-col rounded-md">
       <Image
@@ -20,5 +16,3 @@ export default function Modal({
     </div>
   );
 }
-
-

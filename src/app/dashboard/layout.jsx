@@ -12,9 +12,7 @@ export default function layout({ children }) {
           <Search />
           <ProfileSection />
         </div>
-        <DashboardContainer>
-        {children}
-        </DashboardContainer>
+        <DashboardContainer>{children}</DashboardContainer>
       </div>
     </div>
   );

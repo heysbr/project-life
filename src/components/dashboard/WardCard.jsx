@@ -20,8 +20,15 @@ export default function WardCard({ ward, handleRemove }) {
             className="cursor-pointer"
             onClick={() => setRenameWardModal(true)}
           />
-          {RenameWardModal && <RenameWard closeModal={() => setRenameWardModal(false)} />}
-          <Image src={deleteIcon} alt="" className="cursor-pointer" onClick={()=>handleRemove(wardNumber)} />
+          {RenameWardModal && (
+            <RenameWard closeModal={() => setRenameWardModal(false)} />
+          )}
+          <Image
+            src={deleteIcon}
+            alt=""
+            className="cursor-pointer"
+            onClick={() => handleRemove(wardNumber)}
+          />
         </div>
 
         <div className="flex items-center gap-x-5 px-5 pb-4 pt-0">

@@ -41,14 +41,17 @@ export default function StaffCard({ staff, handleRemove }) {
             >
               <ul className="list-disc marker:text-[#FC5285] list-outside ml-5">
                 <Link href={`/dashboard/staff/`}>
-                <li className="p-1 rounded-md hover:bg-gray-100 cursor-pointer">
-                  Edit Staff
-                </li>
+                  <li className="p-1 rounded-md hover:bg-gray-100 cursor-pointer">
+                    Edit Staff
+                  </li>
                 </Link>
                 <li className="p-1 rounded  hover:bg-gray-100 cursor-pointer">
                   Make an admin
                 </li>
-                <li className="p-1 rounded hover:bg-gray-100 cursor-pointer" onClick={()=>handleRemove(staff.id)}>
+                <li
+                  className="p-1 rounded hover:bg-gray-100 cursor-pointer"
+                  onClick={() => handleRemove(staff.id)}
+                >
                   Remove from institution
                 </li>
               </ul>

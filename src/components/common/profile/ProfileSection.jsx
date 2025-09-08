@@ -25,19 +25,27 @@ export default function ProfileSection() {
           <ul className="py-1">
             <Link href="/dashboard/profile">
               <li className="px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
-                <Image src={ProfileIcon} alt="profile" className="inline me-2"/>
+                <Image
+                  src={ProfileIcon}
+                  alt="profile"
+                  className="inline me-2"
+                />
                 Profile
               </li>
             </Link>
             <Link href={"/dashboard/profile/edit"}>
               <li className="px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
-                <Image src={SettingsIcon} alt="profile" className="inline me-2"/>
+                <Image
+                  src={SettingsIcon}
+                  alt="profile"
+                  className="inline me-2"
+                />
                 Settings
               </li>
             </Link>
             <Link href="/">
               <li className="px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
-                <Image src={LogoutIcon} alt="profile" className="inline me-2"/>
+                <Image src={LogoutIcon} alt="profile" className="inline me-2" />
                 Logout
               </li>
             </Link>

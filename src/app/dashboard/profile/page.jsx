@@ -15,9 +15,12 @@ export default function page() {
   const [toggleEdit, setToggleEdit] = useState(false);
   return (
     <div className="flex flex-col gap-4">
-      <PageTitle title={"Profile"} btnLabel={`${toggleEdit ? "" : "Edit Profile"}`}onClick={() => setToggleEdit(true)}/>
+      <PageTitle
+        title={"Profile"}
+        btnLabel={`${toggleEdit ? "" : "Edit Profile"}`}
+        onClick={() => setToggleEdit(true)}
+      />
       <div className="bg-white flex flex-col p-10 gap-y-5 rounded-md h-fit shadow-lg">
-
         <div className=" relative w-fit">
           <Image
             src={profile}
@@ -34,22 +37,15 @@ export default function page() {
         <p className="font-bold">Genral Info</p>
 
         <div className="flex flex-row bg-white rounded-lg gap-5 items-center me-4 ">
-          <FormTextField
-            label="First Name"
-            placeholder="Enter First Name"
-          />
-          <FormEmailField
-            label="Email"
-            placeholder="Enter Email"
-          />
+          <FormTextField label="First Name" placeholder="Enter First Name" />
+          <FormEmailField label="Email" placeholder="Enter Email" />
           <FormMobileField
             label="Phone Number"
             placeholder="Enter Phone Number"
           />
         </div>
-
       </div>
-      
+
       {toggleEdit && (
         <div className="flex justify-end mt-5 gap-x-5">
           <ButtonSecondary
