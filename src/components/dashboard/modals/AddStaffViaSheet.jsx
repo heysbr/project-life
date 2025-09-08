@@ -8,7 +8,6 @@ export default function AddStaffViaSheet({ closeModal }) {
         <FormUploadField />
         <FormDownloadSample />
       </div>
-
       <div className="flex flex-row gap-x-4 justify-end mt-4">
         <Button variant="secondary" label="Cancel" onClick={() => closeModal(false)} />
         <Button label="Upload" onClick={() => closeModal(false)} />

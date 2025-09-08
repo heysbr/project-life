@@ -21,18 +21,9 @@ export default function StaffCard({ staff, handleRemove }) {
         <div className="flex-1 mx-5">
           <h2 className="text-lg font-bold">{staff.name || "N/A"}</h2>
           <p className="text-sm text-gray-500">ID- {staff.id || "N/A"}</p>
-          <Image
-            src={Call}
-            className="absolute right-3 bottom-2.5"
-            alt="call"
-          />
-          <Image
-            src={Menu}
-            className="absolute right-3 top-2.5 cursor-pointer"
-            onClick={() => setToggle(!toggle)}
-            alt="menu"
-          />
-
+          <Image src={Call} className="absolute right-3 bottom-2.5" alt="call"/>
+          <Image src={Menu} className="absolute right-3 top-2.5 cursor-pointer"
+            onClick={() => setToggle(!toggle)} alt="menu"/>
           {/* Edit Menu */}
           {toggle && (
             <div

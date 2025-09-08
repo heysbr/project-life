@@ -13,11 +13,7 @@ export default function Search() {
       <Dropdown name={"State"} data={StatesListData} />
       <Dropdown name={"District"} data={DistrictsList} />
       <Dropdown name={"Hospitals"} data={HospitalsListData} />
-      <Image
-        width={"auto"}
-        height={"auto"}
-        src={Bell}
-        alt="bell"
+      <Image width={"auto"} height={"auto"} src={Bell} alt="bell"
         className="cursor-pointer active:scale-90 transition-all"
       />
     </div>

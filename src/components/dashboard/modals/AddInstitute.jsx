@@ -13,9 +13,7 @@ export default function AddInstitute({ closeModal, open }) {
         open ? "opacity-100" : "opacity-0 scale-125"
       }`}
     >
-      <Image
-        src={addInstituteCrossBtn}
-        alt="close"
+      <Image src={addInstituteCrossBtn} alt="close"
         className="cursor-pointer absolute right-2 top-2"
         onClick={() => closeModal()}
       />
@@ -25,14 +23,8 @@ export default function AddInstitute({ closeModal, open }) {
       <Image src={defaultProfile} alt="profile" />
 
       <div className="mt-2">
-        <input
-          id="fileUpload"
-          type="file"
-          className="hidden"
-          accept="image/*"
-        />
-        <label
-          htmlFor="fileUpload"
+        <input id="fileUpload" type="file" className="hidden" accept="image/*"/>
+        <label htmlFor="fileUpload"
           className="cursor-pointer rounded-2xl bg-[#FC5285] px-3 py-0.5 text-white text-xs hover:opacity-85"
         >
           Add Photo
@@ -41,21 +33,13 @@ export default function AddInstitute({ closeModal, open }) {
 
       <div className="flex flex-col md:grid md:grid-cols-3 gap-x-10 m-4  gap-y-5 justify-center">
         {fields.map((field, index) => (
-          <FormField
-            key={index}
-            name={field.name}
-            type={field.type}
-            placeholder={field.placeholder}
-            label={field.label}
+          <FormField key={index} name={field.name} type={field.type}
+          placeholder={field.placeholder} label={field.label}
           />
         ))}
       </div>
 
-      <Button
-        label={"Add Institute"}
-        width={"w-68"}
-        onClick={() => closeModal()}
-      />
+      <Button label={"Add Institute"} width={"w-68"} onClick={() => closeModal()}/>
     </div>
   );
 }

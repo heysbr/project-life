@@ -6,7 +6,7 @@ import { useState } from "react";
 import Delete from "@/components/svg/delete.svg";
 import Edit from "@/components/svg/edit.svg";
 
-import Pagination from "../pagination/Pagination";
+import Pagination from "@/components/dashboard/pagination/Pagination";
 
 import { tableComponentData as tableData } from "@/data/data";
 import { tableComponentDataHeaders as headers } from "@/data/data";
@@ -73,23 +73,15 @@ export default function TableComponent() {
               <td className="py-3 px-4 ">{data.contactNo}</td>
               <td className="py-3 px-4 ">{data.totalStaff}</td>
               <td className="py-3 px-4 ">{data.totalPatient}</td>
-              <td className="py-3 px-4 text-[#FF6760] ">
-                {data.highRiskPatient}
-              </td>
-              <td className="w-40 ">
-                <ToggleButton active={data.status} />
-              </td>
+              <td className="py-3 px-4 text-[#FF6760] ">{data.highRiskPatient}</td>
+              <td className="w-40 "><ToggleButton active={data.status}/></td>
               <td className="py-3 px-4 flex items-center gap-3">
                 <Link href="/dashboard/hospital/edit">
-                  <Image
-                    src={Edit}
-                    alt="edit"
+                  <Image src={Edit} alt="edit"
                     className="inline cursor-pointer active:scale-90 transition-all"
                   />
                 </Link>
-                <Image
-                  src={Delete}
-                  alt="delete"
+                <Image src={Delete} alt="delete" 
                   className="inline cursor-pointer active:scale-90 transition-all"
                   onClick={() => handleRemove(data.id)}
                 />
@@ -98,7 +90,6 @@ export default function TableComponent() {
           ))}
         </tbody>
       </table>
-
       {/* table Buttons for pagination */}
       <Pagination setPage={setPage} page={page} totalPages={totalPages} />
     </div>

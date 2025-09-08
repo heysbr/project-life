@@ -2,6 +2,7 @@ import HospitalSearchField from "@/components/dashboard/hospital/HospitalSearchF
 import TableComponent from "@/components/dashboard/hospital/Table";
 import PageTitle from "@/components/common/PageTitle";
 
+
 export default function HospitalList() {
   return (
     <div className="flex flex-col gap-4 ">

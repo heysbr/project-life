@@ -618,3 +618,4 @@ export const hospitalNames = [
   "Kalyani Hospital Gurgaon",
   "Anand Multispeciality Hospital",
 ];
+

@@ -19,24 +19,13 @@ export default function Dropdown({ items, name }) {
         className="flex items-center bg-white rounded-4xl px-3 py-1 w-72 h-9 shadow-md "
         onClick={() => setIsOpen(!isOpen)}
       >
-        <Image
-          src={Sort}
-          alt="down"
-          className="  inline  ml-5 cursor-pointer active:scale-90"
-        />
-        <input
-          type="text"
-          placeholder="Sort By"
-          value={searchTerm}
+        <Image src={Sort} alt="down" className="  inline  ml-5 cursor-pointer active:scale-90"/>
+        <input type="text" placeholder="Sort By" value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
           onClick={() => setIsOpen(!isOpen)}
           className="p-1.5 px-3 focus:outline-0 text-sm "
         />
-        <Image
-          src={Down}
-          alt="down"
-          className="  inline  mr-5 cursor-pointer active:scale-90"
-        />
+        <Image src={Down} alt="down" className="inline  mr-5 cursor-pointer active:scale-90"/>
       </div>
       {isOpen && (
         <ul className="absolute z-10 w-full inline-block bg-white  rounded-md shadow-lg h-fit overflow-y-auto list-disc list-inside">

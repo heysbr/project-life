@@ -1,9 +1,9 @@
 "use client";
 import { useState } from "react";
 import StaffCard from "@/components/dashboard/staff/StaffCard";
-import PageTitle from "../../common/PageTitle";
-import AddStaffModal from "../modals/AddStaffModal";
-import Pagination from "../pagination/Pagination";
+import PageTitle from "@/components/common/PageTitle";
+import AddStaffModal from "@/components/dashboard/modals/AddStaffModal";
+import Pagination from "@/components/dashboard/pagination/Pagination";
 
 export default function StaffCards({ data }) {
   const [dataList, setDataList] = useState(data);
@@ -25,20 +25,12 @@ export default function StaffCards({ data }) {
 
   return (
     <>
-      <PageTitle
-        title={"All Staff"}
-        btnLabel={"Add Staff"}
-        onClick={setAddStaffModal}
-      />
+      <PageTitle title={"All Staff"} btnLabel={"Add Staff"} onClick={setAddStaffModal}/>
       {/* Add Staff Modal */}
-      {addStaffModal && (
-        <AddStaffModal closeModal={() => setAddStaffModal(false)} />
-      )}
+      {addStaffModal && <AddStaffModal closeModal={() => setAddStaffModal(false)} />}
       {/* Cards */}
       <div className="grid grid-cols-3 gap-4 ">
-        {currentData.map((staff, i) => (
-          <StaffCard staff={staff} i={i} key={i} handleRemove={handleRemove} />
-        ))}
+        {currentData.map((staff, i) => <StaffCard staff={staff} key={i} handleRemove={handleRemove}/>)}
       </div>
       {/* Pagination Controls */}
       <Pagination setPage={setPage} page={page} totalPages={totalPages} />
