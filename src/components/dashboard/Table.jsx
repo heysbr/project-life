@@ -1,14 +1,17 @@
 "use client";
 import Image from "next/image";
-import Delete from "@/components/svg/delete.svg";
-import Edit from "@/components/svg/edit.svg";
-import Arrow from "@/components/svg/Arrow.svg";
-
+import Link from "next/link";
 import { useState } from "react";
 
-import { tableComponentData as tableData } from "@/data/data";
-import Link from "next/link";
+import Delete from "@/components/svg/delete.svg";
+import Edit from "@/components/svg/edit.svg";
+
 import Pagination from "./Pagination";
+
+import { tableComponentData as tableData } from "@/data/data";
+import {tableComponentDataHeaders as headers } from "@/data/data";
+
+
 
 const ToggleButton = ({ active }) => {
   const [isActive, setIsActive] = useState(active === "Active");
@@ -34,20 +37,14 @@ const ToggleButton = ({ active }) => {
   );
 };
 
-const headers = [
-  "S. No.",
-  "Hospital Name",
-  "Contact No.",
-  "Total Staff",
-  "Total Patient",
-  "High Risk Patient",
-  "Status",
-  "Action",
-];
+
 
 export default function TableComponent() {
+  const CARDS_PER_PAGE = 5;
   const [page, setPage] = useState(1);
-  const totalPages = 3;
+  const totalPages = Math.ceil(tableData.length / CARDS_PER_PAGE);
+  const startIdx = (page - 1) * CARDS_PER_PAGE;
+  const currentData = tableData.slice(startIdx, startIdx + CARDS_PER_PAGE);
   return (
     <div className="bg-white shadow-md rounded-lg w-full overflow-hidden">
       <table className="border-collapse  w-full">
@@ -61,7 +58,7 @@ export default function TableComponent() {
           </tr>
         </thead>
         <tbody className="text-gray-600">
-          {tableData.map((data, i) => (
+          {currentData.map((data, i) => (
             <tr
               key={data.id}
               className="border-b border-[#E8E8E8] hover:bg-pink-50 text-center"

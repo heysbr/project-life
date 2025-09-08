@@ -5,12 +5,14 @@ import PageTitle from "../common/PageTitle";
 import AddStaffModal from "./modals/AddStaffModal";
 import Pagination from "./Pagination";
 
-const CARDS_PER_PAGE = 6;
+
 
 export default function StaffCards({ data }) {
-  const [page, setPage] = useState(1);
+  
   const [addStaffModal, setAddStaffModal] = useState(false);
-
+  
+  const CARDS_PER_PAGE = 6;
+  const [page, setPage] = useState(1);
   const totalPages = Math.ceil(data.length / CARDS_PER_PAGE);
   const startIdx = (page - 1) * CARDS_PER_PAGE;
   const currentData = data.slice(startIdx, startIdx + CARDS_PER_PAGE);
