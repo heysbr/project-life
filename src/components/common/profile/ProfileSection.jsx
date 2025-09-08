@@ -2,6 +2,9 @@
 import Image from "next/image";
 import { useState } from "react";
 import Profile from "@/components/svg/photo.png";
+import ProfileIcon from "@/components/svg/profile/profile-logo.svg";
+import SettingsIcon from "@/components/svg/profile/profile-setting.svg";
+import LogoutIcon from "@/components/svg/profile/profile-logout.svg";
 import Link from "next/link";
 
 export default function ProfileSection() {
@@ -21,17 +24,20 @@ export default function ProfileSection() {
         <div className="absolute  z-10 w-36 top-full right-0 bg-white border border-gray-200 rounded-md shadow-lg">
           <ul className="py-1">
             <Link href="/dashboard/profile">
-            <li className="px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
-              Profile
-            </li>
+              <li className="px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                <Image src={ProfileIcon} alt="profile" className="inline me-2"/>
+                Profile
+              </li>
             </Link>
             <Link href={"/dashboard/profile/edit"}>
-            <li className="px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
-              Settings
-            </li>
+              <li className="px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                <Image src={SettingsIcon} alt="profile" className="inline me-2"/>
+                Settings
+              </li>
             </Link>
             <Link href="/">
               <li className="px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                <Image src={LogoutIcon} alt="profile" className="inline me-2"/>
                 Logout
               </li>
             </Link>

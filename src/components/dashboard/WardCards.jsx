@@ -7,14 +7,21 @@ import Pagination from "./Pagination";
 
 
 export default function WardCards({data}) {
+  const [dataList, setDataList] = useState(data);
 
   const [addWardModal, setAddWardModal] = useState(false);
 
   const CARDS_PER_PAGE = 9;
   const [page, setPage] = useState(1);
-  const totalPages = Math.ceil(data.length / CARDS_PER_PAGE);
+  const totalPages = Math.ceil(dataList.length / CARDS_PER_PAGE);
   const startIdx = (page - 1) * CARDS_PER_PAGE;
-  const currentData = data.slice(startIdx, startIdx + CARDS_PER_PAGE);
+  const currentData = dataList.slice(startIdx, startIdx + CARDS_PER_PAGE);
+
+  
+  function handleRemove(id) {
+    setDataList((prev) => prev.filter((item) => item.wardNumber !== id));
+  }
+
   return (
     <>
       <PageTitle title={"All Wards"} btnLabel={"Add Ward"} onClick={setAddWardModal}/>
@@ -22,7 +29,7 @@ export default function WardCards({data}) {
 
       {/* Cards */}
       <div className="grid grid-cols-3 gap-4 w-full ">
-        {currentData.map((ward, idx) => <WardCard key={idx} ward={ward} />)}
+        {currentData.map((ward, idx) => <WardCard key={idx} ward={ward} handleRemove={handleRemove}/>)}
       </div>
 
       {/* Pagination Controls */}

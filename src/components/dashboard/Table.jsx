@@ -9,9 +9,7 @@ import Edit from "@/components/svg/edit.svg";
 import Pagination from "./Pagination";
 
 import { tableComponentData as tableData } from "@/data/data";
-import {tableComponentDataHeaders as headers } from "@/data/data";
-
-
+import { tableComponentDataHeaders as headers } from "@/data/data";
 
 const ToggleButton = ({ active }) => {
   const [isActive, setIsActive] = useState(active === "Active");
@@ -37,14 +35,18 @@ const ToggleButton = ({ active }) => {
   );
 };
 
-
-
 export default function TableComponent() {
   const CARDS_PER_PAGE = 5;
+  const [dataList, setDataList] = useState(tableData);
   const [page, setPage] = useState(1);
-  const totalPages = Math.ceil(tableData.length / CARDS_PER_PAGE);
+  const totalPages = Math.ceil(dataList.length / CARDS_PER_PAGE);
   const startIdx = (page - 1) * CARDS_PER_PAGE;
-  const currentData = tableData.slice(startIdx, startIdx + CARDS_PER_PAGE);
+  const currentData = dataList.slice(startIdx, startIdx + CARDS_PER_PAGE);
+
+  function handleRemove(id) {
+    setDataList((prev) => prev.filter((item) => item.id !== id));
+  }
+
   return (
     <div className="bg-white shadow-md rounded-lg w-full overflow-hidden">
       <table className="border-collapse  w-full">
@@ -86,6 +88,7 @@ export default function TableComponent() {
                   src={Delete}
                   alt="delete"
                   className="inline cursor-pointer active:scale-90 transition-all"
+                  onClick={() => handleRemove(data.id)}
                 />
               </td>
             </tr>

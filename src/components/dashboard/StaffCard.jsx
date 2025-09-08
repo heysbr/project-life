@@ -5,7 +5,7 @@ import Call from "@/components/svg/staff-list-call-button.svg";
 import Menu from "@/components/svg/staff-card-menu.svg";
 import Link from "next/link";
 
-export default function StaffCard({ staff }) {
+export default function StaffCard({ staff, handleRemove }) {
   const [toggle, setToggle] = useState(false);
   const active = staff?.active ?? false;
   return (
@@ -48,7 +48,7 @@ export default function StaffCard({ staff }) {
                 <li className="p-1 rounded  hover:bg-gray-100 cursor-pointer">
                   Make an admin
                 </li>
-                <li className="p-1 rounded hover:bg-gray-100 cursor-pointer">
+                <li className="p-1 rounded hover:bg-gray-100 cursor-pointer" onClick={()=>handleRemove(staff.id)}>
                   Remove from institution
                 </li>
               </ul>
