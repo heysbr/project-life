@@ -7,10 +7,11 @@ import Image from "next/image";
 import Link from "next/link";
 
 import { SideBarLinks } from "@/data/data";
+import { usePathname } from "next/navigation";
 
 export default function SideBar() {
   const [open, setOpen] = useState(true);
-  const [active, setActive] = useState("/dashboard");
+  const pathname = usePathname();
 
   return (
     <aside
@@ -24,7 +25,7 @@ export default function SideBar() {
       >
         {open && (
           <Link href="/login" className="p-5">
-            <span>Project Life</span>{" "}
+            <span>Project Life</span>
           </Link>
         )}
         <div>
@@ -49,10 +50,9 @@ export default function SideBar() {
               ? "border-b border-[#E8E8E8] pb-8"
               : ""
           }`}
-          onClick={() => setActive(href)}
         >
           <Image
-            src={active === href ? activeIcon : icon}
+            src={pathname === href ? activeIcon : icon}
             alt={label}
             className="inline"
           />
@@ -60,7 +60,7 @@ export default function SideBar() {
           {open && (
             <span
               className={`${
-                active === href ? "text-[#FC5285]" : "text-[#52575C]"
+                pathname === href ? "text-[#FC5285]" : "text-[#52575C]"
               } font-semibold`}
             >
               {label}
