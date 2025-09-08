@@ -1,3 +1,4 @@
+"use client";
 import LadyPicContainer from "@/components/Container/LadyPicContainer";
 import Button from "@/components/common/Button";
 import FormField from "@/components/common/FormField";

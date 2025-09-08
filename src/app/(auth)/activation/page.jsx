@@ -1,3 +1,4 @@
+"use client";
 import OtpPage from '@/components/Activation/OtpPage';
 import LadyPicContainer from '@/components/Container/LadyPicContainer';
 

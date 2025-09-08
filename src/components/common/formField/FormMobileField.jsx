@@ -2,8 +2,8 @@ import { countryCodes } from "@/data/data";
 
 export default function FormMobileField() {
   return (
-    <div>
-      <span className="text-sm font-bold text-gray-700 mb-2">Mobile No.</span>
+    <div className="m-0 p-0">
+      <span className="  text-gray-700 ">Mobile No.</span>
       <br />
       <label className="flex flex-row border border-gray-300 rounded-md">
         <SelectCountry />

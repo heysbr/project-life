@@ -14,14 +14,11 @@ import ButtonSecondary from "@/components/common/ButtonSecondary";
 export default function page() {
   const [toggleEdit, setToggleEdit] = useState(false);
   return (
-    <>
-      <PageTitle
-        title={"Profile"}
-        btnLabel={`${toggleEdit ? "" : "Edit Profile"}`}
-        onClick={() => setToggleEdit(true)}
-      />
-      <div className="bg-white rounded-md h-fit pb-40 shadow-lg">
-        <div className=" relative w-fit m-5 pt-5 ">
+    <div className="flex flex-col gap-4">
+      <PageTitle title={"Profile"} btnLabel={`${toggleEdit ? "" : "Edit Profile"}`}onClick={() => setToggleEdit(true)}/>
+      <div className="bg-white flex flex-col p-10 gap-y-5 rounded-md h-fit shadow-lg">
+
+        <div className=" relative w-fit">
           <Image
             src={profile}
             alt="profile-pic"
@@ -30,29 +27,29 @@ export default function page() {
           <Image
             src={pencil}
             alt="profile-pic"
-            className="absolute   rounded-full bottom-1 right-1"
+            className="absolute rounded-full bottom-1 right-1"
           />
         </div>
-        <p className="px-7 py-4 font-bold">Genral Info</p>
 
-        <div className="flex flex-row bg-white p-5 rounded-lg gap-x-10  justify-evenly">
+        <p className="font-bold">Genral Info</p>
+
+        <div className="flex flex-row bg-white rounded-lg gap-5 items-center me-4 ">
           <FormTextField
             label="First Name"
             placeholder="Enter First Name"
-            width="w-72"
           />
           <FormEmailField
             label="Email"
             placeholder="Enter Email"
-            width="w-72"
           />
           <FormMobileField
             label="Phone Number"
             placeholder="Enter Phone Number"
-            width="w-72"
           />
         </div>
+
       </div>
+      
       {toggleEdit && (
         <div className="flex justify-end mt-5 gap-x-5">
           <ButtonSecondary
@@ -62,6 +59,6 @@ export default function page() {
           <Button label="Update" onClick={() => setToggleEdit(false)} />
         </div>
       )}
-    </>
+    </div>
   );
 }
