@@ -3,7 +3,7 @@ import Image from "next/image";
 import { useState } from "react";
 import Profile from "@/components/svg/photo.png";
 import ProfileIcon from "@/components/svg/profile/profile-logo.svg";
-import SettingsIcon from "@/components/svg/profile/profile-setting.svg";
+// import SettingsIcon from "@/components/svg/profile/profile-setting.svg";
 import LogoutIcon from "@/components/svg/profile/profile-logout.svg";
 import Link from "next/link";
 
@@ -33,7 +33,7 @@ export default function ProfileSection() {
                 Profile
               </li>
             </Link>
-            <Link href={"/dashboard/profile/edit"}>
+            {/* <Link href={"/dashboard/profile/edit"}>
               <li className="px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
                 <Image
                   src={SettingsIcon}
@@ -42,7 +42,7 @@ export default function ProfileSection() {
                 />
                 Settings
               </li>
-            </Link>
+            </Link> */}
             <Link href="/">
               <li className="px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
                 <Image src={LogoutIcon} alt="profile" className="inline me-2" />

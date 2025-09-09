@@ -10,6 +10,7 @@ import FormForgetField from "@/components/common/formField/FormForgetField";
 import FormUploadField from "@/components/common/formField/FormUploadField";
 import FormDownloadSample from "@/components/common/formField/FormDownloadSample";
 import FormPincodeField from "@/components/common/formField/FormPincodeField";
+import FormTextareaField from "@/components/common/formField/FormTextareaField";
 
 export const fieldComponentMap = {
   text: FormTextField,
@@ -24,6 +25,7 @@ export const fieldComponentMap = {
   upload: FormUploadField,
   download: FormDownloadSample,
   pincode: FormPincodeField,
+  textarea: FormTextareaField, 
 };
 
 export const TestFields = [
@@ -96,6 +98,158 @@ export const TestFields = [
     label: "Download Field",
   },
 ];
+
+export const EditHospitalFields = [
+  {
+    name: "state",
+    type: "text",
+    placeholder: "Enter state",
+    label: "State",
+  },
+  {
+    name: "district",
+    type: "text",
+    placeholder: "Enter district",
+    label: "District",
+  },
+  {
+    name: "city",
+    type: "select",
+    placeholder: "Select city",
+    label: "City",
+    options: [], // you can populate list of cities
+  },
+  {
+    name: "hospital",
+    type: "select",
+    placeholder: "Select hospital",
+    label: "Hospital",
+    options: ["Apollo Hospital"], // example
+  },
+  {
+    name: "adminEmail",
+    type: "email",
+    placeholder: "Enter admin email",
+    label: "Admin Email",
+  },
+  {
+    name: "phone",
+    type: "mobile",
+    placeholder: "Enter phone no.",
+    label: "Phone no.",
+    prefix: "+91", // extra property for country code
+  },
+  {
+    name: "totalStaff",
+    type: "number",
+    placeholder: "Enter total staff",
+    label: "Total Staff",
+  },
+  {
+    name: "totalPatient",
+    type: "number",
+    placeholder: "Enter total patient",
+    label: "Total Patient",
+  },
+  {
+    name: "highRiskPatient",
+    type: "number",
+    placeholder: "Enter high risk patient",
+    label: "High risk Patient",
+  },
+  {
+    name: "status",
+    type: "select",
+    placeholder: "Select status",
+    label: "Status",
+    options: ["Active", "Inactive"], // example
+  },
+];
+
+
+export const EditStafffields = [
+  {
+    name: "firstName",
+    type: "text",
+    placeholder: "Enter first name",
+    label: "First Name",
+  },
+  {
+    name: "middleName",
+    type: "text",
+    placeholder: "Enter middle name",
+    label: "Middle Name",
+  },
+  {
+    name: "lastName",
+    type: "text",
+    placeholder: "Enter last name",
+    label: "Last Name",
+  },
+  {
+    name: "dob",
+    type: "datepicker",
+    placeholder: "Select",
+    label: "Date of Birth",
+  },
+  {
+    name: "sex",
+    type: "radio",
+    label: "Sex",
+    options: ["Male", "Female"],
+  },
+  {
+    name: "instituteName",
+    type: "text",
+    placeholder: "Enter institute name",
+    label: "Institute Name",
+  },
+  {
+    name: "city",
+    type: "text",
+    placeholder: "Enter City",
+    label: "City",
+  },
+  {
+    name: "medicalCouncil",
+    type: "select",
+    placeholder: "Enter medical council",
+    label: "Medical Council",
+    options: [], // can add council list here
+  },
+  {
+    name: "profession",
+    type: "select",
+    placeholder: "Select",
+    label: "Profession i.e. nurse or doctor",
+    options: ["Doctor", "Nurse"], // example
+  },
+  {
+    name: "initials",
+    type: "text",
+    placeholder: "Enter initials",
+    label: "Initials",
+  },
+  {
+    name: "email",
+    type: "email",
+    placeholder: "Enter email",
+    label: "Email",
+  },
+  {
+    name: "mobile",
+    type: "mobile",
+    placeholder: "Enter mobile no.",
+    label: "Mobile no.",
+    prefix: "+91", // extra property
+  },
+  {
+    name: "assignAdmin",
+    type: "checkbox",
+    label: "Do you assign admin role to this staff?",
+  },
+];
+
 
 export const StaffFormFields = [
   {

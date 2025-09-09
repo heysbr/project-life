@@ -10,6 +10,10 @@ import pencil from "@/components/svg/profile-edit.svg";
 import { useState } from "react";
 import Button from "@/components/common/Button";
 
+import { EditStafffields as fields } from "@/data/fields";
+import FormField from "@/components/common/FormField";
+import FormUploadField from "@/components/common/formField/FormUploadField";
+
 export default function page() {
   const [toggleEdit, setToggleEdit] = useState(false);
   return (
@@ -19,39 +23,38 @@ export default function page() {
         btnLabel={`${toggleEdit ? "" : "Edit Profile"}`}
         onClick={() => setToggleEdit(true)}
       />
-      <div className="bg-white flex flex-col p-10 gap-y-5 rounded-md h-fit shadow-lg">
-        <div className=" relative w-fit">
-          <Image
-            src={profile}
-            alt="profile-pic"
-            className=" rounded-full size-25  object-cover"
-          />
-          <Image
-            src={pencil}
-            alt="profile-pic"
-            className="absolute rounded-full bottom-1 right-1"
-          />
-        </div>
 
-        <p className="font-bold">Genral Info</p>
-
-        <div className="flex flex-row bg-white rounded-lg gap-5 items-center me-4 ">
-          <FormTextField label="First Name" placeholder="Enter First Name" />
-          <FormEmailField label="Email" placeholder="Enter Email" />
-          <FormMobileField
-            label="Phone Number"
-            placeholder="Enter Phone Number"
-          />
+      <div className="bg-white  grid rounded-md h-fit shadow-lg place-items-center">
+        <div className="grid grid-cols-3 w-full gap-5 p-8 ">
+          {fields.map((field, index) => (
+            <FormField
+              key={index}
+              name={field.name}
+              type={field.type}
+              placeholder={field.placeholder}
+              label={field.label}
+              values={field?.options}
+            />
+          ))}
         </div>
       </div>
 
       {toggleEdit && (
-        <div className="flex justify-end mt-5 gap-x-5">
-          <Button variant="secondary"
-            label="Cancel"
-            onClick={() => setToggleEdit(false)}
-          />
-          <Button label="Update" onClick={() => setToggleEdit(false)} />
+        <div className="flex justify-between mt-5 gap-x-5">
+          <FormUploadField />
+          <div className="flex justify-end gap-x-5">
+            <Button
+              width="w-30"
+              variant="secondary"
+              label="Cancel"
+              onClick={() => setToggleEdit(false)}
+            />
+            <Button
+              width="w-30"
+              label="Save"
+              onClick={() => setToggleEdit(false)}
+            />
+          </div>
         </div>
       )}
     </div>

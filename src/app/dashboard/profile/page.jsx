@@ -13,13 +13,14 @@ import Button from "@/components/common/Button";
 export default function page() {
   const [toggleEdit, setToggleEdit] = useState(false);
   return (
-    <div className="flex flex-col gap-4">
+    <div className="flex flex-col gap-4 h-1/2">
       <PageTitle
         title={"Profile"}
         btnLabel={`${toggleEdit ? "" : "Edit Profile"}`}
         onClick={() => setToggleEdit(true)}
+        
       />
-      <div className="bg-white flex flex-col p-10 gap-y-5 rounded-md h-fit shadow-lg">
+      <div className="bg-white flex flex-col p-10 gap-y-5 rounded-md h-96 shadow-lg">
         <div className=" relative w-fit">
           <Image
             src={profile}
@@ -41,6 +42,7 @@ export default function page() {
           <FormMobileField
             label="Phone Number"
             placeholder="Enter Phone Number"
+
           />
         </div>
       </div>

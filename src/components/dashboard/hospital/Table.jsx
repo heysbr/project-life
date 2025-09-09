@@ -76,7 +76,7 @@ export default function TableComponent() {
               <td className="py-3 px-4 text-[#FF6760] ">{data.highRiskPatient}</td>
               <td className="w-40 "><ToggleButton active={data.status}/></td>
               <td className="py-3 px-4 flex items-center gap-3">
-                <Link href="/dashboard/hospital/edit">
+                <Link href="/dashboard/hospital">
                   <Image src={Edit} alt="edit"
                     className="inline cursor-pointer active:scale-90 transition-all"
                   />
