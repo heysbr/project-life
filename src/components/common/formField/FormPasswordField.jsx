@@ -7,25 +7,25 @@ export default function FormPasswordField(props) {
   const [passwordVisible, setPasswordVisible] = useState(false);
 
   return (
-    <div className="relative w-full">
-      <label className="text-sm font-medium text-gray-700 mb-2">
-        {props?.label}
+    <label className="text-sm font-bold text-gray-700 mb-2 h-15 cursor-pointer">
+      {props?.label}
+      <div className="relative">
         <input
           type={passwordVisible ? "text" : "password"}
           id={props?.name}
           name={props?.name}
           placeholder={props?.placeholder}
-          className="w-full px-4 py-2  border border-gray-300 rounded-md placeholder-[#BEC5D3] text-sm focus:outline-0"
+          className="w-full px-4 py-2 border font-normal border-gray-300 rounded-md placeholder-[#BEC5D3] text-sm focus:outline-0"
           required
         />
         <Image
           src={eye}
           alt="eye"
-          className="absolute top-1/2 translate-y-1/2 right-3 active:scale-90"
+          className="absolute top-1/2 -translate-1/2 right-0 active:scale-90"
           onMouseUp={() => setPasswordVisible(false)}
           onMouseDown={() => setPasswordVisible(true)}
         />
-      </label>
-    </div>
+      </div>
+    </label>
   );
 }

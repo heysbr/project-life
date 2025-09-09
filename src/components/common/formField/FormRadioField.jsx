@@ -1,19 +1,13 @@
 const FormRadioField = (props) => {
+  const options = props?.values || [];
+  console.log(options);
   return (
-    <label className="text-sm font-medium text-gray-700 mb-2">
-      <span className="font-bold">{props?.label}</span>
-      <div
-        className={`flex gap-6 ${
-          props?.directionCol ? "flex-col" : "flex-row"
-        }`}
-      >
-        {props?.values?.map((item, i) => (
-          <label key={i} className="flex items-center gap-2">
-            <input
-              type="radio"
-              name={props?.name}
-              className="accent-[#FC5285]"
-            />
+    <label className="relative text-sm font-bold text-gray-700 w-full cursor-pointer">
+      {props?.label}
+      <div className="flex items-center flex-1 ">
+        {options.map((item, i) => (
+          <label key={i} className="text-sm w-full flex items-center font-normal mt-2 pr-5 cursor-pointer">
+            <input type="radio" name={props?.name} className="accent-[#FC5285] mx-2 cursor-pointer"/>
             {item}
           </label>
         ))}

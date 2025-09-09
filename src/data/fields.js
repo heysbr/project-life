@@ -42,7 +42,6 @@ export const TestFields = [
     type: "select",
     placeholder: "Enter Select",
     label: "Select Field",
-    options: [{ value: "Option 1" }, { value: "Option 2" }],
   },
   {
     name: "radio",

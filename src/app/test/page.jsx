@@ -15,18 +15,19 @@ const fields = [
     placeholder: "Enter Password",
     label: "Password Field",
   },
-  // {
-  //   name: "select",
-  //   type: "select",
-  //   placeholder: "Enter Select",
-  //   label: "Select Field",
-  //   options: [{ value: "Option 1" }, { value: "Option 2" }],
-  // },
+  {
+    name: "select",
+    type: "select",
+    placeholder: "Enter Select",
+    label: "Select Field",
+    options: ["Option 1", "Option 2"],
+  },
   {
     name: "radio",
     type: "radio",
     placeholder: "Radio Buttons",
     label: "Radio Buttons Field",
+    options: ["Option 1", "Option 2", "Option 3"],
   },
   {
     name: "mobile",
@@ -43,17 +44,15 @@ const fields = [
   {
     name: "checkbox",
     type: "checkbox",
-    placeholder: "Enter Checkbox",
+    // placeholder: "Enter Checkbox",
     label: "Checkbox Field",
   },
-
   {
     name: "datepicker",
     type: "datepicker",
     placeholder: "Enter Date Picker",
     label: "Date Picker Field",
   },
-
   {
     name: "forget",
     type: "forget",
@@ -75,15 +74,22 @@ const fields = [
 ];
 
 export default function Page() {
-
   return (
     <div className="grid place-items-center p-10">
-      <div className="grid grid-cols-3 ">
-        {fields.map((field, index) => <FormField key={index} name={field.name} type={field.type} placeholder={field.placeholder} label={field.label} />)}
+      <div className="grid grid-cols-3 border p-10 gap-x-10">
+        {fields.map((field, index) => (
+          <FormField
+            key={index}
+            name={field.name}
+            type={field.type}
+            placeholder={field.placeholder}
+            label={field.label}
+            values={field?.options}
+          />
+        ))}
       </div>
 
-      <Button label={"Add Institute"} width={"w-68"} />
-      <Button variant="secondary" label={"Add Institute"} width={"w-68"} />
+
     </div>
   );
 }

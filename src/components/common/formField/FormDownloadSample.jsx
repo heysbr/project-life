@@ -7,7 +7,7 @@ export default function FormDownloadSample() {
     <a
       href="./sample.xlsx"
       download
-      className="px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700"
+      className="px-4 py-2 bg-[#3CCB97] text-white rounded-lg hover:bg-[#3CCB97]/90 transition flex items-center justify-center"
     >
       Download Sample Sheet
       <Image src={svgDownload} alt="download icon" className="inline ml-2" />
