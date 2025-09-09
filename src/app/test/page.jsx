@@ -1,33 +1,89 @@
 "use client";
-import { useState } from "react";
-import Modaldemo from "./ModalDemo";
+import Button from "@/components/common/Button";
+import FormField from "@/components/common/FormField";
+
+const fields = [
+  {
+    name: "textfield",
+    type: "text",
+    placeholder: "Enter text",
+    label: "Text Field",
+  },
+  {
+    name: "passwordfield",
+    type: "password",
+    placeholder: "Enter Password",
+    label: "Password Field",
+  },
+  // {
+  //   name: "select",
+  //   type: "select",
+  //   placeholder: "Enter Select",
+  //   label: "Select Field",
+  //   options: [{ value: "Option 1" }, { value: "Option 2" }],
+  // },
+  {
+    name: "radio",
+    type: "radio",
+    placeholder: "Radio Buttons",
+    label: "Radio Buttons Field",
+  },
+  {
+    name: "mobile",
+    type: "mobile",
+    placeholder: "Enter Mobile Number",
+    label: "Mobile Number Field",
+  },
+  {
+    name: "email",
+    type: "email",
+    placeholder: "Enter Email",
+    label: "Email Field",
+  },
+  {
+    name: "checkbox",
+    type: "checkbox",
+    placeholder: "Enter Checkbox",
+    label: "Checkbox Field",
+  },
+
+  {
+    name: "datepicker",
+    type: "datepicker",
+    placeholder: "Enter Date Picker",
+    label: "Date Picker Field",
+  },
+
+  {
+    name: "forget",
+    type: "forget",
+    placeholder: "Enter Forget",
+    label: "Forget Field",
+  },
+  {
+    name: "upload",
+    type: "upload",
+    placeholder: "Enter Upload",
+    label: "Upload Field",
+  },
+  {
+    name: "download",
+    type: "download",
+    placeholder: "Enter Download",
+    label: "Download Field",
+  },
+];
 
 export default function Page() {
-  const [open, setOpen] = useState(false);
 
   return (
-    <div className="min-h-screen flex items-center justify-center p-8">
-      <button
-        onClick={() => setOpen(true)}
-        className="rounded bg-indigo-600 px-4 py-2 text-white hover:bg-indigo-700"
-      >
-        Open Modal
-      </button>
+    <div className="grid place-items-center p-10">
+      <div className="grid grid-cols-3 ">
+        {fields.map((field, index) => <FormField key={index} name={field.name} type={field.type} placeholder={field.placeholder} label={field.label} />)}
+      </div>
 
-      <Modaldemo open={open} onClose={() => setOpen(false)} title="My Modal">
-        <p className="text-sm text-gray-700">
-          This is a simple modal. Focus is trapped inside. Press <kbd>Esc</kbd>{" "}
-          to close.
-        </p>
-
-        <div className="mt-4">
-          <label className="block text-sm">Your name</label>
-          <input
-            className="mt-1 w-full rounded border px-3 py-2"
-            placeholder="Type here"
-          />
-        </div>
-      </Modaldemo>
+      <Button label={"Add Institute"} width={"w-68"} />
+      <Button variant="secondary" label={"Add Institute"} width={"w-68"} />
     </div>
   );
 }

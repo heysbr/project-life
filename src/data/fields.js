@@ -24,6 +24,78 @@ export const fieldComponentMap = {
   download: FormDownloadSample,
 };
 
+export const TestFields = [
+  {
+    name: "textfield",
+    type: "text",
+    placeholder: "Enter text",
+    label: "Text Field",
+  },
+  {
+    name: "passwordfield",
+    type: "password",
+    placeholder: "Enter Password",
+    label: "Password Field",
+  },
+  {
+    name: "select",
+    type: "select",
+    placeholder: "Enter Select",
+    label: "Select Field",
+    options: [{ value: "Option 1" }, { value: "Option 2" }],
+  },
+  {
+    name: "radio",
+    type: "radio",
+    placeholder: "Radio Buttons",
+    label: "Radio Buttons Field",
+  },
+  {
+    name: "mobile",
+    type: "mobile",
+    placeholder: "Enter Mobile Number",
+    label: "Mobile Number Field",
+  },
+  {
+    name: "email",
+    type: "email",
+    placeholder: "Enter Email",
+    label: "Email Field",
+  },
+  {
+    name: "checkbox",
+    type: "checkbox",
+    placeholder: "Enter Checkbox",
+    label: "Checkbox Field",
+  },
+
+  {
+    name: "datepicker",
+    type: "datepicker",
+    placeholder: "Enter Date Picker",
+    label: "Date Picker Field",
+  },
+
+  {
+    name: "forget",
+    type: "forget",
+    placeholder: "Enter Forget",
+    label: "Forget Field",
+  },
+  {
+    name: "upload",
+    type: "upload",
+    placeholder: "Enter Upload",
+    label: "Upload Field",
+  },
+  {
+    name: "download",
+    type: "download",
+    placeholder: "Enter Download",
+    label: "Download Field",
+  },
+];
+
 export const StaffFormFields = [
   {
     name: "firstName",
@@ -57,7 +129,7 @@ export const StaffFormFields = [
   },
   {
     name: "email",
-    type: "text vsdv",
+    type: "text",
     placeholder: "Email ID",
     label: "Institute Name",
     options: [{ value: "Option 1" }, { value: "Option 2" }],

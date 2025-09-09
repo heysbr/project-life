@@ -1,5 +1,5 @@
 import Button from "@/components/common/Button";
-import Heading from "@/components/layouts/Heading";
+import Heading from "@/components/common/layouts/Heading";
 import React from "react";
 import Timer from "@/components/Activation/Timer";
 import OtpInput from "@/components/Activation/OtpInput";

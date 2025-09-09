@@ -1,7 +1,7 @@
 "use client";
 import FormField from "@/components/common/FormField";
 import Button from "@/components/common/Button";
-import Heading from "@/components/layouts/Heading";
+import Heading from "@/components/common/layouts/Heading";
 
 import { LoginFields } from "@/data/fields";
 

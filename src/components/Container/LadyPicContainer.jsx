@@ -1,6 +1,6 @@
 import loginLady from "@/components/images/login-lady.svg";
 import Image from "next/image";
-import Heading from "../layouts/Heading";
+import Heading from "../common/layouts/Heading";
 
 const LadyPicContainer = ({ children }) => {
   return (
