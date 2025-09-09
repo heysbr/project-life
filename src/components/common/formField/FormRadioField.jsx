@@ -6,7 +6,7 @@ const FormRadioField = (props) => {
       {props?.label}
       <div className="flex items-center flex-1 ">
         {options.map((item, i) => (
-          <label key={i} className="text-sm w-full flex items-center font-normal mt-2 pr-5 cursor-pointer">
+          <label key={i} className="text-sm flex items-center font-normal mt-2 pr-5 cursor-pointer">
             <input type="radio" name={props?.name} className="accent-[#FC5285] mx-2 cursor-pointer"/>
             {item}
           </label>

@@ -9,6 +9,7 @@ import FormRadioField from "@/components/common/formField/FormRadioField";
 import FormForgetField from "@/components/common/formField/FormForgetField";
 import FormUploadField from "@/components/common/formField/FormUploadField";
 import FormDownloadSample from "@/components/common/formField/FormDownloadSample";
+import FormPincodeField from "@/components/common/formField/FormPincodeField";
 
 export const fieldComponentMap = {
   text: FormTextField,
@@ -22,6 +23,7 @@ export const fieldComponentMap = {
   forget: FormForgetField,
   upload: FormUploadField,
   download: FormDownloadSample,
+  pincode: FormPincodeField,
 };
 
 export const TestFields = [
@@ -217,26 +219,20 @@ export const AddInstituteFields = [
   {
     name: "institute-name",
     type: "text",
-    placeholder: "Enter name",
+    placeholder: "Enter Institute Name",
     label: "Institute Name",
   },
   {
     name: "email",
-    type: "text",
-    placeholder: "Email ID",
-    label: "Email Id",
+    type: "email",
+    placeholder: "Enter Email",
+    label: "Email",
   },
   {
     name: "mobile",
     type: "mobile",
     placeholder: "Mobile",
-    label: "Enter Mobile",
-  },
-  {
-    name: "pincode",
-    type: "text",
-    placeholder: "Enter Pincode",
-    label: "Pincode",
+    label: "Enter Mobile Number",
   },
   {
     name: "address",
@@ -244,6 +240,13 @@ export const AddInstituteFields = [
     placeholder: "Enter Address",
     label: "Address",
   },
+  {
+    name: "pincode",
+    type: "pincode",
+    placeholder: "Enter Pincode",
+    label: "Pincode",
+  },
+  
   {
     name: "city",
     type: "text",
