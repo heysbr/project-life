@@ -13,7 +13,7 @@ const LadyPicContainer = ({ children }) => {
         <Heading>“Labour Care Guide”</Heading>
         <Image src={loginLady} alt="" className="size-90 " />
       </div>
-      <div className="flex items-center justify-center flex-1  ">
+      <div className="flex items-center justify-center flex-1 bg-white ">
         {children}
       </div>
     </div>

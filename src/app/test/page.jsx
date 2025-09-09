@@ -44,7 +44,7 @@ const fields = [
   {
     name: "checkbox",
     type: "checkbox",
-    // placeholder: "Enter Checkbox",
+    placeholder: "Enter Checkbox",
     label: "Checkbox Field",
   },
   {
@@ -76,7 +76,7 @@ const fields = [
 export default function Page() {
   return (
     <div className="grid place-items-center p-10">
-      <div className="grid grid-cols-3 border p-10 gap-x-10">
+      <div className="grid grid-cols-3 border p-10 gap-x-10 ">
         {fields.map((field, index) => (
           <FormField
             key={index}

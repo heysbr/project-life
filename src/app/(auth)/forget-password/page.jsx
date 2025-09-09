@@ -8,11 +8,11 @@ import { LoginFields } from "@/data/fields";
 export default function LoginForm() {
   return (
     <>
-      <Heading className={"mb-5"}>Labour Care Guide</Heading>
-      <div className="flex flex-col w-9/10 h-fit lg:w-1/3 py-10 lg:h-7/10 bg-white  drop-shadow-2xl/25 drop-shadow-[#f95b85] rounded-lg  items-center">
+      <Heading>Labour Care Guide</Heading>
+      <div className="flex flex-col w-1/3 py-10 h-7/10 bg-white  drop-shadow-2xl/25 drop-shadow-[#f95b85] rounded-lg items-center">
         <h2 className="font-medium mb-8 text-2xl">Reset Password</h2>
         <form className="px-10">
-          <div className="flex flex-col mb-4  gap-y-5 ">
+          <div className="flex flex-col mb-4 gap-y-5">
             {LoginFields.map((field, index) => (
               <FormField
                 key={index}
