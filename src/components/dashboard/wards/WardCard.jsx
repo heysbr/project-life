@@ -10,6 +10,8 @@ export default function WardCard({ ward, handleRemove }) {
   const totalPatient = ward?.totalPatient;
   const [RenameWardModal, setRenameWardModal] = useState(false);
 
+  
+
   return (
     <div className="w-full rounded-xl shadow-xl overflow-hidden">
       <div className=" bg-[#FFEEF3]  ">

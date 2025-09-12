@@ -1,11 +1,7 @@
 import Error from "./Error";
 export default function FormTextField(props) {
-  const label = props?.label || "Label";
-  const placeholder = props?.placeholder || "Placeholder";
-  const name = props?.name || "name";
-  const register = props?.register;
-  const error = props?.error;
-
+  const { label, placeholder, name, register, error, ...rest } = props;
+  
   return (
     <div className="w-full">
       <label
@@ -17,9 +13,10 @@ export default function FormTextField(props) {
 
       <input
         type="text"
+        {...rest}
         id={name}
         placeholder={placeholder}
-        {...register(name)} 
+        {...register(name)}
         className="w-full px-4 py-2 border border-gray-300 rounded-md font-normal placeholder-[#BEC5D3] text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
       />
 

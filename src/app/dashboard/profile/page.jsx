@@ -10,40 +10,68 @@ import pencil from "@/components/svg/profile-edit.svg";
 import { useState } from "react";
 import Button from "@/components/common/Button";
 
-export default function page() {
+import { useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { generateSchema } from "@/components/common/SchemaGenerator";
+import {profileFormFields as fields } from "@/data/fields";
+import FormField from "@/components/common/FormField";
+
+const schema = generateSchema(fields);
+
+export default function page() { 
+  const {
+      register,
+      handleSubmit,
+      formState: { errors },
+    } = useForm({
+      resolver: zodResolver(schema),
+      mode: "all",
+    });
+  
+    const onSubmit = (data) => {
+      alert("Form data: " + JSON.stringify(data, null, 2));
+      setToggleEdit(false);
+    };
   const [toggleEdit, setToggleEdit] = useState(false);
   return (
-    <div className="flex flex-col gap-4 h-1/2">
+    <form className="flex flex-col gap-4 h-1/2">
       <PageTitle
         title={"Profile"}
         btnLabel={`${toggleEdit ? "" : "Edit Profile"}`}
         onClick={() => setToggleEdit(true)}
         
       />
+      <fieldset disabled={!toggleEdit}>
       <div className="bg-white flex flex-col p-10 gap-y-5 rounded-md h-96 shadow-lg">
         <div className=" relative w-fit">
           <Image
             src={profile}
             alt="profile-pic"
             className=" rounded-full size-25  object-cover"
-          />
+            />
           <Image
             src={pencil}
             alt="profile-pic"
             className="absolute rounded-full bottom-1 right-1"
-          />
+            />
         </div>
 
         <p className="font-bold">Genral Info</p>
 
         <div className="flex flex-row bg-white rounded-lg gap-5 items-center me-4 ">
-          <FormTextField label="First Name" placeholder="Enter First Name" />
-          <FormEmailField label="Email" placeholder="Enter Email" />
-          <FormMobileField
-            label="Phone Number"
-            placeholder="Enter Phone Number"
-
-          />
+          {fields.map((field, index) => (
+                        <FormField
+                          key={index}
+                          name={field.name}
+                          type={field.type}
+                          placeholder={field.placeholder}
+                          label={field.label}
+                          options={field?.options}
+                          register={register}
+                          error={errors[field.name]?.message}
+                        />
+                      ))}
+          
         </div>
       </div>
 
@@ -52,10 +80,11 @@ export default function page() {
           <Button variant="secondary"
             label="Cancel"
             onClick={() => setToggleEdit(false)}
-          />
+            />
           <Button label="Update" onClick={() => setToggleEdit(false)} />
         </div>
       )}
-    </div>
+      </fieldset>
+    </form>
   );
 }

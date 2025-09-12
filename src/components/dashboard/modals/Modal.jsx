@@ -11,7 +11,8 @@ export default function Modal({ closeModal, heading, children }) {
         onClick={() => closeModal()}
       />
       <h1 className="font-semibold text-2xl ">{heading}</h1>
-      <div className="flex flex-1 flex-col gap-y-7">{children}</div>
+      <div className="">{children}</div>
+      {/* <div className="flex flex-1 flex-col gap-y-7">{children}</div> */}
     </div>
   );
 }

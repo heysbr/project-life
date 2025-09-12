@@ -10,7 +10,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { generateSchema } from "@/components/common/SchemaGenerator";
 import { useRouter } from "next/navigation";
 
-const schema = generateSchema(FORM_FIELDS);
+const schema = generateSchema(FORM_FIELDS); 
 
 export default function Home() {
   const router = useRouter();

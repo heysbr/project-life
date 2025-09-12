@@ -167,6 +167,28 @@ export const EditHospitalFields = [
 ];
 
 
+export const profileFormFields = [
+  {
+    type: "text",
+    name: "firstName",
+    label: "First Name",
+    placeholder: "Enter First Name",
+  },
+  {
+    type: "email",
+    name: "email",
+    label: "Email",
+    placeholder: "Enter Email",
+  },
+  {
+    type: "mobile",
+    name: "phoneNumber",
+    label: "Phone Number",
+    placeholder: "Enter Phone Number",
+  },
+];
+
+
 export const EditStafffields = [
   {
     name: "firstName",
@@ -215,7 +237,7 @@ export const EditStafffields = [
     type: "select",
     placeholder: "Enter medical council",
     label: "Medical Council",
-    options: [], // can add council list here
+    options: ["a","b","c"], // can add council list here
   },
   {
     name: "profession",

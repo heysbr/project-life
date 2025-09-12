@@ -27,7 +27,7 @@ export default function StaffCards({ data }) {
     <>
       <PageTitle title={"All Staff"} btnLabel={"Add Staff"} onClick={setAddStaffModal}/>
       {/* Add Staff Modal */}
-      {addStaffModal && <AddStaffModal closeModal={() => setAddStaffModal(false)} />}
+      {addStaffModal && <AddStaffModal closeModal={setAddStaffModal} />}
       {/* Cards */}
       <div className="grid grid-cols-3 gap-4 ">
         {currentData.map((staff, i) => <StaffCard staff={staff} key={i} handleRemove={handleRemove}/>)}
