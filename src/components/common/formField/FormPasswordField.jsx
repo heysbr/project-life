@@ -3,8 +3,12 @@ import React, { useState } from "react";
 import eye from "@/components/images/pass-eye.svg";
 import Image from "next/image";
 
+import Error from "./Error";
 export default function FormPasswordField(props) {
   const [passwordVisible, setPasswordVisible] = useState(false);
+  const register = props?.register;
+  const error = props?.error;
+  const name = props?.name || "password";
 
   return (
     <label className="text-sm font-bold text-gray-700 mb-2 h-15 cursor-pointer">
@@ -15,8 +19,8 @@ export default function FormPasswordField(props) {
           id={props?.name}
           name={props?.name}
           placeholder={props?.placeholder}
+          {...register(name)}
           className="w-full px-4 py-2 border font-normal border-gray-300 rounded-md placeholder-[#BEC5D3] text-sm focus:outline-0"
-          required
         />
         <Image
           src={eye}
@@ -26,6 +30,7 @@ export default function FormPasswordField(props) {
           onMouseDown={() => setPasswordVisible(true)}
         />
       </div>
+      {error && <Error error={error} />}
     </label>
   );
 }

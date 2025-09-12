@@ -330,7 +330,7 @@ export const StaffFormFields = [
 export const loginFormFields = [
   {
     name: "email",
-    type: "text",
+    type: "email",
     placeholder: "Email ID",
     label: "Email ID",
   },

@@ -1,6 +1,11 @@
 import { countryCodes } from "@/data/data";
+import Error from "./Error";
 
-export default function FormMobileField() {
+export default function FormMobileField(props) {
+  const error = props?.error;
+  const register = props?.register;
+  const name = props?.name || "mobile";
+
   return (
     <label className="text-sm font-bold text-gray-700 mb-2 h-15 cursor-pointer">
       Mobile No.
@@ -9,11 +14,12 @@ export default function FormMobileField() {
         <input
           type="tel"
           pattern="[0-9]{10}"
+          {...register(name)}
           placeholder="Enter phone number"
           className="w-fit px-4 py-2 font-normal border-gray-300 border-l flex-1 placeholder-[#BEC5D3] text-sm focus:outline-0"
-          required
         />
       </div>
+      {error && <Error error={error} />}
     </label>
   );
 }

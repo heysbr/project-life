@@ -15,7 +15,7 @@ export default function Stats() {
       <PageTitle
         title={"Dashboard- All Hospitals"}
         btnLabel={"Add Institute"}
-        onClick={() => setOpen(true)}
+        onClick={setOpen}
       />
       {open && <AddInstitute closeModal={setOpen} open={open} />}
       <div className="flex flex-row">

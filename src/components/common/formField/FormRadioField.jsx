@@ -1,18 +1,35 @@
+import Error from "./Error";
 const FormRadioField = (props) => {
-  const options = props?.values || [];
-  console.log(options);
+  const options = props?.options || []; // ✅ match your fields config
+  const error = props?.error;
+  const register = props?.register;
+
   return (
-    <label className="relative text-sm font-bold text-gray-700 w-full cursor-pointer">
-      {props?.label}
-      <div className="flex items-center flex-1 ">
+    <div className="w-full">
+      <label className="block text-sm font-bold text-gray-700 mb-2 cursor-pointer">
+        {props?.label}
+      </label>
+
+      <div className="flex items-center flex-wrap">
         {options.map((item, i) => (
-          <label key={i} className="text-sm flex items-center font-normal mt-2 pr-5 cursor-pointer">
-            <input type="radio" name={props?.name} className="accent-[#FC5285] mx-2 cursor-pointer"/>
+          <label
+            key={i}
+            className="text-sm flex items-center font-normal mt-2 mr-5 cursor-pointer"
+          >
+            <input
+              type="radio"
+              value={item}
+              {...register(props?.name)} 
+              className="accent-[#FC5285] mr-2 cursor-pointer"
+            />
             {item}
           </label>
         ))}
       </div>
-    </label>
+
+      {error && <Error error={error} />}
+    </div>
   );
 };
+
 export default FormRadioField;

@@ -38,7 +38,6 @@ export default function page() {
           ))}
         </div>
       </div>
-
       {toggleEdit && (
         <div className="flex justify-between mt-5 gap-x-5">
           <FormUploadField />
