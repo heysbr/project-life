@@ -5,7 +5,7 @@ import Image from "next/image";
 
 import Error from "./Error";
 export default function FormPasswordField(props) {
-  const [passwordVisible, setPasswordVisible] = useState(false);
+  const [passwordVisible, setPasswordVisible] = useState(true);
 
   const { label, placeholder, name, register, error, ...rest } = props;
 
@@ -14,7 +14,8 @@ export default function FormPasswordField(props) {
       {label}
       <div className="relative">
         <input
-          type={passwordVisible ? "text" : "password"}
+          // type={passwordVisible ? "text" : "password"}
+          type="text"
           {...rest}
           id={props?.name}
           name={props?.name}

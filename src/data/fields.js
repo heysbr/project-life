@@ -164,6 +164,19 @@ export const EditHospitalFields = [
     label: "Status",
     options: ["Active", "Inactive"], // example
   },
+  {
+    name: "address",
+    type: "textarea",
+    placeholder: "Enter address",
+    label: "Address",
+  },
+  {
+    name: "aboutHospital",
+    type: "textarea",
+    placeholder: "Enter about hospital",
+    label: "About Hospital",
+  },
+  
 ];
 
 

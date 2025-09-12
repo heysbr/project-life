@@ -1,7 +1,7 @@
 import Error from "./Error";
 export default function FormTextField(props) {
   const { label, placeholder, name, register, error, ...rest } = props;
-  
+
   return (
     <div className="w-full">
       <label

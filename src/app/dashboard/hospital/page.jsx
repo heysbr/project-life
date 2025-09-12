@@ -70,6 +70,7 @@ export default function page() {
 
           <div className="grid grid-cols-3 w-full gap-5 p-8 ">
             {fields.map((field, index) => (
+              field.type !== "textarea" && (
               <FormField
                 key={index}
                 name={field.name}
@@ -79,10 +80,10 @@ export default function page() {
                 values={field?.options}
                 register={register}
                 error={errors[field.name]?.message}
-              />
+              />)
             ))}
           </div>
-          {/* <div className="grid grid-cols-1 w-full gap-5 pt-0 p-8 ">
+          <div className="grid grid-cols-1 w-full gap-5 pt-0 p-8 ">
           {additionalFields.map((field, index) => (
             <FormField
             key={index}
@@ -95,7 +96,7 @@ export default function page() {
             error={errors[field.name]?.message}
             />
             ))}
-            </div> */}
+            </div>
         </div>
 
         {toggleEdit && (

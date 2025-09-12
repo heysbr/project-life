@@ -4,6 +4,7 @@ export default function FormTextareaField(props) {
   const placeholder = props?.placeholder || "Placeholder";
   const name = props?.name || "name";
   const error = props?.error;
+  const register = props?.register;
 
   return (
     <label className="text-sm font-bold text-gray-700 mb-2 h-full cursor-pointer">
