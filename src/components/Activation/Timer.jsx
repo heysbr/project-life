@@ -1,8 +1,8 @@
-"use client"
+"use client";
 import React, { useState, useEffect } from "react";
 
-const Timer = ({classname}) => {
-  const [time, setTime] = useState(30); // Initialize timer with 30 seconds
+const Timer = ({ classname }) => {
+  const [time, setTime] = useState(30); 
 
   useEffect(() => {
     if (time > 0) {
@@ -10,15 +10,14 @@ const Timer = ({classname}) => {
         setTime((prevTime) => prevTime - 1);
       }, 1000);
 
-      return () => clearInterval(timerId); // Cleanup interval on component unmount
+      return () => clearInterval(timerId); 
     }
   }, [time]);
 
   return (
-
-      
-      <div className={`${classname}`}>{time === 0 ? <p>Time's up!</p> : <p>{`00:${time}`}</p> }</div>
-
+    <div className={`${classname}`}>
+      {time === 0 ? <p>Time's up!</p> : <p>{`00:${time}`}</p>}
+    </div>
   );
 };
 

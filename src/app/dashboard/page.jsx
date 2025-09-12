@@ -1,16 +1,11 @@
-import HospitalList from "@/components/dashboard/HospitalList";
-import Search from "@/components/dashboard/Search";
-import Stats from "@/components/dashboard/Stats";
-import React from "react";
+import HospitalList from "@/components/dashboard/hospital/HospitalList";
+import Stats from "@/components/dashboard/stats/Stats";
 
 export default function page() {
   return (
-    <div className="flex-1 ">
-      <Search/>
-      <div className="bg-white/80 ">
-      <Stats/>
-      <HospitalList/>
-      </div>
-      </div>
+    <div className="flex flex-col h-fit gap-y-8 ">
+      <Stats />
+      <HospitalList />
+    </div>
   );
 }

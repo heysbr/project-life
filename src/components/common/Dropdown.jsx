@@ -1,0 +1,59 @@
+"use client";
+import Image from "next/image";
+import { useState } from "react";
+import Down from "@/components/svg/down.svg";
+import Link from "next/link";
+
+export default function Dropdown({ data, name }) {
+  const [searchTerm, setSearchTerm] = useState("");
+  const [isOpen, setIsOpen] = useState(false);
+
+  const filteredItems = data.filter((item) =>
+    item.toLowerCase().includes(searchTerm.toLowerCase())
+  );
+
+  return (
+    <div className="relative" onMouseLeave={() => setIsOpen(false)}>
+      <div
+        className="flex flex-row border  border-gray-300 rounded-full bg-[#FFFFFF] "
+        onClick={() => setIsOpen(!isOpen)}
+      >
+        <input
+          type="text"
+          placeholder={name}
+          value={searchTerm}
+          onChange={(e) => setSearchTerm(e.target.value)}
+          onClick={() => setIsOpen(!isOpen)}
+          className="p-1.5 px-3 focus:outline-0 text-sm "
+        />
+        <Image
+          src={Down}
+          priority
+          alt="down"
+          className="inline  mr-5 cursor-pointer active:scale-90"
+        />
+      </div>
+      {isOpen && (
+        <ul className="absolute z-10 w-full inline-block bg-white  rounded-md shadow-lg h-fit overflow-y-auto list-disc list-inside">
+          {filteredItems.length > 0 ? (
+            filteredItems.map((item, index) => (
+              <Link href="/dashboard/staff-wards" key={index}>
+                <li
+                  className="p-2 pl-5 text-sm hover:bg-gray-100 cursor-pointer  "
+                  onClick={() => {
+                    setSearchTerm(item);
+                    setIsOpen(!isOpen);
+                  }}
+                >
+                  {item}
+                </li>
+              </Link>
+            ))
+          ) : (
+            <div className="p-2 pl-5 text-gray-500 text-sm">No items found</div>
+          )}
+        </ul>
+      )}
+    </div>
+  );
+}

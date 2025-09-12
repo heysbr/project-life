@@ -1,20 +1,14 @@
-import React, { Children } from "react";
-
-export default function FormCheckboxField({  name, value, children }) {
-  // children = "Checkbox"
-  name = "hello";
-  value = "project life";
+export default function FormCheckboxField({ name, label }) {
   return (
-    <div className="w-full">
-      
+    <label className="text-sm text-gray-700 font-bold flex items-center cursor-pointer" >
       <input
         type="checkbox"
         id={name}
         name={name}
-        value={value}
-        className="me-2  accent-[#FC5285]"
+        value={label}
+        className="me-2 accent-[#FC5285] cursor-pointer"
       />
-      <label className="text-sm font-medium text-gray-700" htmlFor={name}>{children}</label> 
-    </div>
+      {label}
+    </label>
   );
 }

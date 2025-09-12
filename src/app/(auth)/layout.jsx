@@ -1,8 +1,4 @@
-import React from "react";
-
 import { Poppins, Lato } from "next/font/google";
-
-// import svg1 from "../components/images/bg-svg1.svg";
 import svg1 from "@/components/images/bg-svg1.svg";
 import svg2 from "@/components/images/bg-svg2.svg";
 import logo from "@/components/images/logo.svg";

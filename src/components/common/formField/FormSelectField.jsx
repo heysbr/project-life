@@ -1,25 +1,15 @@
-import React from "react";
-
-export default function FormSelectField({ options, children }) {
-  // children = "Select";
-  // options = [
-  //   { value: "Option 1" },
-  //   { value: "Option 2" },
-  //   { value: "Option 3" },
-  //   { value: "Option 4" },
-  // ];
+export default function FormSelectField({ options, name, label }) {
+  options = options|| ["Option 1", "Option 2"] ;
   return (
     <>
-      <div className="w-full">
-        <label className="text-sm font-medium text-gray-700 mb-2">
-          {children}
-        </label>
-        <select className="w-full px-4 py-2  border border-gray-300 rounded-md text-sm focus:outline-0 ">
-          {options.map(({ value }, i) => (
-            <option className="hover:bg-[#FC5285]" key={value}>{value}</option>
-          ))}
+      <label className="text-sm font-bold text-gray-700 mb-2 h-full cursor-pointer">
+        {label}
+        <select className="w-full px-4 py-2 border border-gray-300 rounded-md cursor-pointer font-normal placeholder-[#BEC5D3] text-sm focus:outline-0">
+          {options.map(value => <option key={value}>{value}</option>)}
         </select>
-      </div>
+      </label>
     </>
   );
 }
+
+
