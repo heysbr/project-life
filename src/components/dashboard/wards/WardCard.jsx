@@ -14,8 +14,8 @@ export default function WardCard({ ward, handleRemove }) {
 
   return (
     <div className="w-full rounded-xl shadow-xl overflow-hidden">
-      <div className=" bg-[#FFEEF3]  ">
-        <div className="flex items-center  justify-end gap-x-3 p-3 pb-0">
+      <div className=" bg-[#FFEEF3] flex flex-row-reverse justify-between"> 
+        <div className="flex items-center justify-end gap-x-3 p-2 me-2 ">
           <Image
             src={editIcon}
             alt=""
@@ -33,12 +33,12 @@ export default function WardCard({ ward, handleRemove }) {
           />
         </div>
 
-        <div className="flex items-center gap-x-5 px-5 pb-4 pt-0">
-          <Image src={pieIcon} alt="" className="border " />
+        <div className="flex items-center gap-x-5 p-2  ">
+          <Image src={pieIcon} alt=""/>
           <h1>Ward {wardNumber}</h1>
         </div>
       </div>
-      <div className="h-19 px-5 flex items-center ">
+      <div className="h-12 px-5 flex items-center ">
         <span>Total Patients:</span>
         <span className="mx-5">{totalPatient}</span>
       </div>

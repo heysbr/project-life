@@ -379,8 +379,6 @@ export const loginFormFields = [
   {
     name: "forget",
     type: "forget",
-    placeholder: "",
-    label: "",
   },
 ];
 

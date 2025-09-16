@@ -39,7 +39,7 @@ export default function Button(props) {
 
   const baseClasses = `
   ${height} 
-  ${width} h-10
+  ${width} h-10 font-medium
   ${
     variant === "secondary"
       ? "bg-[#EEF2F3] border border-[#BEC5D3] text-[#9DA2AD]"

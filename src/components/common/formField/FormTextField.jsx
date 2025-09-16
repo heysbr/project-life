@@ -3,13 +3,13 @@ export default function FormTextField(props) {
   const { label, placeholder, name, register, error, ...rest } = props;
 
   return (
-    <div className="w-full">
+
       <label
         htmlFor={name}
         className="block text-sm font-bold text-gray-700 mb-1 cursor-pointer"
       >
         {label}
-      </label>
+      
 
       <input
         type="text"
@@ -21,6 +21,19 @@ export default function FormTextField(props) {
       />
 
       {error && <Error error={error} />}
-    </div>
+      </label>
   );
 }
+
+{/* <label className="text-sm font-bold text-gray-700 mb-2 h-full cursor-pointer">
+      {label}
+      <input
+        type="email"
+        id={name}
+        name={name}
+        {...(register ? register(name) : {})}
+        placeholder={placeholder}
+        className="w-full px-4 py-2 border border-gray-300 rounded-md font-normal placeholder-[#BEC5D3] text-sm focus:outline-0 "
+      />
+      {error && <Error error={error} />}
+    </label> */}

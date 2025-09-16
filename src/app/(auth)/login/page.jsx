@@ -9,11 +9,12 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { generateSchema } from "@/components/common/SchemaGenerator";
 import { useRouter } from "next/navigation";
-import FormPasswordField from "@/components/common/formField/FormPasswordField";
+import { useEffect, useState } from "react";
 
 const schema = generateSchema(FORM_FIELDS); 
 
 export default function Home() {
+  const [formData, setformData] = useState({});
   const router = useRouter();
   const {
     register,
@@ -23,9 +24,14 @@ export default function Home() {
     resolver: zodResolver(schema),
     mode: "all",
   });
+  
+  //Used useEffect to monitor formData changes
+  useEffect(() => {
+  console.log("Count changed:", formData);
+}, [formData]);
 
   const onSubmit = (data) => {
-    alert("Form data: " + JSON.stringify(data, null, 2));
+    setformData(data)
     router.push("/activation");
   };
   // login screen
@@ -46,6 +52,7 @@ export default function Home() {
               label={field.label}
               register={register}
               error={errors[field.name]?.message}
+              link={field?.link}
             />
           ))}
           <Button type="submit" label="Login" />

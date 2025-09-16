@@ -15,7 +15,7 @@ export function LargeCard(props) {
           <li className="marker:text-[#FFDB54]">Surgical {surgical}</li>
         </ul>
       </div>
-      <Image src={Pie} alt="totalDeliveries" className="w-36 h-auto" />
+      <Image src={Pie} priority alt="totalDeliveries" className="w-36 h-auto" />
     </div>
   );
 }

@@ -28,7 +28,6 @@ export default function Dropdown({ data, name }) {
         />
         <Image
           src={Down}
-          priority
           alt="down"
           className="inline  mr-5 cursor-pointer active:scale-90"
         />

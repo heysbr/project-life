@@ -15,7 +15,7 @@ const FormRadioField = ({
         </label>
       )}
 
-      <div className="flex items-center flex-wrap">
+      <div className="flex items-center justify-center flex-wrap">
         {options.map((option, i) => (
           <label
             key={i}

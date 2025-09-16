@@ -1,4 +1,4 @@
-import Dropdown from "../../common/Dropdown";
+import Dropdown from "@/components/common/Dropdown";
 import Bell from "@/components/svg/Bell.svg";
 import Image from "next/image";
 
@@ -13,9 +13,7 @@ export default function Search() {
       <Dropdown name={"State"} data={StatesListData} />
       <Dropdown name={"District"} data={DistrictsList} />
       <Dropdown name={"Hospitals"} data={HospitalsListData} />
-      <Image width={"auto"} height={"auto"} src={Bell} alt="bell"
-        className="cursor-pointer active:scale-90 transition-all"
-      />
+      <Image src={Bell} alt="" className="cursor-pointer active:scale-90 transition-all"/>
     </div>
   );
 }
