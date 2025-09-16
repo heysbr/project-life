@@ -27,7 +27,7 @@ export default function Home() {
   
   //Used useEffect to monitor formData changes
   useEffect(() => {
-  console.log("Count changed:", formData);
+  console.log(formData);
 }, [formData]);
 
   const onSubmit = (data) => {

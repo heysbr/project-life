@@ -2,26 +2,29 @@
 import LadyPicContainer from "@/components/Container/LadyPicContainer";
 import Button from "@/components/common/Button";
 import Heading from "@/components/common/layouts/Heading";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Timer from "@/components/Activation/Timer";
-import OtpInput from "@/components/Activation/OtpInput";
 import { useForm } from "react-hook-form";
 import { useRouter } from "next/navigation";
 
 export default function page() {
+  const { register, handleSubmit } = useForm({ mode: "all" });
   const router = useRouter();
+  const mobile_num = "9755253699";
+  const inputs = Array(4).fill("");
+  const [char, setChar] = useState("")
+  const [inputOTP, setinputOTP] = useState("");
 
-  const {
-    register,
-    handleSubmit,
-    formState: { errors },
-  } = useForm({
-    mode: "all",
-  });
-
-  function onSubmit() {
+  function onSubmit() {   
+    setinputOTP(char);
     router.push("/dashboard");
   }
+
+  useEffect(() => {
+    console.log("Entered OTP: ",inputOTP);
+  }, [inputOTP]);
+
+
 
   return (
     <LadyPicContainer>
@@ -33,10 +36,23 @@ export default function page() {
         <p>
           We have sent an OTP on your Mobile no.
           <br />
-          <span className="text-[#FC5285]">9755253699</span>
+          <span className="text-[#FC5285]">{mobile_num}</span>
         </p>
-        <OtpInput register={register} rules={{ required: true }} />
-
+        <div className={`flex flex-row gap-x-3 justify-center `}>
+          {inputs.map((_, index) => (
+            <input
+              key={index}
+              type="text"
+              maxLength={1}
+              name={`otp${index}`}
+              {...(register ? register(`otp${index}`, { required: true }) : {})}
+              className={`size-10 border text-center border-gray-300 rounded-md placeholder-[#BEC5D3] text-2xl `}
+              onChange={(e) => {
+                setChar((prev)=> prev + e.target.value );
+              }}
+            />
+          ))}
+        </div>
         <Timer classname={"text-center "} />
         <Button type="submit" />
       </form>
