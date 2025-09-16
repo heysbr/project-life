@@ -16,7 +16,7 @@ export default function FormPincodeField(props) {
         inputMode="numeric"
         id={name}
         name={name}
-        {...register(name)}
+        {...(register ? register(name) : {})}
         placeholder={placeholder}
         className="w-full px-4 py-2 border border-gray-300 rounded-md font-normal placeholder-[#BEC5D3] text-sm focus:outline-0 "
       />

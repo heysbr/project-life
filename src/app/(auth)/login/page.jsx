@@ -9,6 +9,7 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { generateSchema } from "@/components/common/SchemaGenerator";
 import { useRouter } from "next/navigation";
+import FormPasswordField from "@/components/common/formField/FormPasswordField";
 
 const schema = generateSchema(FORM_FIELDS); 
 

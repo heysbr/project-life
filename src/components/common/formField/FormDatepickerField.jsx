@@ -13,7 +13,7 @@ export default function FormDatepickerField(props) {
         type="date"
         id={name}
         name={name}
-        {...register(name)}
+        {...(register ? register(name) : {})}
         className="w-full px-4 py-2 font-normal border cursor-pointer border-gray-300 rounded-md placeholder-[#BEC5D3] text-sm focus:outline-0"
       />
       {error && <Error error={error} />}

@@ -15,7 +15,7 @@ export default function FormTextareaField(props) {
         placeholder={placeholder}
         className="w-full px-4 py-2 border border-gray-300 rounded-md font-normal placeholder-[#BEC5D3] text-sm focus:outline-0 resize-none"
         rows={4}
-        {...register(name)}
+        {...(register ? register(name) : {})}
       />
       {error && <Error error={error} />}
     </label>

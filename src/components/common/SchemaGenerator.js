@@ -11,9 +11,11 @@ export const fieldValidators = {
   datepicker: z.string().min(1, "Please pick a date"),
   pincode: z.string().regex(/^[0-9]{6}$/, "Must be a 6-digit pincode"),
   textarea: z.string().min(1, "This field is required"),
+  // textarea:z.string().optional(),
   upload: z.any().refine((file) => file instanceof File, "File is required"),
   download: z.any().optional(), 
   forget: z.string().optional(), 
+
 };
 
 export function generateSchema(fieldConfig) {

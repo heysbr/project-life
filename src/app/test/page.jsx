@@ -1,54 +1,24 @@
-// "use client";
-// import { useForm } from "react-hook-form";
-// import { zodResolver } from "@hookform/resolvers/zod";
-// import { generateSchema } from "@/components/SchemaGenerator";
-// import { fields } from "@/data/fields";
-// import { fieldComponentMap } from "@/data/fields";
-
-
-// const schema = generateSchema(fields);
-
-// export default function DynamicForm() {
-//   const {
-//     register,
-//     handleSubmit,
-//     formState: { errors },
-//   } = useForm({
-//     resolver: zodResolver(schema),
-//   });
-
-//   const onSubmit = (data) => {
-//     console.log("Form data:", data);
-//   };
-
-//   return (
-//     <form onSubmit={handleSubmit(onSubmit)}>
-//       {fields.map((field) => {
-//         const Component = fieldComponentMap[field.type];
-//         return (
-//           <Component
-//             key={field.name}
-//             {...field}
-//             register={register}
-//             error={errors[field.name]?.message}
-//           />
-//         );
-//       })}
-
-//       <button
-//         type="submit"
-//         className="mt-4 px-4 py-2 bg-blue-500 text-white rounded"
-//       >
-//         Submit
-//       </button>
-//     </form>
-//   );
-// }
-
-
+"use client";
+import FormPasswordField from "@/components/common/formField/FormPasswordField";
+import { useForm } from "react-hook-form";
 
 export default function page() {
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm({
+    mode: "all",
+    
+  });
+  const handleClick = (data) => {
+    alert("clicked ");
+  }
+
   return (
-    <div>page</div>
-  )
+    <>
+      <FormPasswordField register={register} error={errors["password"]?.message} name="password"/>
+      <button onClick={handleSubmit(handleClick)}>Submit</button>
+    </>
+  );
 }

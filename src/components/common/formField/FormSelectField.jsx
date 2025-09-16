@@ -19,7 +19,7 @@ export default function FormSelectField(props) {
       <div className="relative">
         <select
           id={name}
-          {...register(name)}
+          {...(register ? register(name) : {})}
           className="w-full px-4 py-2 border border-gray-300 rounded-md cursor-pointer font-normal placeholder-[#BEC5D3] text-sm focus:outline-none appearance-none"
         >
           <option value="">{placeholder}</option>

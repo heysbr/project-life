@@ -16,7 +16,7 @@ export default function FormTextField(props) {
         {...rest}
         id={name}
         placeholder={placeholder}
-        {...register(name)}
+        {...(register ? register(name) : {})}
         className="w-full px-4 py-2 border border-gray-300 rounded-md font-normal placeholder-[#BEC5D3] text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
       />
 

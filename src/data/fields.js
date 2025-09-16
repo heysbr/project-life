@@ -105,6 +105,7 @@ export const EditHospitalFields = [
     type: "text",
     placeholder: "Enter state",
     label: "State",
+
   },
   {
     name: "district",

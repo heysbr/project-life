@@ -13,7 +13,7 @@ export default function FormCheckboxField(props) {
         name={name}
         
         className="me-2 accent-[#FC5285] cursor-pointer"
-        {...register(name)}
+        {...(register ? register(name) : {})}
       />
       {label}
       {error && <Error error={error} />}

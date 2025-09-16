@@ -24,7 +24,7 @@ const FormRadioField = ({
             <input
               type="radio"
               value={option}
-              {...register(name)}
+              {...(register ? register(name) : {})}
               className="accent-[#FC5285] mr-2 cursor-pointer"
             />
             {option}

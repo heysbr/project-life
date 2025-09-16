@@ -28,7 +28,9 @@ const additionalFields = [
     label: "About Hospital",
   },
 ];
+
 const schema = generateSchema(fields);
+
 export default function page() {
   const [toggleEdit, setToggleEdit] = useState(false);
   const {
