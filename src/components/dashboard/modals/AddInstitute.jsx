@@ -10,10 +10,13 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { generateSchema } from "@/components/common/SchemaGenerator";
 import { useRouter } from "next/navigation";
+import { use, useEffect, useState } from "react";
 
 const schema = generateSchema(fields);
 
 export default function AddInstitute({ closeModal, open }) {
+  const [formData, setFormData] = useState({});
+
   const {
     register,
     handleSubmit,
@@ -23,8 +26,27 @@ export default function AddInstitute({ closeModal, open }) {
     mode: "all",
   });
 
+  // useEffect(() => {
+  //   // if (Object.keys(formData).length === 0) return; // Skip initial render
+  //   // console.log(formData);
+  //   // `Email    : ${formData.email} \nPassword : ${formData.password}`
+  // }, [formData]);
+
   const onSubmit = (data) => {
-    alert("Form data: " + JSON.stringify(data, null, 2));
+    setFormData(data);
+    console.log(`
+============================
+   Institute Information
+============================
+Institute : ${data["institute-name"]}
+Email     : ${data.email}
+Mobile    : ${data.mobile}
+Address   : ${data.address}
+Pincode   : ${data.pincode}
+City      : ${data.city}
+State     : ${data.state}
+============================
+`);
     closeModal();
   };
 
@@ -37,27 +59,28 @@ export default function AddInstitute({ closeModal, open }) {
       >
         <div className="flex flex-col items-center gap-y-4  w-full ">
           <Image
-          src={addInstituteCrossBtn}
-          alt="close"
-          className="cursor-pointer absolute right-2 top-2"
-          onClick={() => closeModal()}
-        />
+            src={addInstituteCrossBtn}
+            alt="close"
+            className="cursor-pointer absolute right-2 top-2"
+            onClick={() => closeModal()}
+          />
 
-        <h1 className="font-bold text-2xl pb-5">Add Institute</h1>
+          <h1 className="font-bold text-2xl pb-5">Add Institute</h1>
 
-        <Image src={defaultProfile} alt="profile" />
-        <input
-          id="fileUpload"
-          type="file"
-          className="hidden"
-          accept="image/*"
-        />
-        <label
-          htmlFor="fileUpload"
-          className="cursor-pointer rounded-2xl bg-[#FC5285] px-3 py-0.5 text-white text-xs hover:opacity-85"
-        >
-          Add Photo
-        </label></div>
+          <Image src={defaultProfile} alt="profile" />
+          <input
+            id="fileUpload"
+            type="file"
+            className="hidden"
+            accept="image/*"
+          />
+          <label
+            htmlFor="fileUpload"
+            className="cursor-pointer rounded-2xl bg-[#FC5285] px-3 py-0.5 text-white text-xs hover:opacity-85"
+          >
+            Add Photo
+          </label>
+        </div>
 
         <form
           onSubmit={handleSubmit(onSubmit)}
@@ -74,10 +97,13 @@ export default function AddInstitute({ closeModal, open }) {
               error={errors[field.name]?.message}
             />
           ))}
-
-          
         </form>
-        <Button label={"Add Institute"} width={"w-68"} type={"submit"} onClick={handleSubmit(onSubmit)} />
+        <Button
+          label={"Add Institute"}
+          width={"w-68"}
+          type={"submit"}
+          onClick={handleSubmit(onSubmit)}
+        />
       </div>
     </div>
   );

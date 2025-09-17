@@ -9,6 +9,7 @@ export default function WardCard({ ward, handleRemove }) {
   const wardNumber = ward?.wardNumber;
   const totalPatient = ward?.totalPatient;
   const [RenameWardModal, setRenameWardModal] = useState(false);
+  
 
   
 

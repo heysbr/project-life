@@ -5,6 +5,7 @@ import Button from "@/components/common/Button";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
+import { useState } from "react";
 
 // ✅ Zod schema
 const staffSchema = z.object({
@@ -14,6 +15,7 @@ const staffSchema = z.object({
 });
 
 export default function AddStaffModal({ closeModal }) {
+  const [formData, setFormData] = useState({})
   const {
     register,
     handleSubmit,
@@ -22,12 +24,14 @@ export default function AddStaffModal({ closeModal }) {
     mode: "all",
     resolver: zodResolver(staffSchema),
   });
-
+//aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
   const onSubmit = (data) => {
-    alert("Form data: " + JSON.stringify(data, null, 2));
+    // alert("Form data: " + JSON.stringify(data, null, 2));
+    console.log(`Staff : ${data.staff}`);
+    setFormData(data)
     closeModal(false);
   };
-
+//aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
   return (
     <Modal closeModal={closeModal} heading="Add Staff">
       <form

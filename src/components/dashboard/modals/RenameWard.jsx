@@ -2,6 +2,7 @@ import Button from "@/components/common/Button";
 import FormTextField from "@/components/common/formField/FormTextField";
 import Modal from "@/components/dashboard/modals/Modal";
 import { zodResolver } from "@hookform/resolvers/zod";
+import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 
@@ -11,7 +12,7 @@ const Schema = z.object({
 });
 
 export default function RenameWard({ closeModal }) {
-
+  const [formData, setFormData] = useState({})
   const {
         register,
         handleSubmit,
@@ -22,13 +23,15 @@ export default function RenameWard({ closeModal }) {
       });
   
     const onSubmit = (data) => {
-      alert("Form data: " + JSON.stringify(data, null, 2));
+      // alert("Form data: " + JSON.stringify(data, null, 2));
+      console.log(`Ward : ${data.ward}`);
+      setFormData(data)
       closeModal(false);
     }
 
   return (
     <Modal heading="Rename Ward" btnText="Update" closeModal={closeModal}>
-      <form className="flex flex-1 flex-col gap-y-7" onSubmit={handleSubmit(onSubmit)}>
+      <form onSubmit={handleSubmit(onSubmit)} className="flex flex-1 flex-col gap-y-7" >
 
       <FormTextField
         label="Ward Name"

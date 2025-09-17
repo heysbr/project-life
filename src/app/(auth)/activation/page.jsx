@@ -21,7 +21,9 @@ export default function page() {
   }
 
   useEffect(() => {
-    console.log("Entered OTP: ",inputOTP);
+    if (inputOTP.length === 4){
+      console.log("OTP entered:", inputOTP);
+    }
   }, [inputOTP]);
 
 

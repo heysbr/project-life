@@ -33,6 +33,7 @@ const schema = generateSchema(fields);
 
 export default function page() {
   const [toggleEdit, setToggleEdit] = useState(false);
+  const [formData, setFormData] = useState({})
   const {
     register,
     handleSubmit,
@@ -43,7 +44,24 @@ export default function page() {
   });
 
   const onSubmit = (data) => {
-    alert("Form data: " + JSON.stringify(data, null, 2));
+    // alert("Form data: " + JSON.stringify(data, null, 2));
+    setFormData(data)
+    console.log(`
+================================
+        🏥 Hospital Details
+================================
+State         : ${data.state}
+District      : ${data.district}
+City          : ${data.city}
+Hospital      : ${data.hospital}
+Admin Email   : ${data.adminEmail}
+Phone         : ${data.phone}
+Status        : ${data.status}
+Address       : ${data.address}
+About         : ${data.aboutHospital}
+================================
+`);
+
     setToggleEdit(false);
   };
   return (

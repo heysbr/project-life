@@ -11,21 +11,16 @@ import FormUploadField from "@/components/common/formField/FormUploadField";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { generateSchema } from "@/components/common/SchemaGenerator";
+import { da } from "zod/v4/locales";
 
 const schema = generateSchema(fields); 
 
 export default function page() {
-  const {
-    register,
-    handleSubmit,
-    formState: { errors },
-  } = useForm({
-    resolver: zodResolver(schema),
-    mode: "all",
-  });
+  const {register, handleSubmit, formState: { errors } } = useForm({resolver: zodResolver(schema), mode: "all",});
 
   const onSubmit = (data) => {
-    alert("Form data: " + JSON.stringify(data, null, 2));
+    // alert("Form data: " + JSON.stringify(data, null, 2));
+    console.log(data);
     setToggleEdit(false);
   };
  

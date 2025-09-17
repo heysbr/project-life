@@ -8,6 +8,7 @@ import Link from "next/link";
 export default function StaffCard({ staff, handleRemove }) {
   const [toggle, setToggle] = useState(false);
   const active = staff?.active ?? false;
+  
   return (
     <div
       key={staff.id}
