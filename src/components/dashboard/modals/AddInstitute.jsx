@@ -9,8 +9,7 @@ import { AddInstituteFields as fields } from "@/data/fields";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { generateSchema } from "@/components/common/SchemaGenerator";
-import { useRouter } from "next/navigation";
-import { use, useEffect, useState } from "react";
+import {  useEffect, useState } from "react";
 
 const schema = generateSchema(fields);
 
@@ -26,27 +25,9 @@ export default function AddInstitute({ closeModal, open }) {
     mode: "all",
   });
 
-  // useEffect(() => {
-  //   // if (Object.keys(formData).length === 0) return; // Skip initial render
-  //   // console.log(formData);
-  //   // `Email    : ${formData.email} \nPassword : ${formData.password}`
-  // }, [formData]);
-
   const onSubmit = (data) => {
     setFormData(data);
-    console.log(`
-============================
-   Institute Information
-============================
-Institute : ${data["institute-name"]}
-Email     : ${data.email}
-Mobile    : ${data.mobile}
-Address   : ${data.address}
-Pincode   : ${data.pincode}
-City      : ${data.city}
-State     : ${data.state}
-============================
-`);
+    console.table(data);
     closeModal();
   };
 

@@ -33,7 +33,7 @@ const schema = generateSchema(fields);
 
 export default function page() {
   const [toggleEdit, setToggleEdit] = useState(false);
-  const [formData, setFormData] = useState({})
+  const [formData, setFormData] = useState({});
   const {
     register,
     handleSubmit,
@@ -44,24 +44,8 @@ export default function page() {
   });
 
   const onSubmit = (data) => {
-    // alert("Form data: " + JSON.stringify(data, null, 2));
-    setFormData(data)
-    console.log(`
-================================
-        🏥 Hospital Details
-================================
-State         : ${data.state}
-District      : ${data.district}
-City          : ${data.city}
-Hospital      : ${data.hospital}
-Admin Email   : ${data.adminEmail}
-Phone         : ${data.phone}
-Status        : ${data.status}
-Address       : ${data.address}
-About         : ${data.aboutHospital}
-================================
-`);
-
+    setFormData(data);
+    console.table(data);
     setToggleEdit(false);
   };
   return (
@@ -89,8 +73,24 @@ About         : ${data.aboutHospital}
           <p className="font-bold">Genral Info</p>
 
           <div className="grid grid-cols-3 w-full gap-5 p-8 ">
-            {fields.map((field, index) => (
-              field.type !== "textarea" && (
+            {fields.map(
+              (field, index) =>
+                field.type !== "textarea" && (
+                  <FormField
+                    key={index}
+                    name={field.name}
+                    type={field.type}
+                    placeholder={field.placeholder}
+                    label={field.label}
+                    values={field?.options}
+                    register={register}
+                    error={errors[field.name]?.message}
+                  />
+                )
+            )}
+          </div>
+          <div className="grid grid-cols-1 w-full gap-5 pt-0 p-8 ">
+            {additionalFields.map((field, index) => (
               <FormField
                 key={index}
                 name={field.name}
@@ -100,23 +100,9 @@ About         : ${data.aboutHospital}
                 values={field?.options}
                 register={register}
                 error={errors[field.name]?.message}
-              />)
+              />
             ))}
           </div>
-          <div className="grid grid-cols-1 w-full gap-5 pt-0 p-8 ">
-          {additionalFields.map((field, index) => (
-            <FormField
-            key={index}
-            name={field.name}
-            type={field.type}
-            placeholder={field.placeholder}
-            label={field.label}
-            values={field?.options}
-            register={register}
-            error={errors[field.name]?.message}
-            />
-            ))}
-            </div>
         </div>
 
         {toggleEdit && (

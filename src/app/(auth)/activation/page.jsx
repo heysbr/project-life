@@ -22,7 +22,7 @@ export default function page() {
 
   useEffect(() => {
     if (inputOTP.length === 4){
-      console.log("OTP entered:", inputOTP);
+      console.table("OTP entered:", inputOTP);
     }
   }, [inputOTP]);
 

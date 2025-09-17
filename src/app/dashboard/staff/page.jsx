@@ -20,7 +20,7 @@ export default function page() {
 
   const onSubmit = (data) => {
     // alert("Form data: " + JSON.stringify(data, null, 2));
-    console.log(data);
+    console.table(data);
     setToggleEdit(false);
   };
  

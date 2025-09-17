@@ -25,13 +25,16 @@ export default function page() {
     mode: "all",
   });
 
+const [formData, setFormData] = useState({})
+
   const onSubmit = (data) => {
-    alert("Form data: " + JSON.stringify(data, null, 2));
+    console.table(data);
+    setFormData(data);
     setToggleEdit(false);
   };
   const [toggleEdit, setToggleEdit] = useState(false);
   return (
-    <form className="flex flex-col gap-4 h-1/2">
+    <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col gap-4 h-1/2">
       <PageTitle
         title={"Profile"}
         btnLabel={`${toggleEdit ? "" : "Edit Profile"}`}
@@ -77,7 +80,7 @@ export default function page() {
               label="Cancel"
               onClick={() => setToggleEdit(false)}
             />
-            <Button label="Update" onClick={() => setToggleEdit(false)} />
+            <Button label="Update" type="submit" />
           </div>
         )}
       </fieldset>

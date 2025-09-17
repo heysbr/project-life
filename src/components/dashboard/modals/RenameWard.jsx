@@ -23,8 +23,7 @@ export default function RenameWard({ closeModal }) {
       });
   
     const onSubmit = (data) => {
-      // alert("Form data: " + JSON.stringify(data, null, 2));
-      console.log(`Ward : ${data.ward}`);
+      console.table(data);
       setFormData(data)
       closeModal(false);
     }

@@ -24,14 +24,13 @@ export default function AddStaffModal({ closeModal }) {
     mode: "all",
     resolver: zodResolver(staffSchema),
   });
-//aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+  
   const onSubmit = (data) => {
-    // alert("Form data: " + JSON.stringify(data, null, 2));
-    console.log(`Staff : ${data.staff}`);
-    setFormData(data)
+    console.table(data);
+    setFormData(data);
     closeModal(false);
   };
-//aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+
   return (
     <Modal closeModal={closeModal} heading="Add Staff">
       <form

@@ -25,19 +25,9 @@ export default function Home() {
     mode: "all",
   });
 
-  //Used useEffect to monitor formData changes
-  // useEffect(() => {
-  //   if (Object.keys(formData).length === 0) return; // Skip initial render
-  //   console.log(
-  //     `Email    : ${formData.email} \nPassword : ${formData.password}`
-  //   );
-  // }, [formData]);
-
   const onSubmit = (data) => {
     setformData(data);
-    console.log(
-      `Email    : ${data.email} \nPassword : ${data.password}`
-    );
+    console.table(data);
     router.push("/activation");
   };
   // login screen
